@@ -1,5 +1,0 @@
----
-icon: user
----
-
-# Client Area

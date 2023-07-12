@@ -1,5 +1,5 @@
 ---
-icon: earth-europe
+icon: globe-stand
 ---
 # Domains
 
