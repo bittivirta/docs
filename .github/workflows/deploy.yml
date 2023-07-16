@@ -12,8 +12,8 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v3
               with:
+                  ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
                   repository: "bittivirta/docs-engine"
-                  token: ${{ secrets.GH_PAT }}¨
 
             # - name: Install Node.js
             #   uses: actions/setup-node@v3
