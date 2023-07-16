@@ -20,6 +20,7 @@ jobs:
                   ls -la
                   mkdir docs-engine
                   cd docs-engine
+                  ls -la
 
             - name: Clone repository
               run: |
