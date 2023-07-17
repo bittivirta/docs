@@ -6,7 +6,7 @@ on:
             - main
 
 jobs:
-    deployment:
+    bump_engine_version:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
@@ -17,51 +17,46 @@ jobs:
                   ref: main
                   submodules: true
 
-            - name: "List files"
+            - name: Install Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+
+            - name: Install pnpm
+              uses: pnpm/action-setup@v2
+              id: pnpm-install
+              with:
+                  version: 8
+                  run_install: false
+
+            - name: Get pnpm Store Directory
+              id: pnpm-cache
+              shell: bash
               run: |
-                  ls -la
-                  ls -la docs-engine
+                  echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-            # - name: Install Node.js
-            #   uses: actions/setup-node@v3
-            #   with:
-            #       node-version: 18
+            - name: Setup pnpm Cache
+              uses: actions/cache@v3
+              with:
+                  path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+                  key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: |
+                      ${{ runner.os }}-pnpm-store-
 
-            # - uses: pnpm/action-setup@v2
-            #   name: Install pnpm
-            #   id: pnpm-install
-            #   with:
-            #       version: 8
-            #       run_install: false
+            - name: Install Dependencies
+              run: pnpm install
 
-            # - name: Get pnpm Store Directory
-            #   id: pnpm-cache
-            #   shell: bash
-            #   run: |
-            #       echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+            - name: "Bump version"
+              run: |
+                  pnpm bump
 
-            # - uses: actions/cache@v3
-            #   name: Setup pnpm cache
-            #   with:
-            #       path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-            #       key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-            #       restore-keys: |
-            #           ${{ runner.os }}-pnpm-store-
+            - name: "Commit Changes"
+              run: |
+                  git config --local user.email "ci@noreply.bittivirta.fi"
+                  git config --local user.name "Bittivirta CI"
+                  git add .
+                  git commit -m "ci: :bookmark: Bump version"
 
-            # - name: Install Dependencies
-            #   run: pnpm install
-
-            # - name: "Bump version"
-            #   run: |
-            #       pnpm bump
-
-            # - name: "Commit changes"
-            #   run: |
-            #       git config --local user.email "ci@noreply.bittivirta.fi"
-            #       git config --local user.name "Bittivirta CI"
-            #       git add .
-            #       git commit -m "ci: :bookmark: Bump version"
-
-            # - name: "Push changes"
-            #   run: |
-            #       git push
+            - name: "Push Changes"
+              run: |
+                  git push
