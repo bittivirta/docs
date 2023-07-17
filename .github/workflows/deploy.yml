@@ -55,10 +55,6 @@ jobs:
               run: |
                   pnpm bump
 
-            - name: "Commit Changes"
-              run: |
-                  git commit -m "ci: :bookmark: Bump version"
-
             - name: "Push Changes"
               run: |
                   git push
