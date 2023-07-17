@@ -9,23 +9,18 @@ jobs:
     deployment:
         runs-on: ubuntu-latest
         steps:
-            - name: Setup SSH
-              uses: MrSquaare/ssh-setup-action@v1
+            - name: Checkout repository
+              uses: actions/checkout@v3
               with:
-                  host: github.com
-                  private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  repository: bittivirta/docs-engine
+                  ref: main
+                  submodules: true
 
-            - name: "Prepare working dir"
+            - name: "List files"
               run: |
                   ls -la
-                  mkdir docs-engine
-                  cd docs-engine
-                  ls -la
-
-            - name: Clone repository
-              run: |
-                  git clone git@github.com:bittivirta/docs-engine.git .
-                  ls -la
+                  ls -la docs-engine
 
             # - name: Install Node.js
             #   uses: actions/setup-node@v3
