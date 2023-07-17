@@ -9,5 +9,5 @@ If you choose immendiate cancellation, the service is cancelled immediately and 
 ## Paypal subscriptions
 Keep in mind that you do have to cancel your PayPal subscription manually if you have created automatic payment profile. This usually works through our client area by clicking "Cancel" button on service details page, but we recommend to check the subscription status from PayPal as well (since it have not always been working as expected).
 
-## Partial refudns
+## Partial refunds
 If you have chosen to cancel the service immediately, we can refund the remaining time of your service, but we will not refund the time you have already used. To receive the refund, you need to contact our customer support.
