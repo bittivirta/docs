@@ -1,10 +1,6 @@
 ---
 icon: gamepad
 
-# Pelipalvelimet
-
-Tästä osiosta löydät ohjeita Gamepanelin ja pelipalvelimien käyttöön.
-
 features:
   - title: Minecraft
     icon: https://cdn.bittivirta.fi/docimg/logo/minecraft.png
@@ -23,3 +19,6 @@ features:
     details: Read the docs in English
     link: /en/game/
 ---
+# Pelipalvelimet
+
+Tästä osiosta löydät ohjeita Gamepanelin ja pelipalvelimien käyttöön.
