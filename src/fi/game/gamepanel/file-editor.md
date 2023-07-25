@@ -13,7 +13,7 @@ Voit muokata palvelimesi tiedostoja selaimessa. Tämä on helppo tapa muokata yk
 5. Uuden tiedoston luonti
 6. Yksittäisen kohteen toiminnot
 
-![Tiedostomuokkain](https://cdn.bittivirta.fi/docimg/en/game-servers/gamepanel/file-manager.png)
+![Tiedostomuokkain](/assets/docs/img/en/game-servers/gamepanel/file-manager.webp)
 
 ## Yksittäisen kohteen toiminnot
 
@@ -30,7 +30,7 @@ Voit muokata palvelimesi tiedostoja selaimessa. Tämä on helppo tapa muokata yk
 
 </div>
 
-![Kohteen toiminnot](https://cdn.bittivirta.fi/docimg/en/game-servers/gamepanel/file-actions.png =200x)
+![Kohteen toiminnot](/assets/docs/img/en/game-servers/gamepanel/file-actions.webp =200x)
 
 </div>
 
@@ -41,8 +41,8 @@ Useamman kohteen toiminnot tulevat näkyviin, kun valitset useamman kohteen.
 1. Valitse kohteet
 2. Valitse toiminto (Siirrä, pakkaa ja poista)
 
-![Useamman kohteen toiminnot](https://cdn.bittivirta.fi/docimg/en/game-servers/gamepanel/multiple-files.png =500x)
+![Useamman kohteen toiminnot](/assets/docs/img/en/game-servers/gamepanel/multiple-files.webp =500x)
 
 :bulb: Voit myös valita kaikki kohteet klikkaamalla ruutua "/home/container/..." -polun vieressä:
 
-![Kaikkien kohteiden valinta](https://cdn.bittivirta.fi/docimg/en/game-servers/gamepanel/select-all.png =300x)
+![Kaikkien kohteiden valinta](/assets/docs/img/en/game-servers/gamepanel/select-all.webp =300x)

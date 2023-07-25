@@ -2,7 +2,7 @@
 
 1. Kirjaudu asiakasalueelle osoitteessa [bittivirta.cloud/login](https://bittivirta.cloud/login)
 2. Valitse käyttäjävalikosta "tietoni":
-    ![Tietoni](https://cdn.bittivirta.fi/docimg/fi/asiakasalue/tietoni.png =500x)
+    ![Tietoni](/assets/docs/img/fi/asiakasalue/tietoni.webp =500x)
 3. Täytä yhteystiedot ja klikkaa sivun alapuolella sijaitsevaa "Tallenna"-painiketta
 
 :::info Y-tunnuksen vaihtaminen

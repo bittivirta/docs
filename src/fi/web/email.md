@@ -3,10 +3,10 @@
 Avaa Plesk asiakasalueella OneClick-kirjautumisella tai kirjaudu Pleskiin osoitteessa [https://plesk.bittivirta.cloud/](https://plesk.bittivirta.cloud/)
 
 ## 2. Valitse verkkotunnus, sähköposti ja sähköpostitilit​
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1ijykzh.png)
+![](/assets/docs/img/crisp/image_1ijykzh.webp)
 
 ## 3. Valitse uusi sähköpostiosoite​
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1pt1zar.png)
+![](/assets/docs/img/crisp/image_1pt1zar.webp)
 
 ## 4. Määritä sähköpostitilin asetukset​
 1. Säköposti-osoite
@@ -16,8 +16,8 @@ Avaa Plesk asiakasalueella OneClick-kirjautumisella tai kirjaudu Pleskiin osoitt
 5. Luodaanko sähköpostiosoitteelle postilaatikko? (kyllä)
 6. Mikä levytila käyttäjälle myönnetään? Rajoittamattomana maksimilevytila on webhotellisi maksimilevytila.
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1wiloh1.png)
+![](/assets/docs/img/crisp/image_1wiloh1.webp)
 
 ## 5. Lisäoptiot​
 Halutessasi voit asettaa sähköpostilaatikolle sääntöjä välittämiselle, aliaksille ja jopa automaattiselle vastaukselle:
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1xlpfif.png)
+![](/assets/docs/img/crisp/image_1xlpfif.webp)

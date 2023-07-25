@@ -7,14 +7,14 @@ Maksukortin tilille lisääminen on kaikista varmin tapa maksaa palvelut luotett
 # Automaattimaksut maksukortilla
 1. Kirjaudu sisään Bittivirta.cloud-alustalle osoitteessa https://bittivirta.cloud/login
 2. Siirry maksutavat-sivulle:
-![Valitse käyttäjäsi ja sitten "Maksutavat"](https://cdn.bittivirta.fi/docimg/crisp/image_1h9i1ei.png)
+![Valitse käyttäjäsi ja sitten "Maksutavat"](/assets/docs/img/crisp/image_1h9i1ei.webp)
 3. Lisää uusi maksukortti valitsemalla "Lisää uusi maksukortti"
-![Klikkaa "Lisää uusi maksukortti" -painiketta](https://cdn.bittivirta.fi/docimg/crisp/image_1wksed4.png)
+![Klikkaa "Lisää uusi maksukortti" -painiketta](/assets/docs/img/crisp/image_1wksed4.webp)
 4. Lisää pankkikortin tiedot, laskutusosoite ja klikkaa "Tallenna"
-![Maksutavan lisääminen](https://cdn.bittivirta.fi/docimg/crisp/image_1kvf4z4.png)
+![Maksutavan lisääminen](/assets/docs/img/crisp/image_1kvf4z4.webp)
 5. Vahvista pankkikortin lisääminen pankkiisi aukeavassa ikkunassa.
 6. Vaihda maksukortti oletusmaksutavaksi (käytetään uusissa tilauksissa)
-![Valitse "Tiedot" ja vaihda "Maksutapa"](https://cdn.bittivirta.fi/docimg/crisp/image_1f6kpl1.png)
+![Valitse "Tiedot" ja vaihda "Maksutapa"](/assets/docs/img/crisp/image_1f6kpl1.webp)
 
 Lisäksi jokaisella tilauksella on oma oletusmaksutapa. Jos haluat vaihtaa palvelun maksutavan - ole yhteydessä asiakaspalveluumme, niin vaihdamme maksutavan puolestasi.
 

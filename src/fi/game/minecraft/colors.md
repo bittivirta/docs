@@ -29,6 +29,6 @@ Saat `&` -merkin useimmilla näppäimistöillä painamalla `shift` + `6` (tai su
 §rr §rMinecraft
 ```
 
-![](https://cdn.bittivirta.fi/docimg/crisp/mc-format_5pgebx.gif)
+![](/assets/docs/img/crisp/mc-format_5pgebx.gif)
 
 Esimerkki Minecraftin wikistä: https://minecraft.fandom.com/wiki/Formatting_codes
