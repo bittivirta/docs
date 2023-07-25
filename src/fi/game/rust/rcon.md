@@ -15,7 +15,7 @@ Vakiona palvelimilla ei ole RCON yhteyttä käytössä, sillä palvelin asentuu 
 1. Alkuunsa sinun tarvitsee mennä Gamepaneliin ja suunnata omalle palvelimellesi ja valita "Network" -välilehti,
 _Palvelimesi » (valitse haluamasi palvelin) » Network_
 2. Network -välilehdeltä sinun tulee klikata "Create allocation", saat tästä portin RCON -yhteydelle. 
-![](https://cdn.bittivirta.fi/docimg/crisp/1ioiu9trxv_zdrsx7.png)
+![](/assets/docs/img/crisp/1ioiu9trxv_zdrsx7.webp)
 3. Suuntaa "Startup" -välilehdelle ja määrittele sieltä "RCON PORT"
 _Palvelimesi » (valitse haluamasi palvelin) » Startup » RCON PORT_
-![](https://cdn.bittivirta.fi/docimg/crisp/zen9cpgl1q_1eb3lr8.png)
+![](/assets/docs/img/crisp/zen9cpgl1q_1eb3lr8.webp)

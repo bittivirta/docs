@@ -6,17 +6,17 @@ Screen on helppokäyttöinen ohjelmisto Unixille, jolla voidaan hallita eri "ikk
 ​
 Voit luoda uuden screenin komennolla `screen -S ikkunanNimi`. Screen luodaan komennon suoritettua välittömästi, jolloin sinulle aukeaa puhdas komentorivi.
 
-![](https://cdn.bittivirta.fi/docimg/crisp/25screen-s_16nhbtl.gif)
+![](/assets/docs/img/crisp/25screen-s_16nhbtl.gif)
 
 Voit vielä tarkistaa, että olet Screenissä komennolla `screen -ls`. Saat listan Screeneistä. Screenin kohdalla, joka on aktiivinen/käytössä lukee (Attached) ja muiden mahdollisten screenien kohdalla lukee (Deattached).
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1x6afsj.png)
+![](/assets/docs/img/crisp/image_1x6afsj.webp)
 
 ## Screeniin avaaminen​
 
 Voit avata olemassa olevan screenin komennolla `screen -r`. Jos screenejä on kuitenkin useampi, joudut määrittelemään komennon perään, minkä Screenin haluat avata, esim. `screen -r Test`
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1ywo5zw.png)
+![](/assets/docs/img/crisp/image_1ywo5zw.webp)
 
 ## Screenistä poistuminen sulkematta sitä​
 

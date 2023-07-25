@@ -12,10 +12,10 @@ Osa lisäosista vaatii käyttöoikeuksien antamista. Tutustu tästä käyttöoik
 Lisäosien asentaminen on yksinkertaista.
 
 1. Lataa haluamasi lisäosa. Esimerkkinä toimii Gather Manager (alla tarkempia tietoja lisäosan toiminnasta)!
-    ![](https://cdn.bittivirta.fi/docimg/crisp/image_6zgskq.png)
+    ![](/assets/docs/img/crisp/image_6zgskq.webp)
 2. Siirry gamepanelissa Palvelimesi » Files » oxide » plugins
 3. Lataa palvelimelle juuri lataamasi lisäosa. Tarkista, että lisäosan tiedostonimessä ei ole välilyöntiä. Tämä saattaa estää lisäosan toiminnan.
-    ![](https://cdn.bittivirta.fi/docimg/crisp/th7pnh3cpk_1wb9fdj.png)
+    ![](/assets/docs/img/crisp/th7pnh3cpk_1wb9fdj.webp)
 4. Lisäosan lataamisen jälkeen lisäosan pitäisi käynnistyä suoraan ilman reloadia. Jos lisäosa ei lähde toimimaan, tarkista lisäosan sivuilta oikeudet ja toimintaa varten vaadittavat lisäosat! Tarkista myös kohdassa 2. mainittu välilyönti! Voit käynnistää myös palvelimen uudestaan.
 
 # Hyödyllisiä lisäosia​

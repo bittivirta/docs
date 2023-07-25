@@ -15,7 +15,7 @@ Poistaaksesi kartan, sinun tulee olla kansiossa `/server/rust` . Valitse seuraav
 * `proceduralmap.#.#.#.map`
 * `procefuralmap.#.#.#.sav`
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_192otey.png)
+![](/assets/docs/img/crisp/image_192otey.webp)
 
 Poistamalla pelkän kartan jätät pelaajille kaikki tavarat inventoryyn sekä pelaajien blueprintit eivät katoa.
 
@@ -36,7 +36,7 @@ Valitse seuraavat tiedostot ja poista ne:
 * `player.states.#.db`
 * `player.tokens.db`
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1nfgnrx.png)
+![](/assets/docs/img/crisp/image_1nfgnrx.webp)
 
 Jos haluat poistaa pelaajadatan (inventoryn), mutta jättää blueprintit niin älä koske `player.blueprints.#.db` -tiedostoon.
 

@@ -1,5 +1,5 @@
 ---
 index: false
 title: Minecraft
-icon: https://cdn.bittivirta.fi/docimg/logo/minecraft.png
+icon: /assets/docs/img/universal/logo/minecraft.webp
 ---

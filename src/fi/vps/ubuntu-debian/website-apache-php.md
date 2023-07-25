@@ -7,7 +7,7 @@ Tällä ohjeella pääset helposti alkuun verkkosivujen luomisessa virtuaalipalv
 Ensin haemme mahdolliset päivitykset pakettienhallinnalle. Tämä onnistuu seuraavasti:  
 `sudo apt update`  
 
-![](https://cdn.bittivirta.fi/docimg/crisp/2120200522220843-6464d84a_1jjqaag.gif)
+![](/assets/docs/img/crisp/2120200522220843-6464d84a_1jjqaag.gif)
 
 Päivityksen kesto riippuu siitä, että kuinka moni repositorio on päivittynyt sen jälkeen, kun viimeksi päivitit repositoriot.  
 
@@ -20,7 +20,7 @@ Asennin ilmoittaa vielä paketin koon ja pyytää vahvistamaan asennuksen. Kun a
 
 Kun apache on asennettu, pääset palvelimesi verkkosivuille kirjoitamalla selaimen URL-osoitteeseen palvelimesi IP-osoitteen  
 
-![](https://cdn.bittivirta.fi/docimg/crisp/2320200522233603-cb604678-la_i7br9a.png)
+![](/assets/docs/img/crisp/2320200522233603-cb604678-la_i7br9a.webp)
 
 ## Muokataan sivuston sisältöä​
 
@@ -54,4 +54,4 @@ phpinfo();
 
 Tämän jälkeen siirry selaimella osoitteeseen [http://ip-osoite/test.php](http://ip-osoite/test.php). Jos näet vastaavanlaisen sivun, olet onnistunut PHP:n asennuksessa:  
 
-![](https://cdn.bittivirta.fi/docimg/crisp/php_1e6jxnc.png)
+![](/assets/docs/img/crisp/php_1e6jxnc.webp)

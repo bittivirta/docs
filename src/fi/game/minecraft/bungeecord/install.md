@@ -2,19 +2,19 @@
 Kun olet hankkinut itsellesi Minecraft-palvelimen, avaa palvelimesi hallintapaneeli osoitteessa [Gamepanel.fi](https://gamepanel.fi/) ja kirjaudu sisään.
 
 Siirry tiedostonhallintaan (tai yhdistä palvelimeen SFTP avulla)
-![](https://cdn.bittivirta.fi/docimg/crisp/13filemanager_xma422.png)
+![](/assets/docs/img/crisp/13filemanager_xma422.webp)
 
 
 Täällä voit poistaa kaikki vanhat tiedostot ja kansiot.
 
 Kun olet poistanut nämä tiedostot voit siirtyä [lataamaan waterfall-x.jar](https://papermc.io/downloads#Waterfall) tiedoston PaperMC:n sivustolta.
-![](https://cdn.bittivirta.fi/docimg/crisp/14waterfall-download_1lsqpwd.png)
+![](/assets/docs/img/crisp/14waterfall-download_1lsqpwd.webp)
 
 Waterfall on sama kuin Bungeecord, mutta optimoitu suuremmille pelaajamäärille.
 
 Kun olet ladannut uusimman tai haluamasi waterfall-x.jar tiedoston, siirry takaisin palvelimesi tiedostonhallintaan ja lataa tiedostoihin waterfall-x.jar tiedosto. Muista nimetä tämä tiedosto uudelleen **server.jar** nimiseksi tiedostoksi. Muuten palvelin ei käynnisty.
 
-![](https://cdn.bittivirta.fi/docimg/crisp/15upload_jl5854.png)
+![](/assets/docs/img/crisp/15upload_jl5854.webp)
 
 Tämän jälkeen voitkin suoraan siirtyä palvelimen konsoliin ja käynnistää palvelimen ensimmäistä kertaa, jotta palvelin lataa tarvittavat tiedostot.
 

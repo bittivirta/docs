@@ -1,5 +1,5 @@
 ---
 index: false
 title: Valheim
-icon: https://cdn.bittivirta.fi/docimg/logo/valheim.png
+icon: /assets/docs/img/logo/valheim.webp
 ---

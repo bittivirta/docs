@@ -3,15 +3,15 @@ Voit päivittää palvelusi optioita lennossa, eli kesken tilauskauden. Jos käy
 
 Palvelun päivittäminen tapahtuu sivuillamme, kun kirjaudut asiakasalueelle, siirryt "Palveluni" » "Palveluni" ja valitset palvelun, jonka haluat päivittää. Palvelun tiedot-sivulla vasemmassa palkissa, kohdassa "Toiminnot" valitse "Vaihda optioita".  
 
-![](https://cdn.bittivirta.fi/docimg/fi/asiakasalue/optiot-1.png =500x)
+![](/assets/docs/img/fi/asiakasalue/optiot-1.webp =500x)
 
 Valitse haluamasi optiot ja klikkaa "Jatka". 
 
-![](https://cdn.bittivirta.fi/docimg/fi/asiakasalue/optiot-2.png)
+![](/assets/docs/img/fi/asiakasalue/optiot-2.webp)
 
 Noudata sivuston näyttämiä ohjeita ja maksa luotu lasku. Palvelusi päivitetään heti, kun maksusi on vahvistunut. Mikäli kuitenkin palvelu ei automaattisesti vahvistu, ota yhteyttä asiakaspalveluun niin autamme!
 
-![](https://cdn.bittivirta.fi/docimg/fi/asiakasalue/optiot-3.png)
+![](/assets/docs/img/fi/asiakasalue/optiot-3.webp)
 
 :::info Hinnoittelu
 Huomaathan, että päivityksen summa on pienempi, kuin sivustollamme listattu hinta - sillä listahintamme ovat kuukauden hintoja. Näissä hinnoissa on huomitu vain jäljellä oleva aika.
