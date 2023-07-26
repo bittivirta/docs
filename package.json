@@ -1,6 +1,6 @@
 {
   "name": "bittivirta-docs",
-  "version": "0.0.0",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -38,6 +38,7 @@
     ]
   },
   "engines": {
-    "node": ">=16.14"
+    "node": ">=16.14",
+    "pnpm": ">=8.6"
   }
 }
