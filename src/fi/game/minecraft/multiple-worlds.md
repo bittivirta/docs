@@ -5,7 +5,7 @@
 # 1. Valmistele palvelin omalle maailmallesi​
 * Varmista, että palvelin käyttää Paper-palvelinversiota. Näet tämän kirjoittamalla konsoliin komennon version ja painamalla enter.
 * Jos palvelimen versio ei ole Paper, voit päivittää sen tämän ohjeen mukaan: [tulossa]
-* Asenna plugin Multiverse Core palvelimellesi. Lataa Multiverse Core osoitteesta https://www.spigotmc.org/resources/multiverse-core.390/ klikkaamalla "Download Now"-painiketta ja noudata ohjetta "Manuaalinen pluginin asentaminen" tämän ohjeen mukaan: [tulossa]
+* Asenna plugin Multiverse Core palvelimellesi. Lataa Multiverse Core osoitteesta https://www.spigotmc.org/resources/multiverse-core.390/ klikkaamalla "Download Now"-painiketta ja noudata [pluginin asennus ohjetta](https://docs.bittivirta.fi/fi/game/minecraft/install-plugins).
 * Käynnistä palvelimesi uudelleen
 
 # 2. Ladataan oma maailma palvelimelle​
