@@ -1,5 +1,0 @@
-# Laskutus
-
-Tavallisesti kaikki Bittivirran tilaukset maksetaan etukäteen, eli tuote lähetetään tai palvelu aktivoidaan vasta - kun lasku on maksettu. Jos kuitenkin tarvitset palvelut heti käyttöösi tai yrityksesi vaatii laskutuksen, voimme lähettää Suomalaisille yrityksille laskun 14 päivän maksuajalla. Laskuun lisätään 10€+alv 24% laskutuslisä manuaalisesti tehtävän työn takia.
-
-Laskutuksen saat käyttöösi kysymällä tätä asiakaspalvelustamme. Voit ottaa meihin yhteyttä chat-ikkunan kautta tai lähettämällä sähköpostia osoitteeseen :envelope: [tuki@bittivirta.fi](mailto:tuki@bittivirta.fi).
