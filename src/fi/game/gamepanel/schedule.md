@@ -10,7 +10,7 @@ Gamepanelissa on mahdollista ajastaa toimintoja. Voit ajastaa esimerkiksi palvel
 2. Valitse palvelin, jolle haluat ajastaa toimintoja
 3. Valitse "Schedules" -välilehti
 4. Klikkaa "Add schedule" -painiketta
-   ![Ajastetut toiminnot](/assets/docs/img/en/game-servers/gamepanel/schedules.webp =500x)
+   ![Ajastetut toiminnot](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/schedules.webp =500x)
 5. Luo ajastettu toiminto täyttämällä uuden toiminnon tiedot
 
 ## Uuden toiminnon tiedot
@@ -26,7 +26,7 @@ Gamepanelissa on mahdollista ajastaa toimintoja. Voit ajastaa esimerkiksi palvel
 9. Onko toiminto aktiivinen
 10. Luo uusi ajastettu toiminto
 
-![Ajastetun toiminnon luonti](/assets/docs/img/en/game-servers/gamepanel/new-schedule.webp =500x)
+![Ajastetun toiminnon luonti](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/new-schedule.webp =500x)
 
 ## Ajastetun toiminnon ajan määrittäminen
 
@@ -55,7 +55,7 @@ Esimerkkejä:
 
 ## Ajastetun toiminnon toimintojen määrittäminen
 
-![Toiminnon lisääminen](/assets/docs/img/en/game-servers/gamepanel/schedule-new-task.webp)
+![Toiminnon lisääminen](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/schedule-new-task.webp)
 
 Ajastetuilla toiminnoilla voi ajaa useita komentoja ja toimintoja kerralla. Voit lisätä uuden komennon painamalla "New task" -painiketta.
 
@@ -67,4 +67,4 @@ Ajastetuilla toiminnoilla voi ajaa useita komentoja ja toimintoja kerralla. Voit
 2. Payload: Komento, joka lähetetään palvelimelle tai virta-toiminto, joka lähetetään palvelimelle.
 3. Jatketaanko seuraavien komentojen lähetystä, jos tämä komento epäonnistuu
 4. Luo/tallenna toiminto
-![Toiminnon valinnat](/assets/docs/img/en/game-servers/gamepanel/schedule-new-task-dialog.webp)
+![Toiminnon valinnat](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/schedule-new-task-dialog.webp)

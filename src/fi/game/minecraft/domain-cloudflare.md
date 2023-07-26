@@ -2,12 +2,12 @@
 ## 1. Haetaan IP-osoite ja portti​
 Kirjaudu Gamepaneliin osoitteessa [https://gamepanel.fi/](https://gamepanel.fi/), valitse palvelin jolle teemme osoitteen. Kopioi IP-osoite sekä portti.
 
-![](/assets/docs/img/crisp/image_1pifx1h.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/image_1pifx1h.webp)
 
 ## 2. Luodaan tietue CloudFlareen​
 Siirry CloudFlaressa DNS-hallintaan (valitse verkkotunnuksesi ja klikkaa DNS-painiketta ylhäällä sivuston hallinnassa)  ja lisää seuraava tietue:
 
-![](/assets/docs/img/crisp/image_15633yb.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/image_15633yb.webp)
 
 Tyyppi on `SRV`. Name-kohtaan voit laittaa minkä tahansa tekstin, jonka haluat jolla palvelimelle liitytään (jos haluat, että etuliitettä ei ole, laita name-kentään `@`). Kuvan esimerkin mukaan osoitteeksi tulee sirkulaattori.fi.
 

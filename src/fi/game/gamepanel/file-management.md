@@ -14,7 +14,7 @@ Suurien tiedostojen hallinta (yli 100MB) selaimessa ei ole mahdollista. Suurempi
 1. Kirjaudu Gamepaneliin
 2. Valitse palvelin, jonka tiedostoja haluat muokata
 3. Valitse "Files"
-    ![Tiedostojen hallinta](/assets/docs/img/en/game-servers/gamepanel/files.webp =500x)
+    ![Tiedostojen hallinta](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/files.webp =500x)
 4. Muokkaa tiedostoja
 
 Lisää ohjeita tiedostojen hallinnasta sivulla [Selaimen tiedostomuokkain](/pelipalvelimet/gamepanel/tiedostomuokkain.html).
@@ -86,4 +86,4 @@ Näet palvelimen kirjautumistiedot kätevästi myös Gamepanelista palvelimen si
 3. Käyttäjäsi palvelinkohtainen käyttäjänimi
 4. Palvelimen osoite, joka ei sisällä porttia
 
-![Palvelimen Gamepanel-asetukset](/assets/docs/img/en/game-servers/gamepanel/settings.webp)
+![Palvelimen Gamepanel-asetukset](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/settings.webp)

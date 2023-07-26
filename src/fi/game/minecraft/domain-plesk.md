@@ -2,23 +2,23 @@
 ## 1. Haetaan IP-osoite ja portti​
 Kirjaudu Gamepaneliin osoitteessa https://gamepanel.fi/, valitse palvelin jolle teemme osoitteen. Kopioi IP-osoite sekä portti.
 
-![](/assets/docs/img/crisp/image_1pifx1h.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/image_1pifx1h.webp)
 
 ## 2. Luodaan tietue Pleskissä
 Kirjaudu asiakasalueelle ja siirry "Minun..." » "Palveluni" » (Valitse webhotellisi, jossa haluamasi verkkotunnuksen hallinta sijaitsee):
-![](/assets/docs/img/crisp/screenshot-2022-08-18-at-15472_1i5d2ku.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/screenshot-2022-08-18-at-15472_1i5d2ku.webp)
 
 ​Valitse "Kirjaudu Pleskiin":
-![](/assets/docs/img/crisp/screenshot-2022-08-18-at-17083_1cvd1xr.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/screenshot-2022-08-18-at-17083_1cvd1xr.webp)
 
 Valitse verkkotunnuksesi ja valitse "DNS-asetukset":
-![](/assets/docs/img/crisp/screenshot-2022-08-18-at-17111_142xl9q.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/screenshot-2022-08-18-at-17111_142xl9q.webp)
 
 Valitse "Lisää tietue"-painike:
-![](/assets/docs/img/crisp/screenshot-2022-08-18-at-17135_1l3n2hh.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/screenshot-2022-08-18-at-17135_1l3n2hh.webp)
 
 Täytä tiedot seuraavasti (selitykset alempana):
-![](/assets/docs/img/crisp/screenshot-2022-08-18-at-17182_d971ko.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/screenshot-2022-08-18-at-17182_d971ko.webp)
 
 * **Tietuetyyppi** on `SRV`.
 * **Palvelun nimi** on `minecraft`,

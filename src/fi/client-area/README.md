@@ -14,6 +14,6 @@ Yhdellä käyttäjätilillä voi olla useampi asiakastili. Voit vaihtaa asiakast
 
 1. Kirjaudu käyttäjätilillesi osoitteessa [bittivirta.cloud/login](https://bittivirta.cloud/login)
 2. Valitse "Vaihda asiakastili"
-    ![](/assets/docs/img/fi/asiakasalue/asiakastili.webp =500x)
+    ![](https://docs.bittivirta.fi/assets/docs/img/fi/asiakasalue/asiakastili.webp =500x)
 3. Valitse asiakastili, jolle haluat kirjautua klikkaamalla "Vaihda asiakastili"
-    ![](/assets/docs/img/fi/asiakasalue/asiakastilit.webp)
+    ![](https://docs.bittivirta.fi/assets/docs/img/fi/asiakasalue/asiakastilit.webp)

@@ -12,7 +12,7 @@ Plugineita löydät esimerkiksi SpigotMC:n verkkosivuilta (https://www.spigotmc.
 
 Kun olet ladannut pluginin palvelimellesi, uudelleenkäynnistä palvelimesi ja pluginisi pitäisi toimia. Huomioithan kuitenkin, että jotkin pluginit vaaitvat toisen pluginin toimiakseen.
 
-![](/assets/docs/img/crisp/image_1igfrm1.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/image_1igfrm1.webp)
 
 ## Suosittuja plugineita:​
 [WORLDEDIT](https://dev.bukkit.org/projects/worldedit) - Muokkaa maailmaa voimakkailla, monipuolisilla työkaluilla ja hämmästytä ystäväsi suurilla rakennelmilla

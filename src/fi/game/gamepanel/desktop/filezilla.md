@@ -16,18 +16,18 @@ Avaa FileZilla ja täytä tiedot seuraavasti
 4. Palvelimen portti, joka on 2022.
 5. Valitse "Pikayhdistä"
 
-![FileZilla, pikayhdistäminen](/assets/docs/img/fi/pelipalvelimet/windows/sftp/filezilla/pikayhdista.webp =600x)
+![FileZilla, pikayhdistäminen](https://docs.bittivirta.fi/assets/docs/img/fi/pelipalvelimet/windows/sftp/filezilla/pikayhdista.webp =600x)
 
 Ensimmäisellä kerralla kun yhdistät FileZillalla palvelimelle, se kysyy haluatko tallentaa palvelimen salasanan. Mikäli vain sinä käytät tietokonettasi, eikä esimerkiksi muilla perheenjäsenilläsi tai työntekijöillä ole pääsyä tietokoneellesi - voit tallentaa salasanan huoletta.
 
 Aina, kun yhdistät palvelimelle – jolle et ole ennen yhdistänyt, pyytää FileZilla varmistamaan palvelimen tunnisteen. Voit vahvistaa, että luotat aina tähän isäntään ja tämän jälkeen OK. Näin ollen FileZilla ei kysy tunnisteen tarkistamista uudelleen ennen tunnisteiden poistamista.
 
-![FileZilla](/assets/docs/img/fi/pelipalvelimet/windows/sftp/filezilla/fingerprint.webp =400x)
+![FileZilla](https://docs.bittivirta.fi/assets/docs/img/fi/pelipalvelimet/windows/sftp/filezilla/fingerprint.webp =400x)
 
 :::tip Vinkki!
 Ensimmäisen yhdistämisen jälkeen voit käyttää pikayhdistysvalikkoa:
 
-![FileZilla, pikayhdistäminen](/assets/docs/img/fi/pelipalvelimet/windows/sftp/filezilla/pikayhdistysvalikko.webp =400x)
+![FileZilla, pikayhdistäminen](https://docs.bittivirta.fi/assets/docs/img/fi/pelipalvelimet/windows/sftp/filezilla/pikayhdistysvalikko.webp =400x)
 :::
 
 ## Tiedostojen siirto ja hallinta
@@ -35,7 +35,7 @@ Ensimmäisen yhdistämisen jälkeen voit käyttää pikayhdistysvalikkoa:
 FileZilla on hyvin käytännöllinen ohjelmisto tiedostojen siirtoon ja hallintaan. Voit siirtää tiedostoja kätevästi "vedä & pudota"-toiminnolla.
 
 <VideoPlayer
-    src="/assets/docs/img/fi/pelipalvelimet/windows/sftp/filezilla/tiedostojen-hallinta.webm"
+    src="https://docs.bittivirta.fi/assets/docs/img/fi/pelipalvelimet/windows/sftp/filezilla/tiedostojen-hallinta.webm"
     type="video/webm"
     autoplay
     loop
@@ -49,10 +49,10 @@ Voit muokata tiedostoja joko klikkaamalla tiedostoa oikealla hiiren napilla ja v
 Voit tehdä yllä mainitun asetuksen näin:
 
 1. Siirry asetuksiin
-    ![FileZilla, Windows - Asetuksiin navigointi](/assets/docs/img/fi/pelipalvelimet/windows/sftp/filezilla/asetukset.webp =300x)
+    ![FileZilla, Windows - Asetuksiin navigointi](https://docs.bittivirta.fi/assets/docs/img/fi/pelipalvelimet/windows/sftp/filezilla/asetukset.webp =300x)
 2. Valitse "Käyttöliittymä" » "Tiedostolistausket"
 3. Aseta "Tiedostojen tuplaklikkauksen toiminta" toiminnaksi "Näytä/Muokkaa"
-    ![FileZilla, Windows - Asetuksiin navigointi](/assets/docs/img/fi/pelipalvelimet/windows/sftp/filezilla/asetukset-tuplaklikkaus.webp =600x)
+    ![FileZilla, Windows - Asetuksiin navigointi](https://docs.bittivirta.fi/assets/docs/img/fi/pelipalvelimet/windows/sftp/filezilla/asetukset-tuplaklikkaus.webp =600x)
 
 ## Tiedostojen muokkausohjelma
 

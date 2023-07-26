@@ -1,5 +1,5 @@
 ---
 index: false
 title: Rust
-icon: /assets/docs/img/logo/rust.webp
+icon: https://docs.bittivirta.fi/assets/docs/img/logo/rust.webp
 ---

@@ -5,7 +5,7 @@ Kirjaudu omalle virtuaalipalvelimellesi käyttämällä SSH yhteyttä. Ohjeet SS
 
 Siirry TeamSpeakin sivustolle (https://teamspeak.com/en/downloads/#server) ja kopioi sieltä latauslinkki haluamallesi käyttöjärjestelmälle (linux 64-bit).
 
-![](/assets/docs/img/crisp/image_1bgdoo7.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/image_1bgdoo7.webp)
 
 Aja komennot (korvaa `$LINKKI` kopioimallasi linkillä, usein miten hiiren oikea klikkaus) yksi kerrallaan:
 ```
@@ -24,8 +24,8 @@ Ja käynnistä palvelin:
 
 Ensimmäisellä kerralla palvelimellesi tulee näkyviin erilaisia tunnuksia, ota käyttöösi tarpeelliset. Tarvitset palvelimen hallinnointia varten ainakin "Privilege key" avaimen, jonka voit syöttää palvelimelle yhdistettyäsi saadaksesi palvelimen hallintaoikeudet.
 
-![](/assets/docs/img/crisp/image_trwkkl.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/image_trwkkl.webp)
 
 Kun olet liittynyt palvelimelle TeamSpeak 3 Clientillä tietokoneellasi (käytä virtuaalipalvelimesi IP-osoitetta), voit ottaa hallintaroolisi itsekkesi siirtymällä "Permissions" » "Use Privilege Key" ja liittämällä saamasi tokenin (kuten ylemmässä kuvassa näkyy esimerkki).
 
-![](/assets/docs/img/crisp/image_axffht.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/image_axffht.webp)

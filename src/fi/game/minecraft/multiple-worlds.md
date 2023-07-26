@@ -11,16 +11,16 @@
 # 2. Ladataan oma maailma palvelimelle​
 1. Paina näppäimistösi näppäimiä Windows+R samanaikaisesti
 2. Kirjoita auenneen ruudun tekstikenttään teksti %appdata% ja kikkaa OK.
-    ![](/assets/docs/img/crisp/image_wae7n5.webp)
+    ![](https://docs.bittivirta.fi/assets/docs/img/crisp/image_wae7n5.webp)
 3. Avaa kansio .minecraft ja tämän jälkeen kansio saves.
 4. Klikkaa maailmaa, jonka haluat siirtää palvelimellesi oikealla hiiren painikkeella ja paketoi kansio zip-tiedostoon haluamallasi ohjelmistolla tai:
 5. Valitse "Lähetä kohteeseen..." » "Pakattu (zip) tiedosto"
-    ![](/assets/docs/img/crisp/image_1vn0z5j.webp)
+    ![](https://docs.bittivirta.fi/assets/docs/img/crisp/image_1vn0z5j.webp)
 6. Siirrä zip-tiedosto esim. työpöydälle tai ladattuihin tiedostoihin
 7. Siirry Gamepanelissa (https://gamepanel.fi/) tiedostojenhallintaan valitsemalla ensin palvelimesi, sitten "Management" ja "File Management".
 8. Lataa pakkaamasi zip-tiedosto palvelimelle käyttäen upload-painiketta ja valitsemalla tiedosto, jonka haluat tuoda palvelimelle.
 9. Etsi lataamasi tiedosto File Managementista, napsauta kolmea pistettä ja "Decompress"
-![](/assets/docs/img/crisp/image_6pdmxo.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/image_6pdmxo.webp)
 
 # 3. Maailman tuonti peliin​
 1. Anna itsellesi OP-oikeudet kirjoittamalla Gamepanelin konsoliin `op PELAAJA` jossa teksti PELAAJA on pelihahmosi nimi. Pelihahmosi nimen olet päättänyt ostaessasi Minecraftin. Saat tämän selville myös kirjoittamalla palvelimesi chattiin jotakin (paina `T`, kirjoita jotakin ja paina `Enter`)

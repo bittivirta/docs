@@ -13,7 +13,7 @@ Voit muokata palvelimesi tiedostoja selaimessa. Tämä on helppo tapa muokata yk
 5. Uuden tiedoston luonti
 6. Yksittäisen kohteen toiminnot
 
-![Tiedostomuokkain](/assets/docs/img/en/game-servers/gamepanel/file-manager.webp)
+![Tiedostomuokkain](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/file-manager.webp)
 
 ## Yksittäisen kohteen toiminnot
 
@@ -30,7 +30,7 @@ Voit muokata palvelimesi tiedostoja selaimessa. Tämä on helppo tapa muokata yk
 
 </div>
 
-![Kohteen toiminnot](/assets/docs/img/en/game-servers/gamepanel/file-actions.webp =200x)
+![Kohteen toiminnot](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/file-actions.webp =200x)
 
 </div>
 
@@ -41,8 +41,8 @@ Useamman kohteen toiminnot tulevat näkyviin, kun valitset useamman kohteen.
 1. Valitse kohteet
 2. Valitse toiminto (Siirrä, pakkaa ja poista)
 
-![Useamman kohteen toiminnot](/assets/docs/img/en/game-servers/gamepanel/multiple-files.webp =500x)
+![Useamman kohteen toiminnot](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/multiple-files.webp =500x)
 
 :bulb: Voit myös valita kaikki kohteet klikkaamalla ruutua "/home/container/..." -polun vieressä:
 
-![Kaikkien kohteiden valinta](/assets/docs/img/en/game-servers/gamepanel/select-all.webp =300x)
+![Kaikkien kohteiden valinta](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/select-all.webp =300x)

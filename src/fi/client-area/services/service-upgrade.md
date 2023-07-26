@@ -5,9 +5,9 @@ Voit vaihtaa palvelupakettia helposti kesken tilauskauden. Jos käytössäsi on 
 Palvelun päivittäminen tapahtuu sivuillamme, kun kirjaudut asiakasalueelle, siirryt "Palveluni" » "Palveluni" ja valitset palvelun, jonka haluat päivittää. Palvelun tiedot-sivulla vasemmassa palkissa, kohdassa "Toiminnot" valitse "Vaihda palvelupakettia".
 
 1. Valitse "Vaihda palvelupakettia"
-    ![Palvelun päivittäminen](/assets/docs/img/fi/asiakasalue/paketti-1.webp)
+    ![Palvelun päivittäminen](https://docs.bittivirta.fi/assets/docs/img/fi/asiakasalue/paketti-1.webp)
 
 2. Valitse haluamasi palvelupaketti ja klikkaa "Valitse palvelu"
-    ![Palvelun päivittäminen](/assets/docs/img/fi/asiakasalue/paketti-2.webp)
+    ![Palvelun päivittäminen](https://docs.bittivirta.fi/assets/docs/img/fi/asiakasalue/paketti-2.webp)
 
 3. Anna mahdollinen alennuskoodi, valitse maksutapa ja jatka kassalle.

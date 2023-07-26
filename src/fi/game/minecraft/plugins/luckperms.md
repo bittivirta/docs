@@ -1,5 +1,5 @@
 # Luckperms
-![](/assets/docs/img/crisp/luckperms_yojx8p.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/luckperms_yojx8p.webp)
 
 ## LuckPerms lyhyesti​
 LuckPerms on oikeuksien hallintaan tarkoitettu Minecraft palvelinplugin, joka on saatavilla Bukkit/Spigot/Paper, BungeeCord ja monelle muulle alustalle. LuckPerms mahdollistaa palvelimien ylläpitäjien rajoittaa komentoja, ominaisuuksia ja muita käyttäjäryhmien ja käyttäjien avulla ja välillä.
@@ -45,7 +45,7 @@ Nyt kun on perusteet hallussa ja plugin on asennettu, lähdemme liikkeelle itse 
 Ensimmäinen asia, mitä sinun tulee tehdä - on ottaa oikeudet muokata permissioneita. Kun LuckPerms asennetaan ensimmäistä kertaa - kellään ei ole oikeuksia käyttää LuckPermsin komentoja.
 
 ### Antaaksesi oikeuksia, kirjaudu palvelimesi konsoliin ja kirjoita komento: `lp user <pelaajanimesi> permission set luckperms.* true`
-![](/assets/docs/img/crisp/1624735639756_1sbtq45.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/1624735639756_1sbtq45.webp)
 
 Tässä komennossa asetamme itsellemme oikeuden `luckperms.*`. Komennon `*`-merkki tarkoittaa kaikkia permissioneita. Koska merkin edessä on teksti `luckperms.`, meillä on oikeus vain kaikkiin permissioneihin, jotka sillä alkavat.
 
@@ -57,20 +57,20 @@ Voimme luoda pelaajaryhmän komennolla `lp creategroup <group>`.
 Teemme tässä esimerkissä admin-groupin ja lisäämme sille oikeuden.
 
 #### Luodaan group:
-![](/assets/docs/img/crisp/1624739218226_ph7tsk.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/1624739218226_ph7tsk.webp)
 
 #### Lisätään groupille oikeus Minecraftin /ban -komentoon
 `lp group admin permission set minecraft.command.ban true`
-![](/assets/docs/img/crisp/1624739267750_1uckk7w.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/1624739267750_1uckk7w.webp)
 
 #### Jos myöhemmin haluat poistaa permissionin
 `lp group admin permission unset minecraft.command.ban`
-![](/assets/docs/img/crisp/1624739408229_1u6sslw.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/1624739408229_1u6sslw.webp)
 
 ### Pelaajan lisääminen grouppiin​
 Voit lisätä pelaajalle groupin permissionit lisäämällä käyttäjälle "parentin"
 `lp user <pelaaja> parent add <group>`
-![](/assets/docs/img/crisp/1624739533449_62mxe3.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/1624739533449_62mxe3.webp)
 
 ### Asetetaan group perimään oikeudet toiselta groupilta​
 Voit tarvita tätä kun haluat esim. ottaa default-groupin permissionit muille groupeille, kuten moderaattorit tai VIP-jäsenyydet.
@@ -78,7 +78,7 @@ Voit tarvita tätä kun haluat esim. ottaa default-groupin permissionit muille g
 Komento `lp group <group> parent add <perittävä group>`
 
 Tässä esimerkissä admin-groupille lisätään samat oikeudet, kuin modeilla on ja siitä vielä edelleen modeille default-oikeudet. Näin ollen myös admineilla on default-groupin oikeudet.
-![](/assets/docs/img/crisp/1624743824105_1ly3cop.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/1624743824105_1ly3cop.webp)
 
 ### Poistetaan group pelaajalta​
 Voit poistaa groupin pelaajalta komennolla `lp user <pelaaja> parent remove <group>`.

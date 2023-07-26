@@ -10,7 +10,7 @@ WinSCP on asennettavissa sen verkkosivuilta. Pääset WinSCP:n lataussivulle kli
 
 Kun avaat WinSCP:n, pyytää se yhdistämään palvelimelle. Jos kirjautuminen ei jostakin syystä aukea - löydät kirjautumisikkunan valitsemalla ohjelmiston ylävalikosta "Istunto" » "Uusi istunto...":
 
-![WinSCP - Uusi istunto](/assets/docs/img/fi/pelipalvelimet/windows/sftp/winscp/uusi-istunto.webp =300x)
+![WinSCP - Uusi istunto](https://docs.bittivirta.fi/assets/docs/img/fi/pelipalvelimet/windows/sftp/winscp/uusi-istunto.webp =300x)
 
 1. Jos sinulla on jo ennestään kohteita listassa, valitse "Uusi kohde"
 2. Liitä palvelimen osoite. Voit liittää tähän SFTP-osoitteen, joka on mallia `sftp://gX.bitti.gg:2022`. Näin SFTP ja portti asettautuvat itsekseen
@@ -20,14 +20,14 @@ Kun avaat WinSCP:n, pyytää se yhdistämään palvelimelle. Jos kirjautuminen e
 6. Salasana, joka on Gamepanel-käyttäjän salasana. Asiakasalueeen salasana ei ole sama.
 7. Valitse "Tallenna". Jos et halua tallentaa palvelimen tietoja tietokoneellesi, valitse "Kirjaudu".
 
-![WinSCP - Uusi istunto](/assets/docs/img/fi/pelipalvelimet/windows/sftp/winscp/istunto-tallenna.webp =600x)
+![WinSCP - Uusi istunto](https://docs.bittivirta.fi/assets/docs/img/fi/pelipalvelimet/windows/sftp/winscp/istunto-tallenna.webp =600x)
 
 1. Halutessasi voit vaihtaa kohteen nimen, jotta se olisi helpompi muistaa
 2. Halutessasi voit määrittää kohteelle kansion
 3. Voit tallentaa salasanan, mikäli tietokoneesi ei ole jaettu muiden henkilöiden kanssa
 4. Tallenna painamalla OK
 
-![WinSCP - Uusi istunto](/assets/docs/img/fi/pelipalvelimet/windows/sftp/winscp/istunto-nimea.webp =300x)
+![WinSCP - Uusi istunto](https://docs.bittivirta.fi/assets/docs/img/fi/pelipalvelimet/windows/sftp/winscp/istunto-nimea.webp =300x)
 
 Voit yhdistää tallennettuun kohteeseen joko tuplaklikkaamalla sen nimeä tai valitsemalla sen ja painamalla "Kirjaudu".
 
@@ -38,7 +38,7 @@ WinSCP on hyvin käytännöllinen ohjelmisto tiedostojen siirtoon ja hallintaan.
 WinSCP voittaa FileZillan tiedostojen muokkaamisessa. Tiedoston tallentamista ei tarvitse erikseen vahvistaa ja oletuksena tiedoston tuplaklikkaaminen muokkaa tiedostoa.
 
 <VideoPlayer
-    src="/assets/docs/img/fi/pelipalvelimet/windows/sftp/winscp/tiedostojen-hallinta.webm"
+    src="https://docs.bittivirta.fi/assets/docs/img/fi/pelipalvelimet/windows/sftp/winscp/tiedostojen-hallinta.webm"
     type="video/webm"
     autoplay
     loop

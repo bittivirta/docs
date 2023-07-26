@@ -8,7 +8,7 @@ Ihan ensimmäisenä, tarvitset tietoosi palvelimen IP-osoitteesi ja salasanan. N
   
 Löydät palvelimen salasanan salasanakentän viereistä silmänappulaa painamalla ja IP-osoitteen löydät kohdasta IPv4-osoite.  
 
-![](/assets/docs/img/crisp/ip_1manl24.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/ip_1manl24.webp)
 
 ## Yhdistäminen palvelimelle​
 
@@ -34,7 +34,7 @@ Komentorivipohjaisilla ohjelmilla voit käyttää komentoa `ssh root@osoitteesi`
 
 Ensimmäisellä yhteyskerralla SSH ilmoittaa, että palvelimelle ei ole yhdistetty ennen. Tallenna palvelimen "sormenjälki" hyväksymällä tallennus (windowsilla kirjoita yes ja paina enter).  
 
-![](/assets/docs/img/crisp/22terminal_xk6lgt.webp)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/22terminal_xk6lgt.webp)
 
 Palvelin saattaa pyytää sinua myös vaihtamaan root-käyttäjän salasanan ensimmäisellä kerralla. Jos palvelin ei pyydä vaihtamaan salasanaa, voit vaihtaa sen komennolla passwd.  
 
@@ -52,6 +52,6 @@ sudo apt dist-upgrade -y #päivitetään palvelimen ohjelmistot ja niiden riippu
 sudo reboot #käynnistetään palvelin uudelleen
 ```
 
-![](/assets/docs/img/crisp/update_4lswp.gif)
+![](https://docs.bittivirta.fi/assets/docs/img/crisp/update_4lswp.gif)
 
 Tämän jälkeen olet vapaa tekemään palvelimella mitä haluat (Bittivirran käyttöehtoja noudattaen)! Onnea matkaan!

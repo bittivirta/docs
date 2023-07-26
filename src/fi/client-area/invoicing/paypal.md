@@ -9,14 +9,14 @@ Lisätietoa PayPalista löydät heidän omilta sivuilta [https://www.paypal.com/
 ### Olemassa oleva lasku
 1. Kirjaudu asiakasalueelle osoitteessa [bittivirta.cloud/login](https://bittivirta.cloud/login)
 2. Valitse "Minun..." » "Laskuni"
-    ![](/assets/docs/img/fi/asiakasalue/laskuni.webp)
+    ![](https://docs.bittivirta.fi/assets/docs/img/fi/asiakasalue/laskuni.webp)
 3. Valitse lasku klikkaamalla laskua, jonka haluat maksaa
-    ![](/assets/docs/img/fi/asiakasalue/laskut.webp)
+    ![](https://docs.bittivirta.fi/assets/docs/img/fi/asiakasalue/laskut.webp)
 4. Valitse maksutavaksi "PayPal" ja maksa PayPal-tilillä ylemmällä, keltaisella painikkeella tai pankkikortilla harmaalla painikkeella.
-    ![](/assets/docs/img/fi/asiakasalue/paypal-maksu.webp)
+    ![](https://docs.bittivirta.fi/assets/docs/img/fi/asiakasalue/paypal-maksu.webp)
 5. Seuraa PayPalin antamia maksuohjeita
 
 ### Uusi tilaus
 1. Tee uusi tilaus ja siirry kassalle
 2. Valitse maksutavaksi PayPal ja jatka maksamaan tilaus
-    ![](/assets/docs/img/fi/asiakasalue/paypal-kassa.webp)
+    ![](https://docs.bittivirta.fi/assets/docs/img/fi/asiakasalue/paypal-kassa.webp)

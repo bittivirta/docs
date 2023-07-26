@@ -7,16 +7,16 @@ Traficomin esite DNSSEC-ominaisuudesta löytyy [täältä](https://www.traficom.
 Avaa Plesk asiakasalueella OneClick-kirjautumisella tai kirjaudu Pleskiin osoitteessa [https://plesk.bittivirta.cloud/](https://plesk.bittivirta.cloud/)
 
 ## 2. Valitse verkkotunnus jota hallitset, valitse "Isännöinti ja DNS" ja valitse DNNSSEC​
-![Valitse verkkotunnuksesi, seuraavaksi isännöinti ja dns ja viimeisenä DNSSEC](/assets/docs/img/fi/web/dnssec/go-to-dnssec.webp)
+![Valitse verkkotunnuksesi, seuraavaksi isännöinti ja dns ja viimeisenä DNSSEC](https://docs.bittivirta.fi/assets/docs/img/fi/web/dnssec/go-to-dnssec.webp)
 
 ## 3. Allekirjoita DNS-vyöhyke​
-![Klikkaa allekirjoita dns-vyöhyke -painiketta](/assets/docs/img/fi/web/dnssec/sign.webp)
+![Klikkaa allekirjoita dns-vyöhyke -painiketta](https://docs.bittivirta.fi/assets/docs/img/fi/web/dnssec/sign.webp)
 
 ## 4. Täytä avaintietolomake ja paina OK​
 Voit jättää tiedot oletusarvoisiksi.
-![Kenttien arvot jätetään oletusarvoisiksi, ellei tiedossa ole muutoksia](/assets/docs/img/fi/web/dnssec/form.webp)
+![Kenttien arvot jätetään oletusarvoisiksi, ellei tiedossa ole muutoksia](https://docs.bittivirta.fi/assets/docs/img/fi/web/dnssec/form.webp)
 
 ## 5. Lähetä DS-resurssitietueet verkkotunnuksen rekisteröitsijälle​
-![Valmiit DS-tietueet](/assets/docs/img/fi/web/dnssec/done.webp)
+![Valmiit DS-tietueet](https://docs.bittivirta.fi/assets/docs/img/fi/web/dnssec/done.webp)
 
 Bittivirralla ei ole vielä käytössä automaattista DNSSEC-avaimien talletusta, joten joudut olemaan yhteydessä asiakaspalveluun. Asiakaspalvelu lisää DNSSEC-tietueesi puolestasi verkkotunnuksen rekisteriin. Sinun ei tarvitse lähettää DNSSEC-tietueita meille, löydämme ne nimipalvelimiltasi jos käytät Bittivirran nimipalvelimia tai olet lisännyt tietueet nimipalvelimillesi. Jos käytössäsi on muu verkkotunnuksen palveluntarjoaja, lähetä DS-tietueet heille heidän järjestelmien kautta.
