@@ -1,0 +1,43 @@
+# Modien asentaminen​
+Tässä artikkelissa ohjeistetaan palvelimen modien asentaminen. Kohdekansion löydät Gamepanelissa, kun navigoit:
+
+Palvelimesi » Files » oxide » plugins
+
+Jos palvelimellasi ei ole Oxidemod -lisäosaa käytössä, niin tutustu sen asentamiseen täältä: [tulossa]
+
+Osa lisäosista vaatii käyttöoikeuksien antamista. Tutustu tästä käyttöoikeuksien antamiseen:
+
+
+# Kuinka asennan lisäosan?​
+Lisäosien asentaminen on yksinkertaista.
+
+1. Lataa haluamasi lisäosa. Esimerkkinä toimii Gather Manager (alla tarkempia tietoja lisäosan toiminnasta)!
+    ![](https://docs.bittivirta.fi/assets/docs/img/crisp/image_6zgskq.webp)
+2. Siirry gamepanelissa Palvelimesi » Files » oxide » plugins
+3. Lataa palvelimelle juuri lataamasi lisäosa. Tarkista, että lisäosan tiedostonimessä ei ole välilyöntiä. Tämä saattaa estää lisäosan toiminnan.
+    ![](https://docs.bittivirta.fi/assets/docs/img/crisp/th7pnh3cpk_1wb9fdj.webp)
+4. Lisäosan lataamisen jälkeen lisäosan pitäisi käynnistyä suoraan ilman reloadia. Jos lisäosa ei lähde toimimaan, tarkista lisäosan sivuilta oikeudet ja toimintaa varten vaadittavat lisäosat! Tarkista myös kohdassa 2. mainittu välilyönti! Voit käynnistää myös palvelimen uudestaan.
+
+# Hyödyllisiä lisäosia​
+## Gather Manager​
+https://umod.org/plugins/gather-manager
+
+Gather Manager on lisäosa, jolla pystytään vaikuttamaan pelaajan keräämällä saataviin resursseihin. Komennot suoritetaan gamepanelissa.
+
+* `gather.rate dispenser Wood 10` - Anna pelaajien kerätä puuta 10-kertaisesti!
+* `gather.rate dispenser Stones 5` - Anna pelaajien kerätä kiveä 5-kertaisesti!
+* `gather.rate dispenser Cloth 10` - Anna pelaajien kerätä kangasta 10-kertaisesti!
+* `gather.rate pickup Stones 10` - Anna pelaajien kerätä maasta kiviä 10-kertaisesti!
+* `gather.rate quarry Stones 20` - Anna pelaajien louhia kiviä 20-kertaisesti!
+* `gather.rate survey "Sulfur Ore" 5` - Anna pelaajien kerätä rikkiä maastoa kartoittaessa (Survey charge) 5-kertaisesti!
+* `gather.rate dispenser wood 2` & `gather.rate dispenser * 10` - Anna pelaajien kerätä puuta 2-kertaisesti sekä kaikkea muuta 10-kertaisesti!
+
+## NTeleportation​
+https://umod.org/plugins/nteleportation
+
+NTeleportation on lisäosa, jolla pelaaja voi teleportata toisiin pelaajiin tai itse asettamaansa kotiin. Alla yleisimmät komennot
+
+* `/home, /sethome, /removehome` - `nteleportation.home` - Teleporttaus kotiin
+* `/tpr, /tpa, /tpc` -  `nteleportation.tpr` - Teleporttauspyyntö toiseen pelaajaan (/tpr), Pyynnön hyväksyminen (/tpa), Kieltäytyminen pyynnöstä (/tpc)
+* `/tpb` - `nteleportation.tpb` - Teleporttaus edeltävään sijaintiin
+* `/tp` - `nteleportation.tp` - Teleporttaus toiseen pelaajaan

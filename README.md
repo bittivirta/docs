@@ -1,41 +1,36 @@
-# Website
+<picture height="60">
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.bittivirta.fi/graphics/logo/2023/bittivirta/svg/logo-alt.svg">
+    <img alt=“Bittivirta Logo” src="https://cdn.bittivirta.fi/graphics/logo/2023/bittivirta/svg/logo.svg" height="60">
+</picture>
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+# Bittivirta Docs
 
-### Installation
+Welcome to the Bittivirta documentation repository. This repository contains all the documentation content. The documentation is available at [docs.bittivirta.fi](https://docs.bittivirta.fi).
 
-```
-$ yarn
-```
+You are free to contribute to the documentation by creating a pull request to this repository. However, you will need to follow the license terms of this repository, as the documentation is Bittivirta's intellectual property.
 
-### Local Development
+## License
 
-```
-$ yarn start
-```
+This documentation is licensed under **proprietary** license, which means that you are not allowed to copy, modify or redistribute the documentation without a written permission from Bittivirta.
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+You are allowed to fork this repository and create pull requests to this repository. However, you are not allowed to use the documentation in any other way than forking and creating pull requests.
 
-### Build
+Read the full license terms from [LICENSE.md](LICENSE.md).
 
-```
-$ yarn build
-```
+## Contributing
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+You can contribute to the documentation by creating a pull request to this repository. The pull request will be reviewed by Bittivirta and merged if it is accepted.
 
-### Deployment
+If you see any errors or would like to suggest something in the documentation, please create an issue to this repository or contact Bittivirta directly.
 
-Using SSH:
+### Development build
 
-```
-$ USE_SSH=true yarn deploy
-```
+To run the docs locally, you need to have [Node.js](https://nodejs.org/en/) and [pnpm](https://pnpm.io/) installed. After installing the dependencies, you can run the development build with command `pnpm dev`.
 
-Not using SSH:
+### Production build
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+To build the documentation for production, you can run the command `pnpm build`. The production build will be available in the `dist` directory.
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## Discord Community
+
+Bittivirta has a public Discord Community, and you are free to join and discuss with us at [discord.gg/bittivirta](https://discord.gg/bittivirta).

@@ -1,0 +1,7 @@
+---
+icon: server
+---
+
+# Dedikoidut
+
+Tästä osiosta löydät tulevaisuudessa ohjeita dedikoitujen palvelimien käyttöön.
