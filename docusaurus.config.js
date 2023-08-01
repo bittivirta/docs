@@ -17,10 +17,33 @@ const config = {
 
     i18n: {
         defaultLocale: "fi",
-        locales: ["en", "fi"],
+        locales: ["fi"],
     },
 
-    plugins: ["plugin-image-zoom"],
+    plugins: [
+        "docusaurus-plugin-sass",
+        require.resolve("docusaurus-plugin-image-zoom"),
+        async function tailwindCSS(context, options) {
+            return {
+                name: "docusaurus-tailwindcss",
+                configurePostCss(postcssOptions) {
+                    postcssOptions.plugins.push(require("tailwindcss"));
+                    postcssOptions.plugins.push(require("autoprefixer"));
+                    return postcssOptions;
+                },
+            };
+        },
+        [
+            "@docusaurus/plugin-ideal-image",
+            {
+                quality: 75,
+                max: 1030, // max resized image's size.
+                min: 640, // min resized image's size. if original is lower, use that size.
+                steps: 2, // the max number of images generated between min and max (inclusive)
+                disableInDev: false,
+            },
+        ],
+    ],
 
     presets: [
         [
@@ -34,13 +57,18 @@ const config = {
                 },
                 blog: false,
                 theme: {
-                    customCss: require.resolve("./src/css/custom.css"),
+                    customCss: require.resolve("./src/css/custom.scss"),
                 },
             }),
         ],
     ],
 
+    markdown: {
+        mermaid: true,
+    },
+
     themes: [
+        '@docusaurus/theme-mermaid',
         [
             // @ts-ignore
             require.resolve("@easyops-cn/docusaurus-search-local"),
@@ -50,6 +78,8 @@ const config = {
                 hashed: true,
                 language: ["en", "fi"],
             }),
+
+
         ],
     ],
 
@@ -67,26 +97,32 @@ const config = {
                     {
                         type: "docSidebar",
                         sidebarId: "clientAreaSidebar",
+                        label: "Client Area",
                     },
                     {
                         type: "docSidebar",
                         sidebarId: "serverSidebar",
+                        label: "Server",
                     },
                     {
                         type: "docSidebar",
                         sidebarId: "hostingSidebar",
+                        label: "Hosting",
                     },
                     {
                         type: "docSidebar",
                         sidebarId: "gameSidebar",
+                        label: "Game Servers",
                     },
                     {
                         type: "docSidebar",
                         sidebarId: "docsSidebar",
+                        label: "Docs",
                     },
                     {
                         type: "docSidebar",
                         sidebarId: "companySidebar",
+                        label: "Company",
                     },
                     {
                         type: "localeDropdown",
@@ -99,6 +135,14 @@ const config = {
                     },
                 ],
             },
+            mermaid: {
+                theme: { light: 'neutral', dark: 'forest' },
+                options: {
+                    themeVariables: {
+                        'primaryColor': '#BB2528',
+                    },
+                }
+            },
             footer: {
                 copyright: `Copyright © ${new Date().getFullYear()} Bittivirta - All rights reserved`,
             },
@@ -106,17 +150,11 @@ const config = {
                 theme: lightCodeTheme,
                 darkTheme: darkCodeTheme,
             },
-            imageZoom: {
-                // CSS selector to apply the plugin to, defaults to '.markdown img'
-                selector: ".markdown img",
-                // Optional medium-zoom options
-                // see: https://www.npmjs.com/package/medium-zoom#options
-                options: {
-                    margin: 24,
-                    background: "#BADA55",
-                    scrollOffset: 0,
-                    container: "#zoom-container",
-                    template: "#zoom-template",
+            zoom: {
+                selector: ".markdown :not(em) > img",
+                background: {
+                    light: "rgb(255, 255, 255)",
+                    dark: "rgb(50, 50, 50)",
                 },
             },
         }),
