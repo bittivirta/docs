@@ -1,41 +1,63 @@
 # Dynmap
-Dynmap on plugin, jolla saat renderöityä Minecraft-maailmasi nettisivulle Google Mapsin tyylisesti. Näin voit selailla pelin karttaa myös silloin, kun et ole pelissä tai haluat etsiä sopivaa aluetta, jossa rakentaa!
 
-Plugin on aikaisemmassa Bittivirran historiassa ollut täysin kielletty, sillä se vie niin paljon levytilaa. Nykyisellä levytilaratkaisulla, jossa emme enää tarjoa rajatonta maksutonta levytilaa pluginin käyttö on jälleen mahdollistettu. Saat tilatessasi meiltä palvelimen, jossa on 10GB levytilaa. Jos tämä tulee täyteen, saat maksutta toiset 10GB levytilaa käyttöösi. Lisälevytila on ostettavissa asiakaspalvelusta 1€/10GB tilaa.
+Dynmap on plugin, jolla saat renderöityä Minecraft-maailmasi nettisivulle Google
+Mapsin tyylisesti. Näin voit selailla pelin karttaa myös silloin, kun et ole
+pelissä tai haluat etsiä sopivaa aluetta, jossa rakentaa!
 
-Suosittelemme kuitenkin joka tapauksessa, että tallennat Dynmapin datan joko omalle MySQL-palvelimelle tai pienennät Dynmapin kuvanlaadun niin pieneksi, kuin mahdollista. Tässä ohjeessa näytämme, miten pienennät kuvanlaadun ja tallennat kuvat MySQL-palvelimelle.
+Plugin on aikaisemmassa Bittivirran historiassa ollut täysin kielletty, sillä se
+vie niin paljon levytilaa. Nykyisellä levytilaratkaisulla, jossa emme enää
+tarjoa rajatonta maksutonta levytilaa pluginin käyttö on jälleen mahdollistettu.
+Saat tilatessasi meiltä palvelimen, jossa on 10GB levytilaa. Jos tämä tulee
+täyteen, saat maksutta toiset 10GB levytilaa käyttöösi. Lisälevytila on
+ostettavissa asiakaspalvelusta 1€/10GB tilaa.
 
-## Avataan portti​
-Dynmap vaatii oman portin toimiakseen, jota kautta kartta ladataan käyttäjille (http). Oletuksena tämä on 8123, mutta emme voi antaa jokaiselle asiakkaalle samaa porttia. Joudut pyytämään asiakaspalvelusta palvelimelle lisäportin. Tavoitat asiakaspalvelun täältä, vasemmalla näkyvästä chat-ruudusta tai sähköpostitse tuki@bittivirta.fi. Ota meihin yhteyttä sähköposti-osoitteella tai asiakastilillä, jolla olet ostanut Minecraft-palvelimesi. Jos otat yhteyttä Discordin kautta - varmista, että olet linkittänyt Discord-tilisi asiakastiliisi.
+Suosittelemme kuitenkin joka tapauksessa, että tallennat Dynmapin datan joko
+omalle MySQL-palvelimelle tai pienennät Dynmapin kuvanlaadun niin pieneksi, kuin
+mahdollista. Tässä ohjeessa näytämme, miten pienennät kuvanlaadun ja tallennat
+kuvat MySQL-palvelimelle.
 
-## Dynmapin asennus​
-Lataa plugin palvelimelle "plugins"-kansioosi ja käynnistä tai uudelleenkäynnistä palvelimesi. Kun palvelin on täysin käynnistynyt, samuuta se konfiguroinnin ajaksi. Näin emme renderöi turhaan kuvia väärällä laadulla.
+## Avataan portti
+
+Dynmap vaatii oman portin toimiakseen, jota kautta kartta ladataan käyttäjille
+(http). Oletuksena tämä on 8123, mutta emme voi antaa jokaiselle asiakkaalle
+samaa porttia. Joudut pyytämään asiakaspalvelusta palvelimelle lisäportin.
+Tavoitat asiakaspalvelun täältä, vasemmalla näkyvästä chat-ruudusta tai
+sähköpostitse tuki@bittivirta.fi. Ota meihin yhteyttä sähköposti-osoitteella tai
+asiakastilillä, jolla olet ostanut Minecraft-palvelimesi. Jos otat yhteyttä
+Discordin kautta - varmista, että olet linkittänyt Discord-tilisi
+asiakastiliisi.
+
+## Dynmapin asennus
+
+Lataa plugin palvelimelle "plugins"-kansioosi ja käynnistä tai
+uudelleenkäynnistä palvelimesi. Kun palvelin on täysin käynnistynyt, samuuta se
+konfiguroinnin ajaksi. Näin emme renderöi turhaan kuvia väärällä laadulla.
 
 Plugineiden asennusohjeet: [tulossa]
 
-###  Konfigurointi​
+### Konfigurointi
+
 Avaa kansio /plugins/dynmap ja tiedosto configuration.txt.
 
-Etsi tiedostosta seuraava kohta:
-`webserver-port: 8123`
-ja korvaa numero asiakaspalvelusta saamallasi portilla.
+Etsi tiedostosta seuraava kohta: `webserver-port: 8123` ja korvaa numero
+asiakaspalvelusta saamallasi portilla.
 
-Seuraavaksi etsitään kuvien laatu-asetus:
-`image-format: jpg-q90`
-Ja korvataan se:
-`image-format: jpg-q75`
+Seuraavaksi etsitään kuvien laatu-asetus: `image-format: jpg-q90` Ja korvataan
+se: `image-format: jpg-q75`
 
-Ja vielä ihan tiedoston ylhäältä löytyy asetus:
-`deftemplatesuffix: hires`
-ja korvataan se (2 pikseliä/block):
-`deftemplatesuffix: vlowres`
-tai vaihtoehtoisesti:
-`deftemplatesuffix: lowres`
+Ja vielä ihan tiedoston ylhäältä löytyy asetus: `deftemplatesuffix: hires` ja
+korvataan se (2 pikseliä/block): `deftemplatesuffix: vlowres` tai
+vaihtoehtoisesti: `deftemplatesuffix: lowres`
 
-Configuration-tiedostosta löytyy myös paljon muita mielenkiintoisia asetuksia, joihin sinun kannattaa tutustua parantaaksesi Dynmapin ulkoasua. Lisää ohjeita konfigurointiin (engl.) löytyy Dynmapin wikistä: https://github.com/webbukkit/dynmap/wiki/Configuration
+Configuration-tiedostosta löytyy myös paljon muita mielenkiintoisia asetuksia,
+joihin sinun kannattaa tutustua parantaaksesi Dynmapin ulkoasua. Lisää ohjeita
+konfigurointiin (engl.) löytyy Dynmapin wikistä:
+https://github.com/webbukkit/dynmap/wiki/Configuration
 
-Tiettyjen maailmojen näyttäminen​
-Jos palvelimellasi on useampi maailma, kannattaa näyttää vain maailmat, jotka haluat kartassa näkyvän. Avaa kansio /plugins/dynmap ja tiedosto worlds.txt poista sen sisältö ja lisää rivit:
+Tiettyjen maailmojen näyttäminen Jos palvelimellasi on useampi maailma,
+kannattaa näyttää vain maailmat, jotka haluat kartassa näkyvän. Avaa kansio
+/plugins/dynmap ja tiedosto worlds.txt poista sen sisältö ja lisää rivit:
+
 ```txt
 worlds:
   - name: world
@@ -43,7 +65,9 @@ worlds:
     enabled: true
 ```
 
-Toista kolmea alimmaista riviä ja täytä maailmojen tiedot. Voit myös muuttaa maailman näyttönimeä. Tässä esimerkki:
+Toista kolmea alimmaista riviä ja täytä maailmojen tiedot. Voit myös muuttaa
+maailman näyttönimeä. Tässä esimerkki:
+
 ```txt
 worlds:
   - name: world
@@ -62,10 +86,17 @@ worlds:
     enabled: false
 ```
 
-### Kuvien tallennus MySQL-palvelimelle​
-Mikäli käytössäsi on MySQL-palvelin, joka on tarkoitettu suuremman datan määrän tallennukselle (ei Bittivirran pelipalvelimien tietokannat, Webhotellien tietokannat ovat OK), voit käyttää myös suurempia kuvien laatuja ja kuvan resoluutiota.
+### Kuvien tallennus MySQL-palvelimelle
 
-Aiemmassa kansiosta /plugins/dynmap löytyvässä tiedostossa configuration.txt voit määrittää MySQL-palvelimen tiedot seuraavasti tiedoston alussa olevan storage-osion kohdalle:
+Mikäli käytössäsi on MySQL-palvelin, joka on tarkoitettu suuremman datan määrän
+tallennukselle (ei Bittivirran pelipalvelimien tietokannat, Webhotellien
+tietokannat ovat OK), voit käyttää myös suurempia kuvien laatuja ja kuvan
+resoluutiota.
+
+Aiemmassa kansiosta /plugins/dynmap löytyvässä tiedostossa configuration.txt
+voit määrittää MySQL-palvelimen tiedot seuraavasti tiedoston alussa olevan
+storage-osion kohdalle:
+
 ```txt
 storage:
   type: mysql
@@ -78,8 +109,13 @@ storage:
   flags: "?allowReconnect=true"
 ```
 
-Jotkin palvelimet joilla ei ole SSL-sertifikaattia vaativat, että useSSL=false on määritetty, jotta yhteys tietokantaan toimii. Voit määrittää tämän muuttamalla flags-kohdan seuraavaksi:
+Jotkin palvelimet joilla ei ole SSL-sertifikaattia vaativat, että useSSL=false
+on määritetty, jotta yhteys tietokantaan toimii. Voit määrittää tämän
+muuttamalla flags-kohdan seuraavaksi:
 `flags: "?allowReconnect=true&useSSL=false"`
 
-## Palvelimen käynnistäminen ja kartan katselu​
-Seuraavaksi voit käynnistää palvelimesi. Kun palvelin on käynnistynyt, voit siirtyä selaimellasi osoitteeseen, joka on palvelimesi IP-osoite ja dynmapiin vaihtamasi portti, esim: http://gX.bitti.gg:8123/.
+## Palvelimen käynnistäminen ja kartan katselu
+
+Seuraavaksi voit käynnistää palvelimesi. Kun palvelin on käynnistynyt, voit
+siirtyä selaimellasi osoitteeseen, joka on palvelimesi IP-osoite ja dynmapiin
+vaihtamasi portti, esim: http://gX.bitti.gg:8123/.

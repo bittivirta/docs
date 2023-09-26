@@ -4,13 +4,16 @@ title: Ajastetut toiminnot
 
 # Ajastetut toiminnot
 
-Gamepanelissa on mahdollista ajastaa toimintoja. Voit ajastaa esimerkiksi palvelimen uudelleenkäynnistyksen tai muita komentoja, jotka voivat olla tarpeen ajaa säännöllisesti.
+Gamepanelissa on mahdollista ajastaa toimintoja. Voit ajastaa esimerkiksi
+palvelimen uudelleenkäynnistyksen tai muita komentoja, jotka voivat olla tarpeen
+ajaa säännöllisesti.
 
 1. Kirjaudu Gamepaneliin osoitteessa [gamepanel.fi](https://gamepanel.fi)
 2. Valitse palvelin, jolle haluat ajastaa toimintoja
 3. Valitse "Schedules" -välilehti
 4. Klikkaa "Add schedule" -painiketta
-   ![Ajastetut toiminnot](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/schedules.webp =500x)
+   ![Ajastetut toiminnot](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/schedules.webp
+   =500x)
 5. Luo ajastettu toiminto täyttämällä uuden toiminnon tiedot
 
 ## Uuden toiminnon tiedot
@@ -26,45 +29,56 @@ Gamepanelissa on mahdollista ajastaa toimintoja. Voit ajastaa esimerkiksi palvel
 9. Onko toiminto aktiivinen
 10. Luo uusi ajastettu toiminto
 
-![Ajastetun toiminnon luonti](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/new-schedule.webp =500x)
+![Ajastetun toiminnon luonti](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/new-schedule.webp
+=500x)
 
 ## Ajastetun toiminnon ajan määrittäminen
 
-Toiminnon ajastuksen määritys tapahtuu Unix-pohjaiseen Cron-menettelyyn. Voit lukea lisää ajastuksen määrittämisestä [täältä](https://en.wikipedia.org/wiki/Cron).
+Toiminnon ajastuksen määritys tapahtuu Unix-pohjaiseen Cron-menettelyyn. Voit
+lukea lisää ajastuksen määrittämisestä
+[täältä](https://en.wikipedia.org/wiki/Cron).
 
-Aikakentissä jokaisen aikayksikön kohdalla määritetään, minä aikayksiköissä komento ajetaan. Jos haluat ajastaa toiminnon jokaisena ajan yksikkönä, täytä yksikkökenttään tähti, `*`.
+Aikakentissä jokaisen aikayksikön kohdalla määritetään, minä aikayksiköissä
+komento ajetaan. Jos haluat ajastaa toiminnon jokaisena ajan yksikkönä, täytä
+yksikkökenttään tähti, `*`.
 
-Näin ollen jos haluat ajastaa toiminnon joka minuutti, täytä minuuttikenttään tähti, `*`.
+Näin ollen jos haluat ajastaa toiminnon joka minuutti, täytä minuuttikenttään
+tähti, `*`.
 
-Jos haluat ajastaa toiminnon joka viiden minuutin välein, täytä minuuttikenttään `*/5`. Tämä tarkoittaa, että toiminto ajetaan joka viides minuutti, eli 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ja 55 minuutin välein.
+Jos haluat ajastaa toiminnon joka viiden minuutin välein, täytä minuuttikenttään
+`*/5`. Tämä tarkoittaa, että toiminto ajetaan joka viides minuutti, eli 0, 5,
+10, 15, 20, 25, 30, 35, 40, 45, 50 ja 55 minuutin välein.
 
-Jos määrität tuntikenttään `2`, minuutit ajetaan klo 2. Näin ollen komento ajetaan 5 minuutin välein klo 2, 2:05, 2:10, 2:15, 2:20, 2:25, 2:30, 2:35, 2:40, 2:45, 2:50 ja 2:55.
+Jos määrität tuntikenttään `2`, minuutit ajetaan klo 2. Näin ollen komento
+ajetaan 5 minuutin välein klo 2, 2:05, 2:10, 2:15, 2:20, 2:25, 2:30, 2:35, 2:40,
+2:45, 2:50 ja 2:55.
 
-Kun halujat ajaa toiminnon kerran tunnissa, täytä tuntikenttään tähti, `*` ja minuuttikenttään `0`. Näin komento ajetaan vain kerran tunnissa, eli klo 2:00, 3:00, 4:00, 5:00, 6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00, 22:00 ja 23:00.
+Kun halujat ajaa toiminnon kerran tunnissa, täytä tuntikenttään tähti, `*` ja
+minuuttikenttään `0`. Näin komento ajetaan vain kerran tunnissa, eli klo 2:00,
+3:00, 4:00, 5:00, 6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00,
+15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00, 22:00 ja 23:00.
 
-Esimerkkejä:
-| Määritelmä           | Minuutit | Tunnit | Päivät | Kuukaudet | Viikonpäivät |
-| -------------------- | -------- | ------ | ------ | --------- | ------------ |
-| Jokainen minuutti    | `*`      | `*`    | `*`    | `*`       | `*`          |
-| Joka viides minuutti | `*/5`    | `*`    | `*`    | `*`       | `*`          |
-| Joka tunti           | `0`      | `*`    | `*`    | `*`       | `*`          |
-| Joka päivä klo 2     | `0`      | `2`    | `*`    | `*`       | `*`          |
-| Joka viikko klo 2    | `0`      | `2`    | `*`    | `*`       | `1`          |
-| Joka kuukausi klo 2  | `0`      | `2`    | `1`    | `*`       | `*`          |
-| Joka 03:00 ja 15:    | `0`      | `3,15` | `*`    | `*`       | `*`          |
+Esimerkkejä: | Määritelmä | Minuutit | Tunnit | Päivät | Kuukaudet |
+Viikonpäivät | | -------------------- | -------- | ------ | ------ | --------- |
+------------ | | Jokainen minuutti | `*` | `*` | `*` | `*` | `*` | | Joka viides
+minuutti | `*/5` | `*` | `*` | `*` | `*` | | Joka tunti | `0` | `*` | `*` | `*`
+| `*` | | Joka päivä klo 2 | `0` | `2` | `*` | `*` | `*` | | Joka viikko klo 2 |
+`0` | `2` | `*` | `*` | `1` | | Joka kuukausi klo 2 | `0` | `2` | `1` | `*` |
+`*` | | Joka 03:00 ja 15: | `0` | `3,15` | `*` | `*` | `*` |
 
 ## Ajastetun toiminnon toimintojen määrittäminen
 
 ![Toiminnon lisääminen](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/schedule-new-task.webp)
 
-Ajastetuilla toiminnoilla voi ajaa useita komentoja ja toimintoja kerralla. Voit lisätä uuden komennon painamalla "New task" -painiketta.
+Ajastetuilla toiminnoilla voi ajaa useita komentoja ja toimintoja kerralla. Voit
+lisätä uuden komennon painamalla "New task" -painiketta.
 
-1. Toiminnon tyyppi<br />
-   **Send command**: Lähetä komento palvelimelle<br />
-   **Send power action**: Lähetä palvelimelle virta-toiminto<br />
-   **Create backup**: Luo palvelimelle varmuuskopio
+1. Toiminnon tyyppi<br /> **Send command**: Lähetä komento palvelimelle<br />
+   **Send power action**: Lähetä palvelimelle virta-toiminto<br /> **Create
+   backup**: Luo palvelimelle varmuuskopio
 1. Komennon viivästyttäminen sekunteina
-2. Payload: Komento, joka lähetetään palvelimelle tai virta-toiminto, joka lähetetään palvelimelle.
-3. Jatketaanko seuraavien komentojen lähetystä, jos tämä komento epäonnistuu
-4. Luo/tallenna toiminto
-![Toiminnon valinnat](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/schedule-new-task-dialog.webp)
+1. Payload: Komento, joka lähetetään palvelimelle tai virta-toiminto, joka
+   lähetetään palvelimelle.
+1. Jatketaanko seuraavien komentojen lähetystä, jos tämä komento epäonnistuu
+1. Luo/tallenna toiminto
+   ![Toiminnon valinnat](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/schedule-new-task-dialog.webp)
