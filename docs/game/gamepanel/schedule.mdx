@@ -1,6 +1,4 @@
----
-title: Ajastetut toiminnot
----
+import Image from "@theme/IdealImage";
 
 # Ajastetut toiminnot
 
@@ -12,8 +10,11 @@ ajaa säännöllisesti.
 2. Valitse palvelin, jolle haluat ajastaa toimintoja
 3. Valitse "Schedules" -välilehti
 4. Klikkaa "Add schedule" -painiketta
-   ![Ajastetut toiminnot](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/schedules.webp
-   =500x)
+    <Image
+    	style={{ maxWidth: "800px" }}
+    	img={require("./assets/schedules.png")}
+    	alt="Ajastetut toiminnot"
+    />
 5. Luo ajastettu toiminto täyttämällä uuden toiminnon tiedot
 
 ## Uuden toiminnon tiedot
@@ -29,8 +30,11 @@ ajaa säännöllisesti.
 9. Onko toiminto aktiivinen
 10. Luo uusi ajastettu toiminto
 
-![Ajastetun toiminnon luonti](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/new-schedule.webp
-=500x)
+<Image
+	style={{ maxWidth: "500px" }}
+	img={require("./assets/new-schedule.png")}
+	alt="Ajastetut toiminnot"
+/>
 
 ## Ajastetun toiminnon ajan määrittäminen
 
@@ -58,27 +62,38 @@ minuuttikenttään `0`. Näin komento ajetaan vain kerran tunnissa, eli klo 2:00
 3:00, 4:00, 5:00, 6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00,
 15:00, 16:00, 17:00, 18:00, 19:00, 20:00, 21:00, 22:00 ja 23:00.
 
-Esimerkkejä: | Määritelmä | Minuutit | Tunnit | Päivät | Kuukaudet |
-Viikonpäivät | | -------------------- | -------- | ------ | ------ | --------- |
------------- | | Jokainen minuutti | `*` | `*` | `*` | `*` | `*` | | Joka viides
-minuutti | `*/5` | `*` | `*` | `*` | `*` | | Joka tunti | `0` | `*` | `*` | `*`
-| `*` | | Joka päivä klo 2 | `0` | `2` | `*` | `*` | `*` | | Joka viikko klo 2 |
-`0` | `2` | `*` | `*` | `1` | | Joka kuukausi klo 2 | `0` | `2` | `1` | `*` |
-`*` | | Joka 03:00 ja 15: | `0` | `3,15` | `*` | `*` | `*` |
+Esimerkkejä:
+
+| Määritelmä             | Minuutit | Tunnit | Päivät | Kuukaudet | Viikonpäivät |
+| ---------------------- | -------- | ------ | ------ | --------- | ------------ |
+| Jokainen minuutti      | `*`      | `*`    | `*`    | `*`       | `*`          |
+| Joka viides minuutti   | `*/5`    | `*`    | `*`    | `*`       | `*`          |
+| Joka tunti             | `0`      | `*`    | `*`    | `*`       | `*`          |
+| Joka päivä klo 2:00    | `0`      | `2`    | `*`    | `*`       | `*`          |
+| Joka viikko klo 2:00   | `0`      | `2`    | `*`    | `*`       | `1`          |
+| Joka kuukausi klo 2:00 | `0`      | `2`    | `1`    | `*`       | `*`          |
+| Joka 03:00 ja 15:00    | `0`      | `3,15` | `*`    | `*`       | `*`          |
 
 ## Ajastetun toiminnon toimintojen määrittäminen
 
-![Toiminnon lisääminen](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/schedule-new-task.webp)
+<Image
+	img={require("./assets/schedule-new-task.png")}
+	alt="Toiminnon lisääminen"
+/>
 
 Ajastetuilla toiminnoilla voi ajaa useita komentoja ja toimintoja kerralla. Voit
 lisätä uuden komennon painamalla "New task" -painiketta.
 
-1. Toiminnon tyyppi<br /> **Send command**: Lähetä komento palvelimelle<br />
-   **Send power action**: Lähetä palvelimelle virta-toiminto<br /> **Create
-   backup**: Luo palvelimelle varmuuskopio
+1. Toiminnon tyyppi:<br />
+   **Send command**: Lähetä komento palvelimelle<br />
+   **Send power action**: Lähetä palvelimelle virta-toiminto<br />
+   **Create backup**: Luo palvelimelle varmuuskopio
 1. Komennon viivästyttäminen sekunteina
 1. Payload: Komento, joka lähetetään palvelimelle tai virta-toiminto, joka
    lähetetään palvelimelle.
 1. Jatketaanko seuraavien komentojen lähetystä, jos tämä komento epäonnistuu
 1. Luo/tallenna toiminto
-   ![Toiminnon valinnat](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/schedule-new-task-dialog.webp)
+    <Image
+    	img={require("./assets/schedule-new-task-dialog.png")}
+    	alt="Toiminnon valinnat"
+    />

@@ -1,6 +1,4 @@
----
-order: 1
----
+import Image from "@theme/IdealImage";
 
 # Tiedostojen hallinta
 
@@ -8,14 +6,19 @@ Voit hallita tiedostojasi joko selaimessa tai tietokoneeltasi SFTP-yhteyden yli.
 
 ## Tiedostojen hallinta selaimessa
 
-:::warning Huomaa! Suurien tiedostojen hallinta (yli 100MB) selaimessa ei ole
-mahdollista. Suurempien tiedostojen hallintaan voit käyttää SFTP-yhteyttä. :::
+:::warning Huomaa!
+Suurien tiedostojen hallinta (yli 100MB) selaimessa ei ole
+mahdollista. Suurempien tiedostojen hallintaan voit käyttää SFTP-yhteyttä.
+:::
 
 1. Kirjaudu Gamepaneliin
 2. Valitse palvelin, jonka tiedostoja haluat muokata
 3. Valitse "Files"
-   ![Tiedostojen hallinta](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/files.webp
-   =500x)
+    <Image
+    	style={{ maxWidth: "400px" }}
+    	img={require("./assets/files.png")}
+    	alt="Tiedostojen hallinta"
+    />
 4. Muokkaa tiedostoja
 
 Lisää ohjeita tiedostojen hallinnasta sivulla
@@ -35,9 +38,6 @@ Tiedostoja voidaan hallita muutamallakin eri tavalla. Valitse itsellesi
 mieluinen tapa käsitellä tiedostoja, voit kokeilla eri tapoja ja katsoa mikä on
 sinulle sopivin.
 
-<div style="display:flex;align-items:start;flex-wrap:wrap;">
-<div style="margin-right:4rem;">
-
 ### SFTP-ohjelmistoja
 
 #### <icon icon="fa:windows" width="13px"/> Windows
@@ -56,9 +56,6 @@ sinulle sopivin.
 
 -   FileZilla
 
-</div>
-<div>
-
 ### Tekstieditorit
 
 #### <icon icon="fa:windows" width="13px"/> Windows
@@ -76,9 +73,6 @@ sinulle sopivin.
 
 -   Visual Studio Code
 -   Vim
-
-</div>
-</div>
 
 ## SFTP-yhteyden luominen
 
@@ -103,4 +97,8 @@ sivulla Settings-välilehdeltä:
 3. Käyttäjäsi palvelinkohtainen käyttäjänimi
 4. Palvelimen osoite, joka ei sisällä porttia
 
-![Palvelimen Gamepanel-asetukset](https://docs.bittivirta.fi/assets/docs/img/en/game-servers/gamepanel/settings.webp)
+<Image
+	style={{ maxWidth: "800px" }}
+	img={require("./assets/settings.png")}
+	alt="Palvelimen Gamepanel-asetukset"
+/>
