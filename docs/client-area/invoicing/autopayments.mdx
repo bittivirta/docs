@@ -1,4 +1,5 @@
 import Image from "@theme/IdealImage";
+import Stepper, { Step } from "@site/src/components/Stepper";
 
 # Automaattimaksut
 
@@ -12,26 +13,32 @@ tilauksen sivuiltamme tai pyytämällä asiakaspalveluamme perumaan tilauksen.
 
 ## Automaattimaksut maksukortilla
 
-1. Kirjaudu sisään Bittivirta.cloud-alustalle osoitteessa
-   https://bittivirta.cloud/login
-2. Siirry maksutavat-sivulle:
+<Stepper title="Automaattimaksujen käyttöönotto maksukortille">
+  <Step>
+    Kirjaudu sisään Bittivirta.cloud-alustalle osoitteessa
+    https://bittivirta.cloud/login
+  </Step>
+  <Step>
+    Siirry maksutavat-sivulle
     <Image img={require("./assets/maksutavat.png")} alt="Maksutavat" />
-3. Lisää uusi maksukortti valitsemalla "Lisää uusi maksukortti"
+  </Step>
+  <Step>
+    Lisää uusi maksukortti valitsemalla <kbd>Lisää uusi maksukortti</kbd> ja
+    vahvista pankkikortin lisääminen pankkiisi aukeavassa ikkunassa.
     <Image
-    	img={require("./assets/ei-maksutapoja.png")}
-    	alt="Maksutapoja ei lisätty"
+      img={require("./assets/ei-maksutapoja.png")}
+      style={{ maxWidth: "400px" }}
+      alt="Maksutapoja ei lisätty"
     />
-4. Lisää pankkikortin tiedot, laskutusosoite ja klikkaa "Tallenna"
+  </Step>
+  <Step>
+    Vaihda maksukortti oletusmaksutavaksi (käytetään uusissa tilauksissa)
     <Image
-    	img={require("./assets/lisaa-uusi-maksutapa.png")}
-    	alt="Maksutavat"
+      img={require("./assets/oletusmaksutapa.png")}
+      alt="Valitse Tiedot ja vaihda Maksutapa"
     />
-5. Vahvista pankkikortin lisääminen pankkiisi aukeavassa ikkunassa.
-6. Vaihda maksukortti oletusmaksutavaksi (käytetään uusissa tilauksissa)
-    <Image
-    	img={require("./assets/oletusmaksutapa.png")}
-    	alt="Valitse Tiedot ja vaihda Maksutapa"
-    />
+  </Step>
+</Stepper>
 
 Lisäksi jokaisella tilauksella on oma oletusmaksutapa. Jos haluat vaihtaa
 palvelun maksutavan - ole yhteydessä asiakaspalveluumme, niin vaihdamme
