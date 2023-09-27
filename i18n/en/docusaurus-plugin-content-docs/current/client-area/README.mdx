@@ -8,25 +8,25 @@ In the example, you can see how different user accounts are assigned management 
 
 ```mermaid
 flowchart LR
-   mikaelk["Mikael Kauppi"] -->|"CEO"| sirkulaattori["Sirkulaattori Oy"]
-   jennas["Jenna Soininen"] -->|"Sivustovastaava"| sirkulaattori
-   riittas["Riitta Salmela"] -->|"Henkilöstövastaava"| sirkulaattori
-   pauliinam["Pauliina Mustonen"] -->|"Puheenjohtaja"| liikeyhdistys["Liikeyhdistys Ry"]
-   reetaj["Reeta Järvi"] -->|"Sivustovastaava"| liikeyhdistys
-   reetaj --->|"Yksityisasiakas"| reeta["Reeta Järvi"]
-   saulil["Sauli Lintilä"] --->|"Reetan kaveri"| reeta
-   subgraph asiakastilit["Asiakastilit"]
-      sirkulaattori
-      reeta
-      liikeyhdistys
+   john["John Doe"] -->|"CEO"| acme["Acme LTD"]
+   jen["Jen Smith"] -->|"Webmaster"| acme
+   rita["Rita Miller"] -->|"HR"| acme
+   mary["Mary Wilson"] -->|"Puheenjohtaja"| movement["Movement Organization"]
+   sarah["Sarah Carter"] -->|"Webmaster"| movement
+   sarah --->|"Yksityisasiakas"| rachel["Rachel Allen"]
+   scott["Scott Davis"] --->|"Friend of Rachel"| rachel
+   subgraph customers["Customer Accounts"]
+      acme
+      rachel
+      movement
    end
-   subgraph kayttajatilit["Käyttäjätilit"]
-      reetaj
-      saulil
-      pauliinam
-      jennas
-      riittas
-      mikaelk
+   subgraph users["User Accounts"]
+      sarah
+      scott
+      mary
+      jen
+      rita
+      john
    end
 ```
 
@@ -36,7 +36,7 @@ There are separate user and customer accounts in the customer area. A user accou
 
 One user account can have more than one customer account. You can change your customer account at any time:
 
-1. Login to your account atabittivirta[.cloud/login](https://bittivirta.cloud/login)
+1. Login to your account [bittivirta.cloud/login](https://bittivirta.cloud/login)
 2. Select "Change customer account"
     <Image
     	style={{ maxWidth: 600 }}

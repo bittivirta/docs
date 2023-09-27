@@ -1,4 +1,0 @@
----
-title: Työpöytäohjelmistot
-index: false
----
