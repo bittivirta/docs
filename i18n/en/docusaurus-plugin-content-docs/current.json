@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "Seuraava",
+    "message": "Next",
     "description": "The label for version current"
   },
   "sidebar.clientAreaSidebar.category.Yrityksille": {
@@ -27,9 +27,21 @@
     "message": "Työpöytäohjelmistot",
     "description": "The label for category Työpöytäohjelmistot in sidebar gameSidebar"
   },
+  "sidebar.gameSidebar.category.Minecraft": {
+    "message": "Minecraft",
+    "description": "The label for category Minecraft in sidebar gameSidebar"
+  },
   "sidebar.gameSidebar.category.BungeeCord": {
     "message": "BungeeCord",
     "description": "The label for category BungeeCord in sidebar gameSidebar"
+  },
+  "sidebar.gameSidebar.category.Konfigurointi": {
+    "message": "Konfigurointi",
+    "description": "The label for category Konfigurointi in sidebar gameSidebar"
+  },
+  "sidebar.gameSidebar.category.Oma verkkotunnus": {
+    "message": "Oma verkkotunnus",
+    "description": "The label for category Oma verkkotunnus in sidebar gameSidebar"
   },
   "sidebar.gameSidebar.category.Pluginit": {
     "message": "Pluginit",
@@ -47,32 +59,20 @@
     "message": "VPS",
     "description": "The label for category VPS in sidebar serverSidebar"
   },
-  "sidebar.serverSidebar.category.Windows": {
-    "message": "Windows",
-    "description": "The label for category Windows in sidebar serverSidebar"
-  },
-  "sidebar.docsSidebar.category.Osallistuminen": {
-    "message": "Osallistuminen",
-    "description": "The label for category Osallistuminen in sidebar docsSidebar"
-  },
-  "sidebar.gameSidebar.category.Konfigurointi": {
-    "message": "Konfigurointi",
-    "description": "The label for category Konfigurointi in sidebar gameSidebar"
-  },
-  "sidebar.gameSidebar.category.Oma verkkotunnus": {
-    "message": "Oma verkkotunnus",
-    "description": "The label for category Oma verkkotunnus in sidebar gameSidebar"
-  },
   "sidebar.serverSidebar.category.Ubuntu/Debian": {
     "message": "Ubuntu/Debian",
     "description": "The label for category Ubuntu/Debian in sidebar serverSidebar"
+  },
+  "sidebar.serverSidebar.category.Windows": {
+    "message": "Windows",
+    "description": "The label for category Windows in sidebar serverSidebar"
   },
   "sidebar.hostingSidebar.category.Webhotellit": {
     "message": "Webhotellit",
     "description": "The label for category Webhotellit in sidebar hostingSidebar"
   },
-  "sidebar.gameSidebar.category.Minecraft": {
-    "message": "Minecraft",
-    "description": "The label for category Minecraft in sidebar gameSidebar"
+  "sidebar.docsSidebar.category.Osallistuminen": {
+    "message": "Osallistuminen",
+    "description": "The label for category Osallistuminen in sidebar docsSidebar"
   }
 }

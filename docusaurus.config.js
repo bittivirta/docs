@@ -17,7 +17,7 @@ const config = {
 
 	i18n: {
 		defaultLocale: "fi",
-		locales: ["fi"],
+		locales: ["fi", "en"],
 	},
 
 	plugins: [
