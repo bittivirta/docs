@@ -322,7 +322,25 @@
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.tags.tagsPageTitle": {
-    "message": "Tags",
+    "message": "Tagit",
     "description": "The title of the tag list page"
+  },
+  "stepper.show_one": {
+    "message": "Show one"
+  },
+  "stepper.show_all": {
+    "message": "Show all"
+  },
+  "stepper.all_steps": {
+    "message": "All Steps"
+  },
+  "stepper.of": {
+    "message": "of"
+  },
+  "stepper.next": {
+    "message": "Next"
+  },
+  "stepper.previous": {
+    "message": "Previous"
   }
 }
