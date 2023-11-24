@@ -1,11 +1,11 @@
-import React from 'react';
+
 import style from "./style.module.scss"
+
+import { useState } from 'react';
+import Translate from '@docusaurus/Translate';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/pro-solid-svg-icons';
-import Translate from '@docusaurus/Translate';
-import Markdown from 'react-markdown'
-import remarkRehype from 'remark-rehype'
-import remarkGfm from 'remark-gfm'
 
 export function Step({ children }) {
   return (
@@ -16,8 +16,8 @@ export function Step({ children }) {
 }
 
 export default function Stepper({ title, children }) {
-  const [currentStep, setCurrentStep] = React.useState(0);
-  const [showAll, setShowAll] = React.useState(false);
+  const [currentStep, setCurrentStep] = useState(0);
+  const [showAll, setShowAll] = useState(false);
   return (
     <div className={style.stepper}>
       <div className={style.step_header}>
@@ -45,17 +45,16 @@ export default function Stepper({ title, children }) {
       </div>
       <div className={style.step}>
         {showAll ?
-          children.map((child, index) => (
-            <div key={index} className="flex pb-7 mb-7 border-dashed border-0 border-b-2 last:border-b-0 border-slate-200">
-              <div>
-                <span className={style.step_current}>{index + 1}</span>
-              </div>
-              <div className='mt-1' style={{ width: "calc(100% - 60px)" }}>
-                <Markdown remarkPlugins={[remarkGfm, remarkRehype]}>{child}</Markdown>
-              </div>
+          children.map((child, index) => (<div key={index} className="flex pb-7 mb-7 border-dashed border-0 border-b-2 last:border-b-0 border-slate-200">
+            <div>
+              <span className={style.step_current}>{index + 1}</span>
             </div>
-          ))
-          : <Markdown remarkPlugins={[remarkGfm, remarkRehype]}>{children[currentStep]}</Markdown>
+            <div className='mt-1' style={{ width: "calc(100% - 60px)" }}>
+              <Step key={index}>{child}</Step>
+            </div>
+          </div>))
+          :
+          <Step>{children[currentStep]}</Step>
         }
       </div>
       <div className='flex gap-3 justify-between'>
@@ -69,6 +68,6 @@ export default function Stepper({ title, children }) {
           <button className={style.button} onClick={e => (setShowAll(!showAll))}>{showAll ? <Translate id="stepper.show_one"></Translate> : <Translate id="stepper.show_all"></Translate>}</button>
         </div>
       </div>
-    </div >
+    </div>
   );
 }
