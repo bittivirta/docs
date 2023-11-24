@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url(https://cdn.bittivirta.fi/css/fonts/font-package.css);
+@import url(https://cdn.bittivirta.fi/css/fonts/asap.css);
+@import url(https://cdn.bittivirta.fi/css/fonts/fira-code-nerd.css);
 
 :root {
   --ifm-color-primary: #1166b6;
@@ -15,7 +16,7 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  --ifm-font-family-base: "Ubuntu", sans-serif;
+  --ifm-font-family-base: "Asap", sans-serif;
 }
 
 [data-theme="dark"] {
