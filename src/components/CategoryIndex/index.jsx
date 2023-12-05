@@ -25,7 +25,6 @@ function Category({ link, title, description, icon, image }) {
 }
 
 export default function CategoryIndex({ items }) {
-  console.log(items);
   return (
     <section>
       <div className="grid grid-cols-2 gap-3">
