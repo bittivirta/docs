@@ -28,10 +28,6 @@
   margin-right: 10px;
 }
 
-.step_content {
-  width: calc(100% - 45px);
-}
-
 .button {
   @apply bg-primary inline-block p-2 px-4 rounded-full text-white font-bold border-0 text-base cursor-pointer;
 }

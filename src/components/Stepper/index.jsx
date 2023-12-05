@@ -17,7 +17,7 @@ export function Step({ children }) {
 
 export default function Stepper({ title, children }) {
   const [currentStep, setCurrentStep] = useState(0);
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
   return (
     <div className={style.stepper}>
       <div className={style.step_header}>
@@ -45,7 +45,7 @@ export default function Stepper({ title, children }) {
       </div>
       <div className={style.step}>
         {showAll ?
-          children.map((child, index) => (<div key={index} className="flex pb-7 mb-7 border-dashed border-0 border-b-2 last:border-b-0 border-slate-200">
+          children.map((child, index) => (<div key={index} className="flex pb-5 mb-5 border-dashed border-0 border-b-2 last:border-b-0 border-slate-200">
             <div>
               <span className={style.step_current}>{index + 1}</span>
             </div>
