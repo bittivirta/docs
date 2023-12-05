@@ -5,35 +5,42 @@ nimipalvelimiasi. Bittivirran kaikki webhotellit tukevat DNSSEC-ominaisuutta ja
 suosittelemme vahvasti sen käyttöönottoa. Myös fi-verkkotunnuksien myöntäjä
 Traficom suosittelee vahvasti DNSSEC:n käyttöä.
 
-Traficomin esite DNSSEC-ominaisuudesta löytyy
-[täältä](https://www.traficom.fi/sites/default/files/media/file/DNSSec_uusi.pdf)
+Traficomin esite DNSSEC-ominaisuudesta löytyy [täältä](./assets/dnssec.pdf)
 
-## 1. Kirjaudu Pleskiin
 
-Avaa Plesk asiakasalueella OneClick-kirjautumisella tai kirjaudu Pleskiin
-osoitteessa [https://plesk.bittivirta.cloud/](https://plesk.bittivirta.cloud/)
+<Stepper>
+  <Step>
+    Avaa Plesk asiakasalueella OneClick-kirjautumisella tai kirjaudu Pleskiin
+    osoitteessa [https://plesk.bittivirta.fi/](https://plesk.bittivirta.fi/)
+  </Step>
+  <Step>
+    Valitse verkkotunnus jota hallitset, valitse "Isännöinti ja DNS" ja valitse DNNSSEC
 
-## 2. Valitse verkkotunnus jota hallitset, valitse "Isännöinti ja DNS" ja valitse DNNSSEC
+    <Image img={require("./assets/go-to-dnssec.png")} />
+  </Step>
+  <Step>
+    Allekirjoita DNS-vyöhyke
 
-![Valitse verkkotunnuksesi, seuraavaksi isännöinti ja dns ja viimeisenä DNSSEC](https://cdn.bittivirta.fi/docimg/fi/web/dnssec/go-to-dnssec.png)
+    <Image img={require("./assets/sign.png")} />
+  </Step>
+  <Step>
+    Täytä avaintietolomake ja paina OK
 
-## 3. Allekirjoita DNS-vyöhyke
+    Voit jättää tiedot oletusarvoisiksi.
 
-![Klikkaa allekirjoita dns-vyöhyke -painiketta](https://cdn.bittivirta.fi/docimg/fi/web/dnssec/sign.png)
+    <Image img={require("./assets/form.png")} />
+  </Step>
+  <Step>
+    Lähetä DS-resurssitietueet verkkotunnuksen rekisteröitsijälle
 
-## 4. Täytä avaintietolomake ja paina OK
+    <Image img={require("./assets/done.png")} />
 
-Voit jättää tiedot oletusarvoisiksi.
-![Kenttien arvot jätetään oletusarvoisiksi, ellei tiedossa ole muutoksia](https://cdn.bittivirta.fi/docimg/fi/web/dnssec/form.png)
-
-## 5. Lähetä DS-resurssitietueet verkkotunnuksen rekisteröitsijälle
-
-![Valmiit DS-tietueet](https://cdn.bittivirta.fi/docimg/fi/web/dnssec/done.png)
-
-Bittivirralla ei ole vielä käytössä automaattista DNSSEC-avaimien talletusta,
-joten joudut olemaan yhteydessä asiakaspalveluun. Asiakaspalvelu lisää
-DNSSEC-tietueesi puolestasi verkkotunnuksen rekisteriin. Sinun ei tarvitse
-lähettää DNSSEC-tietueita meille, löydämme ne nimipalvelimiltasi jos käytät
-Bittivirran nimipalvelimia tai olet lisännyt tietueet nimipalvelimillesi. Jos
-käytössäsi on muu verkkotunnuksen palveluntarjoaja, lähetä DS-tietueet heille
-heidän järjestelmien kautta.
+    Bittivirralla ei ole vielä käytössä automaattista DNSSEC-avaimien talletusta,
+    joten joudut olemaan yhteydessä asiakaspalveluun. Asiakaspalvelu lisää
+    DNSSEC-tietueesi puolestasi verkkotunnuksen rekisteriin. Sinun ei tarvitse
+    lähettää DNSSEC-tietueita meille, löydämme ne nimipalvelimiltasi jos käytät
+    Bittivirran nimipalvelimia tai olet lisännyt tietueet nimipalvelimillesi. Jos
+    käytössäsi on muu verkkotunnuksen palveluntarjoaja, lähetä DS-tietueet heille
+    heidän järjestelmien kautta.
+  </Step>
+</Stepper>
