@@ -16,230 +16,325 @@ ja pyytää meitä lataamaan levykuva palvelimelle.
 
 ## Palvelun tilaaminen
 
-Huomaathan, että palvelua tilatessasi tarvitset vähintään 2 prosessoriydintä,
-2GB RAM-muistia ja 32GB levytilaa. Ilman näiden rajoitusten täyttymistä Windows
-ei välttämättä edes käynnisty. Suosittelemme valitsemaan vähintään BVPS3-paketin
-Budjettisarjasta tai VPS2-paketin Premium-sarjastamme. Suosittelemme
-ehdottomasti ennemmin Premium-sarjan paketteja näiden paremmista prosessoreiden
-kellotaajuuksista johtuen, josta Windows hyötyy huomattavasti.
+Ennen kuin voit asentaa Windowsin, sinun tulee tilata palvelin, jolle
+asennat Windowsin. Windows vaatii Linux-käyttöjärjestelmää enemmän resursseja,
+joiden suosituksen löydät alta.
+
+
+| Resurssi     | Minimi   | Suositus |
+|--------------|----------|----------|
+| CPU          | 2 ydintä | 4 ydintä |
+| RAM (Muisti) | 2GB      | 4GB      |
+| Levytila     | 32GB     | 64GB     |
+
+Ilman näiden rajoitusten täyttymistä Windows ei välttämättä edes käynnisty.
+Suosittelemme valitsemaan vähintään BVPS3-paketin Budjettisarjasta tai VPS2-paketin
+Premium-sarjastamme. Suosittelemme ehdottomasti ennemmin Premium-sarjan paketteja näiden
+paremmista prosessoreiden kellotaajuuksista johtuen, josta Windows hyötyy huomattavasti.
 
 Tehdessäsi tilausta aseta palvelimen käyttöjärjestelmäksi mikä tahansa, voit
-myös jättää oletuksen. Vaihdamme tämän myöhemmin.
+myös jättää oletuksen. Vaihdamme tämän myöhemmin. Palvelimelle ei siis valita vielä
+Windowsia, sillä Windowsin asennus onnistuu vain ISO-tiedostojen kautta.
 
 Voit tilata VPS-palvelimen täältä:
 https://bittivirta.cloud/virtuaalipalvelimet.php
 
-## 1. Valitse palvelu
+<Stepper title="Windowsin Asennus Virtuaalipalvelimelle">
+  <Step>
+    Suorita tämä ohje "Näytä yksi kerrallaan" -tilassa. Näin voit seurata
+    ohjetta helposti vaihe vaiheelta.
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1dhfomj.png)
+    <Image img={require("./assets/windows_install/stepper.png")} style={{maxWidth:400}} />
+  </Step>
+  <Step>
+    Siirry kohtaan ISO-tiedostot palvelun hallinnassa:
+    <Image img={require("./assets/windows_install/to-iso-list.png")} />
+  </Step>
+  <Step>
+    Etsi "Windows" ja klikkaa levykuvan latauspainiketta:
 
-:::tip Vinkki
-voit antaa palvelulle nimen tunnistaaksesi sen laskuissa ja
-asiakasalueelle klikkaamalla punaista tekstiä tai myöhemmin palvelun nimeä, joka
-kuvassa näkyy "Windows Test"-nimenä.
+:::danger Huomaa!
+Muista, minkä ISO-tiedoston valitsit, sillä tarvitset tätä tietoa myöhemmin,
+kun asennat Windowsin.
 :::
-
-## 2. Valitse ISO-tiedosto
-
-Siirry kohtaan ISO-tiedostot palvelun hallinnassa:
-![](https://cdn.bittivirta.fi/docimg/crisp/image_6fdhb6.png)
-
-Etsi "Windows" ja klikkaa levykuvan latauspainiketta:
-
-:::caution
-Muista, minkä ISO-tiedoston valitsit, sillä tarvitset tätä tietoa
-myöhemmin!
-:::
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1plmzko.png)
+    <Image img={require("./assets/windows_install/iso-select.png")} />
 
 :::tip
 ISO-tiedostot päivittyvät, kun tukemme eri käyttöjärjestelmille laajenee.
 Suosittelemme valitsemaan Windowsin uusimman vuosiversion, mikäli palvelusi ei
 ole riippuvainen vanhemmasta ohjelmistosta.
+
+Valitse myös versio, jonka käyttämäsi lisenssi sallii. Esimerkiksi Windows
+Server 2012 ei toimi, mikäli käytät lisenssinä Windows Server 2019:ää.
 :::
-![](https://cdn.bittivirta.fi/docimg/crisp/image_mkq0c6.png)
 
-## 3. Uudelleenkäynnistä palvelin ja aloita asennus
+    Vahvista ISO-tiedoston kytkentä palvelimelle:
+    <Image img={require("./assets/windows_install/mount.png")} style={{maxWidth:500}} />
+  </Step>
+  <Step>
+    Siirry "Tiedot" välilehdelle vasemmasta tuotteen hallinnan valikosta.
 
-Siirry "Tiedot" välilehdelle vasemmasta tuotteen hallinnan valikosta.
+    Käynnistä palvelin uudelleen ja vahvista vielä uudelleenkäynnistys:
 
-Käynnistä palvelin uudelleen ja vahvista vielä uudelleenkäynnistys:
-
-![](https://cdn.bittivirta.fi/docimg/crisp/image_149f91x.png)
-
-Avaa konsoli
-![](https://cdn.bittivirta.fi/docimg/crisp/image_2j3tq6.png)
-
-:::tip
+    <Image img={require("./assets/windows_install/reboot.png")} style={{maxWidth:250}} />
+  </Step>
+  <Step>
+:::info
 Jos olet juuri käynnistänyt palvelimen uudelleen, saatat saada
 virheilmoituken siitä, että palvelimen tulee olla käynnissä jotta voit avata
 konsoliyhteyden. Odota hetki ja päivitä sivu. Jos palvelin ei tunnu
 käynnistyvän, voit käynnistää sen käsin "Käynnistä"-nappulaa painamalla.
 :::
+    Avaa konsoli
+    <Image img={require("./assets/windows_install/console.png")} style={{maxWidth:250}} />
+  </Step>
+  <Step>
+    Käynnistä asennin
+    <Image img={require("./assets/windows_install/installer.png")} style={{maxWidth:600}} />
 
-Valitse asennukseen kellonaika- ja valuuttaformaatti sekä näppäimistöasettelu:
-![](https://cdn.bittivirta.fi/docimg/crisp/image_6c1ick.png)
+    Valitse asennukseen kellonaika- ja valuuttaformaatti sekä näppäimistöasettelu:
+    <Image img={require("./assets/windows_install/timeformat.png")} style={{maxWidth:600}} />
+  </Step>
+  <Step>
+    Valitse haluamasi lisenssi ja ympäristö:
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_fax0mh.png)
-
-Valitse haluamasi lisenssi ja ympäristö:
-
-:::danger
+:::warning Huomaa!
 Huomaathan, että jos haluat käyttää työpöytäympäristöä: valitse
 ympäristöksi lisenssi, joka sisältää tekstin (Desktop Experience)
 :::
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1fu80kf.png)
+    <Image img={require("./assets/windows_install/edition.png")} style={{maxWidth:600}} />
+  </Step>
+  <Step>
+    Lue ja hyväksy käyttöehdot.
+  </Step>
+  <Step>
+    Valitse asennustyypiksi "**Custom: Install Windows only (advanced)**":
 
-Hyväksy Windowsin käyttöehdot luettuasi ne:
-![](https://cdn.bittivirta.fi/docimg/crisp/image_lwebkp.png)
-
-Valitse asennustyypiksi "**Custom: Install Windows only (advanced)**":
-![](https://cdn.bittivirta.fi/docimg/crisp/image_jjy9rr.png)
-
-## 4. Levyajureiden asennus (vaikein osuus)
-
+    <Image img={require("./assets/windows_install/custom_install.png")} style={{maxWidth:600}} />
+  </Step>
+  <Step>
+:::warning Tärkeää!
 Seuraavaksi asennamme levyajurit, jotta Windows tunnistaa palvelimen levyt. Jos
-levyajureita ei ole asennettu, asennin ei näytä mitään levyjä:
+levyajureita ei ole asennettu, asennin ei näytä mitään levyjä.
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_59q7yo.png)
+Noudata ohjeita tarkalleen, sillä asennus ei onnistu, jos levyajureita ei ole
+asennettu. Jos asennus ei onnistu, voit palata tähän kohtaan ja asentaa
+levyajurit uudelleen.
 
-Palaamme seuraavaksi ISO-tiedostojen valintaan. Etsi ISO-tiedostoista teksti
-"virtio" ja ota käyttöön kuvaa vastaava virtio-ISO-tiedosto ja vahvista
-ISO-tiedoston kytkentä:
-![](https://cdn.bittivirta.fi/docimg/crisp/image_3fk9sl.png)
+Ohje saattaa vaikuttaa toistavan itseään, mutta tämä on tarkoituksellista,
+jotta asennus onnistuu varmasti.
+:::
+  </Step>
+  <Step>
+    Kun ajureita ei ole asennettu, asennin näyttää seuraavalta:
 
-Palaa konsoliin ja avaa "Load driver"-ikkuna:
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1lywljc.png)
+    <Image img={require("./assets/windows_install/no_drivers.png")} style={{maxWidth:600}} />
 
-Valitse "Browse":
-![](https://cdn.bittivirta.fi/docimg/crisp/image_scp049.png)
+    Jatka seuraavaan vaiheeseen.
+  </Step>
+  <Step>
+    Palaamme seuraavaksi ISO-tiedostojen valintaan. Etsi ISO-tiedostoista teksti
+    "virtio" ja ota käyttöön kuvaa vastaava virtio-ISO-tiedosto ja vahvista
+    ISO-tiedoston kytkentä.
 
-Seuraavaksi asennamme kolme eri ajuria:
+    Valitse uusin virtio-ISO-tiedosto, joka on saatavilla. Tämä on tärkeää, sillä
+    vanhemmat virtio-ajurit eivät välttämättä toimi uusimpien Windows-versioiden
+    kanssa.
 
-1. Asennamme ensimmäisen, "balloon":
-   ![](https://cdn.bittivirta.fi/docimg/crisp/image_106398p.png)
-   ![](https://cdn.bittivirta.fi/docimg/crisp/image_1f5poob.png)
-2. Asennamme toisen, "NetKVM":
-   ![](https://cdn.bittivirta.fi/docimg/crisp/image_zximxh.png)
-   ![](https://cdn.bittivirta.fi/docimg/crisp/image_19cxa9j.png)
-3. Ja asennamme kolmannen, "vioscsi":
-   ![](https://cdn.bittivirta.fi/docimg/crisp/image_4mc8ed.png)
-   ![](https://cdn.bittivirta.fi/docimg/crisp/image_16eyuq7.png)
 
-Kun ajurit on asennettu, levyjen pitäisi tulla näkyviin seuraavasti:
-![](https://cdn.bittivirta.fi/docimg/crisp/image_s83lib.png)
+:::caution Huomaa!
+Jos et aiemmin ottanut muistiin, minkä Windowsin ISO-tiedoston valitsit, voit tarkistaa sen
+tästä listasta etsimällä "Windows" ja tarkistamalla, mikä ISO-tiedosto on käytössä.
 
-Seuraavaksi käydään liittämässä Windowsin ISO-tiedosto takaisin. Sinun tulee
-siis laittaa takaisin täysin sama tiedosto, muuten asennus ei onnistu:
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1n9bhyr.png)
+Käytössä olevan ISO-tiedoston tunnistat siitä, että sen kohdalla lukee "Poista" tai "Unmount".
 
-## 5. Levytilan osiointi
+Otamme myöhemmin tämän ISO-tiedoston uudelleen käyttöön.
+:::
 
-Seuraavaksi, suosittelemme poistamaan kaikki levyt, jotka Windows on
-automaattisesti luotu. Valitse levyt yksi kerrallaan ja klikkaa "Delete".
+    <Image img={require("./assets/windows_install/virtio.png")} style={{maxWidth:600}} />
 
-Jäljelle jäi "Drive 0 Unallocated Space". Käytämme tätä asennuksessa
-klikkaamalla "Next":
+  </Step>
+  <Step>
+    Palaa asennusohjelmaan ja valitse "Load driver":
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_854zyf.png)
+    <Image img={require("./assets/windows_install/load_driver.png")} style={{maxWidth:600}} />
+  </Step>
+  <Step>
+    Sinulle avautuu "Load driver"-ikkuna. Valitse "Browse":
 
-Halutessasi voit jättää levytilasta pienen osan, jota voit käyttää muissa
-tarkoituksissa palvelimella. Emme kuitenkaan suosittele tätä, vaan suosittelemme
-tilaamaan palvelimelle lisälevytilaa, sillä sitä pystyy suurentamaan helposti
-päivittämättä koko palvelimen resurssipakettia. Näinollen sinulla voi olla
-lisälevytilana vaikka 1TB lisälevytilaa.
+    <Image img={require("./assets/windows_install/browse.png")} style={{maxWidth:600}} />
+  </Step>
+  <Step>
+    Asennetaan ensimmäinen ajuri, "balloon".
 
-## 6. Windowsin asennus
+    1. Avaa selausikkunasta CD-asema "CD Drive (D:) virtio-win-xxx"
+    2. Avaa kansio "Balloon"
+    3. Valitse käyttämäsi Windows-version mukainen kansio (esim. "2k19", k kuvastaa kiloa, eli tuhatta. Näinollen "2k19" tarkoittaa "2019")
+    4. Valitse kansio "amd64" (jos käytät 32-bittistä Windowsia, valitse "x86", tai jos asennat Windowsin ARM-arkkitehtuurille, valitse "arm64")
+    5. Klikkaa OK ja siirry seuraavaan vaiheeseen.
 
-Odottelemme Windowsin asennusta. Asennus vie keskimäärin 5-30 minuuttia riippuen
-valitsemasi palvelimesi tehosta. VPS3-palvelimella asennus kesti 3 minuuttia.
-![](https://cdn.bittivirta.fi/docimg/crisp/image_uqj9oa.png)
+    <Image img={require("./assets/windows_install/balloon.png")} style={{maxWidth:700}} />
+  </Step>
+  <Step>
+    Valitse "Virt IO Balloon Driver (polku ajurille)" ja klikkaa "Next":
 
-## 7. ISO-tiedoston poisto
+    <Image img={require("./assets/windows_install/balloon_install.png")} style={{maxWidth:600}} />
+  </Step>
+  <Step>
+    Asennetaan toinen ajuri, "NetKVM".
 
-Tämä ei ole kriittinen vaihe, mutta voit poistaa ISO-tiedoston turvallisesti
-palvelimelta heti, kun pääset seuraavaan ruutuun:
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1ugzkau.png)
+    1. Avaa selausikkunasta CD-asema "CD Drive (D:) virtio-win-xxx"
+    2. Avaa kansio "NetKVM"
+    3. Valitse käyttämäsi Windows-version mukainen kansio (esim. "2k19", k kuvastaa kiloa, eli tuhatta. Näinollen "2k19" tarkoittaa "2019")
+    4. Valitse kansio "amd64" (jos käytät 32-bittistä Windowsia, valitse "x86", tai jos asennat Windowsin ARM-arkkitehtuurille, valitse "arm64")
+    5. Klikkaa OK ja siirry seuraavaan vaiheeseen.
 
-ISO-tiedoston poisto toimii ISO-tiedostot-välilehden "Unmount"-painiketta
-klikkaamalla:
-![](https://cdn.bittivirta.fi/docimg/crisp/image_p0ek43.png)
+    <Image img={require("./assets/windows_install/netkvm.png")} style={{maxWidth:700}} />
+  </Step>
+  <Step>
+    Valitse "Red Hat VirtIO Ethernet Adapter (polku ajurille)" ja klikkaa "Next":
 
-Vahvista ISO-tiedoston poisto vielä klikkaamalla vahvistuspainiketta, joka
-aukeaa ponnahdusikkunassa.
+    <Image img={require("./assets/windows_install/netkvm_install.png")} style={{maxWidth:600}} />
+  </Step>
+  <Step>
+    Asennetaan kolmas ajuri, "vioscsi".
 
-## 8. Palvelimen perustietojen täyttö
+    1. Avaa selausikkunasta CD-asema "CD Drive (D:) virtio-win-xxx"
+    2. Avaa kansio "vioscsi"
+    3. Valitse käyttämäsi Windows-version mukainen kansio (esim. "2k19", k kuvastaa kiloa, eli tuhatta. Näinollen "2k19" tarkoittaa "2019")
+    4. Valitse kansio "amd64" (jos käytät 32-bittistä Windowsia, valitse "x86", tai jos asennat Windowsin ARM-arkkitehtuurille, valitse "arm64")
+    5. Klikkaa OK ja siirry seuraavaan vaiheeseen.
 
-Anna palvelimelle turvallinen salasana. Turvallinen salasana on satunnaisesti
-generoitu, joka sisältää vähintään 10 merkkiä, jotka ovat pieniä ja suuria
-kirjaimia, numeroita ja erikoismerkkejä. Suosittelemme vähintään 30 merkin
-salasanoja palvelimille. Susittelemme luomaan salasanan täällä:
+    <Image img={require("./assets/windows_install/vioscsi.png")} style={{maxWidth:700}} />
+  </Step>
+  <Step>
+    Valitse "Red Hat VirtIO SCSI Controller (polku ajurille)" ja klikkaa "Next":
 
-https://bitwarden.com/password-generator/
+    <Image img={require("./assets/windows_install/vioscsi_install.png")} style={{maxWidth:600}} />
+  </Step>
+  <Step>
+    Kun kaikki ajurit on asennettu, asennin näyttää seuraavalta:
 
-Koska asiakasalueen etäyhteys ei tue tekstin liittämistä, voit asettaa
-palvelimelle väliaikaisesti helpomman salasanan, jonka voit päivittää myöhemmin
-tavallisella Windowsin etätyöpöytäyhteydellä.
+    <Image img={require("./assets/windows_install/disks.png")} style={{maxWidth:600}} />
+  </Step>
+  <Step>
+    Seuraavaksi käydään liittämässä Windowsin ISO-tiedosto takaisin. Sinun tulee
+    laittaa takaisin täysin sama tiedosto, kun aiemmin, sillä muuten asennus ei onnistu.
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_117o7cz.png)
+    <Image img={require("./assets/windows_install/iso-select.png")} style={{maxWidth:600}} />
+  </Step>
+  <Step>
+    Palaa asennusohjelmaan. Poista kaikki levyt, jotka Windows on automaattisesti
+    luonut. Valitse levyt yksi kerrallaan ja klikkaa "Delete".
 
-Kun salasana on asetettu, voit kirjautua palvelimelle vielä etäyhteydellä
-asiakasalueella klikkaamalla seuraavassa ruudussa "Send Ctrl+Alt+Del"
--painiketta käyttäen. Tavallien Windowsin "leporuudun" klikkaaminen tai ylös
-raahaaminen ei toimi oletuksena palvelimilla:
+    Jäljelle jää "Drive 0 Unallocated Space". Käytämme tätä asennuksessa klikkaamalla "Next":
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_ddif5w.png)
+    <Image img={require("./assets/windows_install/disks_unallocated.png")} style={{maxWidth:600}} />
 
-Ensimmäisellä kerralla palvelin pyytää muutaman vahvistuksen. Servermanagerin
-ohjeen voit ohittaa, mutta Networks-ikkunalle valitse "Yes" tai "No" riippuen,
-haluatko palvelimesi löytyvän lähiverkossa. Yleensä tähän voi vastata "No",
-sillä palvelin ei ole lähiverkossa eikä ominaisuus näinollen ole tarpeellinen:
+    Halutessasi voit jättää levytilasta pienen osan, jota voit käyttää muissa
+    tarkoituksissa palvelimella. Emme kuitenkaan suosittele tätä, vaan suosittelemme
+    tilaamaan palvelimelle lisälevytilaa, sillä sitä pystyy suurentamaan helposti
+    päivittämättä koko palvelimen resurssipakettia. Näinollen sinulla voi olla
+    lisälevytilana vaikka 1TB lisälevytilaa.
+  </Step>
+  <Step>
+    Odottelemme Windowsin asennusta. Asennus vie keskimäärin 5-30 minuuttia riippuen
+    valitsemasi palvelimesi tehosta. VPS3-palvelimella asennus kesti 3 minuuttia.
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1hifz3t.png)
+    <Image img={require("./assets/windows_install/installing.png")} style={{maxWidth:600}} />
+  </Step>
+  <Step>
+    Tämä ei ole kriittinen vaihe, mutta voit poistaa ISO-tiedoston turvallisesti
+    palvelimelta heti, kun pääset seuraavaan ruutuun:
 
-Asetuksen voi vielä myöhemmin muuttaa.
+    <Image img={require("./assets/windows_install/customize.png")} style={{maxWidth:600}} />
 
-## 9. Palvelimelle yhdistäminen Windowsin etätyöpöytäyhteydellä
+    Voit poistaa ISO-tiedoston painamalla palvelimen hallinnan "Unmount"-painiketta:
 
-Voit ottaa palvelimelle etätyöpöytäyhteyden helpoiten suoraan omalta
-Windows-tietokoneeltasi. Paina Windows-painiketta ja ala kirjoittamaan
-"Etätyöpöytäyhteys" tai englanniksi "Remote Desktop", tai lyhyelti "rdp".
+    <Image img={require("./assets/windows_install/unmount.png")} style={{maxWidth:600}} />
 
-Avaa seuraava ohjelma:
+    Vahvista ISO-tiedoston poisto vielä klikkaamalla vahvistuspainiketta, joka
+    aukeaa ponnahdusikkunassa.
+  </Step>
+  <Step>
+    Anna palvelimelle turvallinen salasana. Turvallinen salasana on satunnaisesti
+    generoitu, joka sisältää vähintään 10 merkkiä, jotka ovat pieniä ja suuria
+    kirjaimia, numeroita ja erikoismerkkejä. Suosittelemme vähintään 30 merkin
+    salasanoja palvelimille. Susittelemme luomaan salasanan täällä:
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1qgmqvm.png)
+    https://bitwarden.com/password-generator/
 
-Joka näyttää avattuna tältä:
+    Koska asiakasalueen etäyhteys ei tue tekstin liittämistä, voit asettaa
+    palvelimelle väliaikaisesti helpomman salasanan, jonka voit päivittää myöhemmin
+    tavallisella Windowsin etätyöpöytäyhteydellä.
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1rdnvw8.png)
+    <Image img={require("./assets/windows_install/customize.png")} style={{maxWidth:600}} />
+  </Step>
+  <Step>
+    Kun salasana on asetettu, voit kirjautua palvelimelle vielä etäyhteydellä
+    asiakasalueella klikkaamalla seuraavassa ruudussa "Send Ctrl+Alt+Del"
+    -painiketta käyttäen. Tavallien Windowsin "leporuudun" klikkaaminen tai ylös
+    raahaaminen ei toimi oletuksena palvelimilla:
 
-"Computer" -tai "Tietokone"-kenttään tulee palvelimen IP-osoite, jonka löydät
-palvelimen tiedoista:
+    <Image img={require("./assets/windows_install/lockscreen.png")} style={{maxWidth:600}} />
+  </Step>
+  <Step>
+    Ensimmäisellä kerralla palvelin pyytää muutaman vahvistuksen. Server Managerin
+    ohjeen voit ohittaa, mutta Networks-ikkunalle valitse "Yes" tai "No" riippuen,
+    haluatko palvelimesi löytyvän lähiverkossa. Yleensä tähän voi vastata "No",
+    sillä palvelin ei ole lähiverkossa eikä ominaisuus näinollen ole tarpeellinen:
 
-https://bittivirta.community/attachments/1622671518190-png.45/
+    <Image img={require("./assets/windows_install/first_login.png")} style={{maxWidth:600}} />
 
-## 10. Palvelimesi on käyttövalmis
+    Asetuksen voi vielä myöhemmin muuttaa.
+  </Step>
+  <Step>
+    Voit ottaa palvelimelle etätyöpöytäyhteyden helpoiten suoraan omalta
+    Windows- tai Mac-tietokoneeltasi. Paina Windows-painiketta ja ala kirjoittamaan
+    "Etätyöpöytäyhteys" tai englanniksi "Remote Desktop", tai lyhyelti "rdp".
 
-Palvelimesi on nyt käyttövalmiina. Voit Server Managerissa lisätä
-Windows-palvelimelle tuttuja ympäristöjä, kuten DHCP-palvelimen, Active
-Directory-palvelimen tai vaikka ISS-palvelimen verkkosivujen tarjoamiseen.
+    Avaa seuraava ohjelma:
 
-Palvelimella verkkosivujen selaaminen on Internet Exploreria käyttäen aika
-työlästä muuttamatta oletussääntöä, jonka mukaan jokainen verkkotunnus, jolla
-käyt on erikseen hyväksyttävä sallittujen osotteiden luetteloon. Lisäksi
-Explorerin käyttö nykypäivänä on hitaahkoa ja osa sivustoista ei sitä enää tue.
-Suosittelemme asentamaan jonkin seuraavista selaimista. Ninite nopeuttaa
-tiedoston hakemista, alla linkit suoraan asentimeen:
+    <Image img={require("./assets/windows_install/rdp.png")} style={{maxWidth:300}} />
 
--   Google Chrome: https://ninite.com/chrome/ninite.exe
--   Opera: https://ninite.com/opera/ninite.exe
--   Firefox: https://ninite.com/firefox/ninite.exe
--   Edge: https://ninite.com/edge/ninite.exe
+    Jos käytössäsi on Mac-tietokone, voit ladata Microsoftin etätyöpöytäyhteys-
+    ohjelman [App Storesta](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12).
+  </Step>
+  <Step>
+    Kirjoita etätyöpöytäyhteyden "Computer"- tai "PC Name"-kenttään palvelimen IP-osoite ja paina
+    "Connect". Löydät palvelimen IP-osoitteen asiakasalueen palvelun hallinnasta.
+
+    <Tabs>
+      <TabItem value="Windows">
+        <Image img={require("./assets/windows_install/rdp_connect.png")} style={{maxWidth:400}} />
+      </TabItem>
+      <TabItem value="Mac">
+        <Image img={require("./assets/windows_install/rdp_mac.png")} style={{maxWidth:600}} />
+      </TabItem>
+    </Tabs>
+  </Step>
+  <Step>
+    Palvelimesi on nyt käyttövalmiina. Voit Server Managerissa lisätä
+    Windows-palvelimelle tuttuja ympäristöjä, kuten DHCP-palvelimen, Active
+    Directory-palvelimen tai vaikka ISS-palvelimen verkkosivujen tarjoamiseen.
+
+    Palvelimella verkkosivujen selaaminen on Internet Exploreria käyttäen aika
+    työlästä muuttamatta oletussääntöä, jonka mukaan jokainen verkkotunnus, jolla
+    käyt on erikseen hyväksyttävä sallittujen osotteiden luetteloon. Lisäksi
+    Explorerin käyttö nykypäivänä on hitaahkoa ja osa sivustoista ei sitä enää tue.
+    Suosittelemme asentamaan jonkin seuraavista selaimista. Ninite nopeuttaa
+    tiedoston hakemista, alla linkit suoraan asentimeen:
+
+    - Google Chrome: https://ninite.com/chrome/ninite.exe
+    - Opera: https://ninite.com/opera/ninite.exe
+    - Firefox: https://ninite.com/firefox/ninite.exe
+    - Edge: https://ninite.com/edge/ninite.exe
+  </Step>
+</Stepper>
+
 
 ## Huomautuksia:
 
--   Salasanan resetointi ei asiakasalueen kautta onnistu, sillä asiakasalue ei
-    tue Windowsin salasananresetointia
--   Asiakasalueella saattaa näkyä väärä käyttöjärjestelmä, kun palvelimelle on
-    asennettu oma käyttöjärjestelmä ISO-tiedostoja käyttäen)
+- Salasanan resetointi ei asiakasalueen kautta onnistu, sillä asiakasalue ei tue Windowsin salasananresetointia
+- Asiakasalueella saattaa näkyä väärä käyttöjärjestelmä, kun palvelimelle on asennettu oma käyttöjärjestelmä ISO-tiedostoja käyttäen
