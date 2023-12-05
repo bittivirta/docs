@@ -3,17 +3,18 @@
   "version": "3.0.0",
   "private": true,
   "scripts": {
-    "build": "docusaurus build",
+    "build": "bun run infogen && docusaurus build",
     "clear": "docusaurus clear",
     "deploy": "docusaurus deploy",
-    "dev": "pnpm start",
+    "dev": "bun run start",
     "docusaurus": "docusaurus",
     "serve": "docusaurus serve",
-    "start": "docusaurus start",
+    "start": "bun run infogen && docusaurus start",
     "swizzle": "docusaurus swizzle",
     "write-heading-ids": "docusaurus write-heading-ids",
     "write-translations": "docusaurus write-translations",
-    "dep:upgrade": "bun x npm-check-updates -ui"
+    "dep:upgrade": "bun x npm-check-updates -ui",
+    "infogen": "branch=$(git rev-parse --abbrev-ref HEAD) && mkdir .tmp && printf '{\"branch\":\"%s\"}' \"$branch\" > ./.tmp/info.json"
   },
   "browserslist": {
     "production": [
