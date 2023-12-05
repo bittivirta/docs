@@ -7,28 +7,33 @@
 
 :root {
   --ifm-color-primary: #1145ca;
-  --ifm-color-primary-dark: #105ca4;
-  --ifm-color-primary-darker: #0f579b;
-  --ifm-color-primary-darkest: #0d477f;
-  --ifm-color-primary-light: #1470c8;
-  --ifm-color-primary-lighter: #1575d1;
-  --ifm-color-primary-lightest: #1c84e9;
+  --ifm-color-primary-dark: #0f3eb6;
+  --ifm-color-primary-darker: #0e3bac;
+  --ifm-color-primary-darkest: #0c308d;
+  --ifm-color-primary-light: #134cde;
+  --ifm-color-primary-lighter: #144fe8;
+  --ifm-color-primary-lightest: #2f65ee;
+
+  --ifm-alert-background-color: #1d355a;
+
   --docusaurus-highlighted-code-line-bg: rgba(155, 181, 206, 0.17);
   --docusaurus-hover-code-line-bg: rgba(155, 181, 206, 0.08);
   --ifm-code-font-size: 95%;
+
 
   --ifm-font-family-base: "Asap", sans-serif;
   --ifm-font-family-monospace: "Fira Code Nerd", monospace;
 }
 
 [data-theme="dark"] {
-  --ifm-color-primary: #6691ff;
-  --ifm-color-primary-dark: #45a4fd;
-  --ifm-color-primary-darker: #339bfc;
-  --ifm-color-primary-darkest: #0381f7;
-  --ifm-color-primary-light: #8bc6fd;
-  --ifm-color-primary-lighter: #9dcffe;
-  --ifm-color-primary-lightest: #d2e9fe;
+  --ifm-color-primary: #9bb5f8;
+  --ifm-color-primary-dark: #7599f5;
+  --ifm-color-primary-darker: #638bf4;
+  --ifm-color-primary-darkest: #2a61f0;
+  --ifm-color-primary-light: #c1d1fb;
+  --ifm-color-primary-lighter: #d3dffc;
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-background-color: #05132e;
   --docusaurus-highlighted-code-line-bg: rgba(155, 181, 206, 0.17);
   --docusaurus-hover-code-line-bg: rgba(155, 181, 206, 0.08);
   --ifm-code-font-size: 95%;
@@ -172,6 +177,15 @@ code {
   .theme-doc-markdown ol li p {
     margin-top: 3px;
   }
+
+}
+
+main {
+  a {
+    @apply font-bold;
+  }
+
+  font-weight: 500;
 }
 
 kbd {
@@ -187,4 +201,8 @@ kbd {
 
 main img {
   @apply rounded-lg;
+}
+
+.alert div :last-child {
+  @apply mb-0;
 }
