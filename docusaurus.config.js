@@ -50,6 +50,10 @@ const config = {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/bittivirta/docs",
+          admonitions: {
+            keywords: ['result'],
+            extendDefaults: true,
+          },
         },
         blog: false,
         theme: {
