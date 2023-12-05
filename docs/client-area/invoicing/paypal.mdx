@@ -1,6 +1,7 @@
 import Image from "@theme/IdealImage";
+import Stepper, { Step } from "@site/src/components/Stepper";
 
-# Mikä on PayPal?
+# PayPal
 
 **PayPal Holdings, Inc.** on Amerikkalainen, kansainvälisesti luotettu
 maksutapatarjoaja johon voit tallentaa pankki-/luottokorttisi tai siirtää rahaa
@@ -16,31 +17,41 @@ Lisätietoa PayPalista löydät heidän omilta sivuilta
 [https://www.paypal.com/](https://www.paypal.com/) tai Wikipedia-artikkelista:
 [https://fi.wikipedia.org/wiki/PayPal](https://fi.wikipedia.org/wiki/PayPal).
 
-## Miten maksan PayPalilla Bittivirta.cloudissa?​
-
-### Olemassa oleva lasku
-
-1. Kirjaudu asiakasalueelle osoitteessa
-   [bittivirta.cloud/login](https://bittivirta.cloud/login)
-2. Valitse "Minun..." » "Laskuni"
+<Stepper title="Olemassa oleva laskun maksaminen">
+  <Step>
+    Kirjaudu asiakasalueelle osoitteessa
+    [bittivirta.cloud/login](https://bittivirta.cloud/login)
+  </Step>
+  <Step>
+    Valitse "Minun..." » "Laskuni"
     <Image
-    	style={{ maxWidth: "400px" }}
-    	img={require("./assets/laskuni.png")}
-    	alt="Laskuni"
+      style={{ maxWidth: "400px" }}
+      img={require("./assets/laskuni.png")}
+      alt="Laskuni"
     />
-3. Valitse lasku klikkaamalla laskua, jonka haluat maksaa
+  </Step>
+  <Step>
+    Valitse lasku klikkaamalla laskua, jonka haluat maksaa
     <Image img={require("./assets/laskut.png")} alt="Laskut" />
-4. Valitse maksutavaksi "PayPal" ja maksa PayPal-tilillä ylemmällä, keltaisella
-   painikkeella tai pankkikortilla harmaalla painikkeella.
+  </Step>
+  <Step>
+    Valitse maksutavaksi "PayPal" ja maksa PayPal-tilillä ylemmällä, keltaisella
+    painikkeella tai pankkikortilla harmaalla painikkeella.
     <Image
-    	style={{ maxWidth: "400px" }}
-    	img={require("./assets/paypal-maksu.png")}
-    	alt="Maksu"
+      style={{ maxWidth: "400px" }}
+      img={require("./assets/paypal-maksu.png")}
+      alt="Maksu"
     />
-5. Seuraa PayPalin antamia maksuohjeita
+  </Step>
+  <Step>Seuraa PayPalin antamia maksuohjeita</Step>
+</Stepper>
 
-### Uusi tilaus
+## Uuden tilauksen maksaminen PayPalilla
 
 1. Tee uusi tilaus ja siirry kassalle
 2. Valitse maksutavaksi PayPal ja jatka maksamaan tilaus
-    <Image img={require("./assets/paypal-kassa.png")} alt="Kassa" />
+   <Image
+     img={require("./assets/paypal-kassa.png")}
+     alt="Kassa"
+     style={{ maxWidth: "700px" }}
+   />

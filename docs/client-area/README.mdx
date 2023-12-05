@@ -1,4 +1,5 @@
 import Image from "@theme/IdealImage";
+import Stepper, { Step } from "@site/src/components/Stepper";
 
 # Asiakasalue
 
@@ -44,9 +45,21 @@ käytetään mm. palveluiden tilaamiseen ja laskujen maksamiseen.
 Yhdellä käyttäjätilillä voi olla useampi asiakastili. Voit vaihtaa asiakastiliä
 seuraavasti:
 
-1. Kirjaudu käyttäjätilillesi osoitteessa
-   [bittivirta.cloud/login](https://bittivirta.cloud/login)
-2. Valitse "Vaihda asiakastili"
-    <Image style={{maxWidth: 600}} img={require("./assets/asiakastili.png")} />
-3. Valitse asiakastili, jolle haluat kirjautua klikkaamalla "Vaihda asiakastili"
+<Stepper title="Asiakastilin vaihtaminen">
+  <Step>
+    Kirjaudu käyttäjätilillesi osoitteessa
+    [bittivirta.cloud/login](https://bittivirta.cloud/login)
+  </Step>
+  <Step>
+    Valitse "Vaihda asiakastili"
+    <Image
+      style={{ maxWidth: 600 }}
+      img={require("./assets/asiakastili.png")}
+    />
+  </Step>
+  <Step>
+    Valitse asiakastili, jolle haluat kirjautua klikkaamalla "Vaihda
+    asiakastili"
     <Image img={require("./assets/asiakastilit.png")} />
+  </Step>
+</Stepper>
