@@ -1,6 +1,4 @@
-const { themes } = require('prism-react-renderer');
-const lightCodeTheme = themes.github;
-const darkCodeTheme = themes.dracula;
+import prismVscodeDarkPlus from "./src/theme/prism-vscode-dark-plus.ts"
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -86,10 +84,10 @@ const config = {
     ({
       image: "img/social-card.png",
       navbar: {
-        title: "Bittivirta",
+        title: "Docs",
         logo: {
           alt: "Bittivirta Logo",
-          src: "https://cdn.bittivirta.fi/graphics/logo/2023/bittivirta/svg/icon.svg",
+          src: "https://cdn.bittivirta.fi/brand/logo/logo.svg",
         },
         items: [
           {
@@ -145,8 +143,40 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Bittivirta - All rights reserved`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismVscodeDarkPlus,
+        darkTheme: prismVscodeDarkPlus,
+        additionalLanguages: ['bash', "log", "diff", "ini", "json", "mermaid", "nginx", "php", "sql", "css", "java", "apacheconf"],
+        magicComments: [
+          {
+            className: 'theme-code-block-highlighted-line',
+            line: 'highlight',
+            block: { start: 'highlight-start', end: 'highlight-end' },
+          },
+          {
+            className: 'theme-code-block-error-line',
+            line: 'error',
+          },
+          {
+            className: 'theme-code-block-terminal-line',
+            line: 'terminal',
+          },
+          {
+            className: 'theme-code-block-script-line',
+            line: 'script',
+          },
+          {
+            className: 'theme-code-block-comment-line',
+            line: 'comment',
+          },
+          {
+            className: 'theme-code-block-mariadb-line',
+            line: 'mariadb',
+          },
+          {
+            className: 'theme-code-block-mysql-line',
+            line: 'mysql',
+          },
+        ],
       },
       zoom: {
         selector: ".markdown :not(em) > img",
