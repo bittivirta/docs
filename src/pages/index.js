@@ -31,13 +31,13 @@ export default function Home() {
               "description": "Asiakasalueen käyttöohjeet"
             },
             {
-              "link": "/hosting",
+              "link": "/hosting/web",
               "icon": ["fat", "hotel"],
               "title": "Webhotelli",
               "description": "Webhotellien käyttöohjeet"
             },
             {
-              "link": "/servers",
+              "link": "/servers/vps",
               "icon": ["fat", "usb-drive"],
               "title": "Virtuaalipalvelimet",
               "description": "Virtuaalimien käyttöohjeet"
