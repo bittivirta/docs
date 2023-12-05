@@ -37,7 +37,7 @@ export default function Home() {
               "description": "Webhotellien käyttöohjeet"
             },
             {
-              "link": "/servers/vps",
+              "link": "/server/vps",
               "icon": ["fat", "usb-drive"],
               "title": "Virtuaalipalvelimet",
               "description": "Virtuaalimien käyttöohjeet"
