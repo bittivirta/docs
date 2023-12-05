@@ -45,6 +45,11 @@ input,
 select,
 textarea {
   font-family: var(--ifm-font-family-base);
+  background-color: #f8fafc;
+}
+
+.navbar {
+  @apply shadow-md;
 }
 
 .navbar__title {
@@ -133,6 +138,8 @@ code {
 }
 
 .main-wrapper {
+  @apply mt-5;
+
   .theme-doc-sidebar-container {
     @apply py-3;
     border: 0 !important;
