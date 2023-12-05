@@ -326,13 +326,13 @@
     "description": "The title of the tag list page"
   },
   "stepper.show_one": {
-    "message": "Näytä yksi"
+    "message": "Näytä yksi ohje kerrallaan"
   },
   "stepper.show_all": {
-    "message": "Näytä kaikki"
+    "message": "Näytä kaikki kerralla"
   },
   "stepper.all_steps": {
-    "message": "Kaikki"
+    "message": "Ohje"
   },
   "stepper.of": {
     "message": "/"
