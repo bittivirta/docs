@@ -1,10 +1,4 @@
-# Muokkaaminen
-
-Jos käsilläsi sattuu olemaan enemmän aikaa, ja haluat osallistua dokumentaation kehittämiseen, voit haarauttaa dokumentaation itsellesi ja tehdä muutoksia siihen. Haarauttaminen onnistuu GitHubin kautta, jossa voit haarauttaa dokumentaation, muokata sitä ja lähettää muutokset tarkastettavaksi.
-
-Kannattaa kuitenkin muistaa, että kyseessä on Bittivirran dokumentaatio, joten muutokset julkaistaan vasta, kun ne on hyväksytty Bittivirran henkilökunnan toimesta. Suuremmissa muutoksissa kannattaa siis kysyä ensin Bittivirran henkilökunnalta, onko muutoksille tarvetta.
-
-Lisäksi, dokumentaatio on Bittivirran immateriaalioikeuksien alaista ja repositorion lisenssinä on omistusoikeuslisenssi (proprietary), joten muutokset siirtyvät Bittivirran omistukseen, kun ne on hyväksytty.
+# Haarauttaminen
 
 ## Haarauttaminen GitHubin kautta
 
@@ -20,7 +14,9 @@ Esimerkiksi:
 - `feature/new-minecraft-guide` Lisää ohjeet Minecraft-palvelimen käyttöönottoon
 - `fix/typos` Korjaa kirjoitusvirheitä
 
-> ⚠️ **Älä tee muutoksia suoraan `main`-haaraan!**
+:::warning
+Älä tee muutoksia suoraan `main`-haaraan!
+:::
 
 ## Muutoksien tekeminen
 
@@ -36,13 +32,29 @@ Emoji ilmaisee muutoksen tyyppiä. Emoji tulee lisätä otsikon eteen. Emoji voi
 - `:pencil2:` Korjaa kirjoitusvirhe
 - `:recycle:` Uudelleenjärjestele ohjeita
 
-Kuvaus voi sisältää esimerkiksi seuraavia asioita:
+Kuvaus tulee olla englanniksi ja se tulee aloittaa isolla kirjaimella. Kuvaus tulee olla yksinkertainen ja selkeä. Kuvaus kirjoitetaan imperatiivisessa muodossa (käskymuoto). Kuvaus voi olla esimerkiksi seuraavista:
 
-- Kirjoitusvirheen korjaus
-- Virheellisen tiedon korjaus
-- Linkin korjaus
-- Uuden sisällön lisääminen
+- `Fix typo`
+- `Add new guide`
+- `Update guide`
+- `Fix broken link`
+
+Jos muutos koskee jotakin tiettyä GitHub issueta, tulee issue mainita muutoksen laajemmassa kuvauksessa GitHubin laajemmalla mallilla. Esimerkiksi:
+
+```git
+fix: :bug: Fix typo
+
+Fixes bittivirta/docs#1
+```
 
 ## Muutosten lähettäminen
 
 Kun olet tehnyt muutoksia, voit lähettää muutokset tarkastettavaksi. Ennen muutosten lähettämistä päivitä oma haarasi uusimpaan versioon päähaarasta (main). Tämän jälkeen voit lähettää muutokset GitHubiin ja luoda uuden pull requestin. Pull requestin otsikon tulee noudattaa muutosten tekemisessä käytettyä otsikointia. Pull requestin kuvaus tulee sisältää tietoa tehdyistä muutoksista.
+
+
+## Ei paniikkia
+
+Jos et ole varma, miten jokin asia tehdään, älä epäröi kysyä apua. Voit kysyä apua esimerkiksi asiakaspalvelustamme, Discordissa tai GitHubin kautta. Voit myös tehdä muutoksia ja lähettää ne tarkastettavaksi, jolloin muutokset voidaan tarkistaa ja tarvittaessa korjata.
+
+Emme odota, että kaikki osaavat kaiken. Tärkeintä on, että yrität ja opit uutta! :heart: Arvostamme kaikkia tekemiäsi muutoksia, vaikka ne eivät olisikaan täydellisiä.
+

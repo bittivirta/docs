@@ -1,0 +1,56 @@
+# Ohjeiden askellus
+
+Ohjeiden askellus on yksi tapa esittää ohjeita. Se on hyödyllinen, kun ohjeet
+ovat pitkiä ja niitä on vaikea hahmottaa yhdellä silmäyksellä. Ohjeiden
+askellus on myös hyödyllinen, kun ohjeet ovat monimutkaisia ja niiden
+suoritusjärjestys on tärkeä.
+
+Voit käyttää askellusta, seuraavanlaisesti:
+
+```jsx
+<Stepper>
+  <Step>
+    Ensiimmäinen askel. Tämä on hyvin tärkeä askel, joka on tehtävä ennen
+    seuraavaa askelta.
+
+    Voit myös lisätä kuvia askeliin, kuten tässä:
+    <Image img={require("@site/static/img/social-card.png")} style={{maxWidth:400}} />
+  </Step>
+  <Step>
+    Toinen askel. Tämä on myös hyvin tärkeä askel, joka on tehtävä ennen
+    seuraavaa askelta.
+  </Step>
+  <Step>
+    Kolmas askel. Tämä on myös hyvin tärkeä askel, joka on tehtävä viimeisenä,
+    jotta ohjeet toimivat.
+  </Step>
+  <Step>
+    Valmista tuli! Nyt voit nauttia uusista taidoistasi. Voit myös kertoa lukijalle,
+    mitä hän voi tehdä seuraavaksi.
+  </Step>
+</Stepper>
+```
+
+**Joka tulostuu:**
+
+<Stepper>
+  <Step>
+    Ensiimmäinen askel. Tämä on hyvin tärkeä askel, joka on tehtävä ennen
+    seuraavaa askelta.
+
+    Voit myös lisätä kuvia askeliin, kuten tässä:
+    <Image img={require("@site/static/img/social-card.png")} style={{maxWidth:400}} />
+  </Step>
+  <Step>
+    Toinen askel. Tämä on myös hyvin tärkeä askel, joka on tehtävä ennen
+    seuraavaa askelta.
+  </Step>
+  <Step>
+    Kolmas askel. Tämä on myös hyvin tärkeä askel, joka on tehtävä viimeisenä,
+    jotta ohjeet toimivat.
+  </Step>
+  <Step>
+    Valmista tuli! Nyt voit nauttia uusista taidoistasi. Voit myös kertoa lukijalle,
+    mitä hän voi tehdä seuraavaksi.
+  </Step>
+</Stepper>
