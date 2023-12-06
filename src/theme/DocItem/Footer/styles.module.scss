@@ -1,0 +1,7 @@
+.footerButton {
+  @apply bg-white shadow-sm border border-solid border-slate-200 flex items-center h-[40px] w-[40px] justify-center rounded-full relative text-lg transition-all;
+}
+
+.tooltip {
+  @apply absolute z-10 block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 left-1/2 -translate-x-1/2 -translate-y-full w-auto whitespace-nowrap;
+}
