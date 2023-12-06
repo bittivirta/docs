@@ -2,6 +2,7 @@ import React from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import CategoryIndex from '@site/src/components/CategoryIndex';
+import { faBook, faBuilding, faGamepadAlt, faHotel, faUsbDrive, faUsers } from "@fortawesome/pro-thin-svg-icons";
 
 
 function HomepageHeader() {
@@ -26,37 +27,37 @@ export default function Home() {
           <CategoryIndex cols={3} variation="large" items={[
             {
               "link": "/client-area",
-              "icon": ["fat", "users"],
+              "icon": faUsers,
               "title": "Asiakasalue",
               "description": "Asiakasalueen käyttöohjeet"
             },
             {
               "link": "/hosting/web",
-              "icon": ["fat", "hotel"],
+              "icon": faHotel,
               "title": "Webhotelli",
               "description": "Webhotellien käyttöohjeet"
             },
             {
               "link": "/server/vps",
-              "icon": ["fat", "usb-drive"],
+              "icon": faUsbDrive,
               "title": "Virtuaalipalvelimet",
               "description": "Virtuaalimien käyttöohjeet"
             },
             {
               "link": "/game",
-              "icon": ["fat", "gamepad-alt"],
+              "icon": faGamepadAlt,
               "title": "Pelipalvelimet",
               "description": "Pelipalvelinten käyttöohjeet"
             },
             {
               "link": "/docs",
-              "icon": ["fat", "book"],
+              "icon": faBook,
               "title": "Dokumentaatio",
               "description": "Dokumentaation käyttöohjeet"
             },
             {
               "link": "/company",
-              "icon": ["fat", "building"],
+              "icon": faBuilding,
               "title": "Yritys",
               "description": "Tietoa Bittivirrasta"
             },
