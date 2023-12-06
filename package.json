@@ -14,7 +14,7 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "write-translations": "docusaurus write-translations",
     "dep:upgrade": "bun x npm-check-updates -ui",
-    "infogen": "branch=$(git rev-parse --abbrev-ref HEAD) && mkdir .tmp && printf '{\"branch\":\"%s\"}' \"$branch\" > ./.tmp/info.json"
+    "infogen": "branch=$(git rev-parse --abbrev-ref HEAD) && mkdir -p .tmp && printf '{\"branch\":\"%s\"}' \"$branch\" > ./.tmp/info.json"
   },
   "browserslist": {
     "production": [
