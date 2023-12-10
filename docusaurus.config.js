@@ -9,7 +9,7 @@ const config = {
   url: "https://docs.bittivirta.fi/",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenMarkdownLinks: "throw",
 
   i18n: {
     defaultLocale: "fi",
