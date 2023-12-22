@@ -14,18 +14,20 @@ import Image from "@theme/IdealImage";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CategoryIndex from '@site/src/components/CategoryIndex';
+import Link from '@docusaurus/Link';
 
 library.add(fab, fas, fal, fat, far); // Add all icons to the library so you can use them without importing them individually.
 
 export default {
   // Re-use the default mapping
   ...MDXComponents,
-  icon: FontAwesomeIcon, // Make the FontAwesomeIcon component available in MDX as <icon />.
+  Icon: FontAwesomeIcon,
   Hotkey,
   Stepper,
   Step,
   Image,
   Tabs,
   TabItem,
-  CategoryIndex
+  CategoryIndex,
+  Link
 };

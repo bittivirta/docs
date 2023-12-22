@@ -1,7 +1,4 @@
-import Image from "@theme/IdealImage";
-import Stepper, { Step } from "@site/src/components/Stepper";
-
-# Asiakasalue
+# Tilit
 
 Asiakasalueella käytössä on erikseen käyttäjä- ja asiakastilejä. Käyttäjätilit
 ovat henkilökohtaisia tilejä, joida hallitaan asiakkuuksia. Tämä mahdollistaa
@@ -34,32 +31,3 @@ flowchart LR
       mikaelk
    end
 ```
-
-## Käyttäjä- ja asiakastili
-
-Asiakasalueella on erikseen käyttäjä- ja asiakastilejä. Käyttäjätili on
-yksilöllinen ja se on luotu sinulle. Asiakastili on yrityksesi oma ja se on
-luotu yrityksesi Y-tunnuksen tai asiakasnimen perusteella. Asiakastiliä
-käytetään mm. palveluiden tilaamiseen ja laskujen maksamiseen.
-
-Yhdellä käyttäjätilillä voi olla useampi asiakastili. Voit vaihtaa asiakastiliä
-seuraavasti:
-
-<Stepper title="Asiakastilin vaihtaminen">
-  <Step>
-    Kirjaudu käyttäjätilillesi osoitteessa
-    [bittivirta.cloud/login](https://bittivirta.cloud/login)
-  </Step>
-  <Step>
-    Valitse "Vaihda asiakastili"
-    <Image
-      style={{ maxWidth: 600 }}
-      img={require("./assets/asiakastili.png")}
-    />
-  </Step>
-  <Step>
-    Valitse asiakastili, jolle haluat kirjautua klikkaamalla "Vaihda
-    asiakastili"
-    <Image img={require("./assets/asiakastilit.png")} />
-  </Step>
-</Stepper>

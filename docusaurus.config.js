@@ -100,8 +100,8 @@ const config = {
         items: [
           {
             type: "docSidebar",
-            sidebarId: "clientAreaSidebar",
-            label: "Client Area",
+            sidebarId: "generalSidebar",
+            label: "General",
           },
           {
             type: "docSidebar",
