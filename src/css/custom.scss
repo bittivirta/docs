@@ -14,12 +14,13 @@
   --ifm-color-primary-lighter: #144fe8;
   --ifm-color-primary-lightest: #2f65ee;
 
+  --ifm-background-color: #f8fafc;
+
   --ifm-alert-background-color: #1d355a;
 
   --docusaurus-highlighted-code-line-bg: rgba(155, 181, 206, 0.17);
   --docusaurus-hover-code-line-bg: rgba(155, 181, 206, 0.08);
   --ifm-code-font-size: 95%;
-
 
   --ifm-font-family-base: "Asap", sans-serif;
   --ifm-font-family-monospace: "Fira Code Nerd", monospace;
@@ -33,7 +34,10 @@
   --ifm-color-primary-light: #c1d1fb;
   --ifm-color-primary-lighter: #d3dffc;
   --ifm-color-primary-lightest: #ffffff;
-  --ifm-background-color: #05132e;
+
+  --ifm-background-color: #171e2d !important;
+  --ifm-background-surface-color: #242d3c !important;
+
   --docusaurus-highlighted-code-line-bg: rgba(155, 181, 206, 0.17);
   --docusaurus-hover-code-line-bg: rgba(155, 181, 206, 0.08);
   --ifm-code-font-size: 95%;
@@ -45,7 +49,6 @@ input,
 select,
 textarea {
   font-family: var(--ifm-font-family-base);
-  background-color: #f8fafc;
 }
 
 .navbar {

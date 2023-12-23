@@ -10,7 +10,7 @@ const Footer = () => {
   const info = require("../../../.tmp/info.json")
 
   return (
-    <footer className="bg-primary-800 text-primary-100">
+    <footer className="bg-slate-800 text-primary-100">
       <div className="container py-10">
         <div className="flex gap-10 items-center justify-between">
           <Image img="https://cdn.bittivirta.fi/brand/logo/light/logo.svg" height={40} />

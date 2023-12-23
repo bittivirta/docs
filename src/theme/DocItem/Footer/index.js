@@ -63,7 +63,7 @@ export default function FooterWrapper(props) {
             <div><Link to="https://github.com/bittivirta/docs/issues" target="_blank">Ilmoita ongelmasta <FontAwesomeIcon icon={faExternalLink} /></Link></div>
           </div>}
         </div>
-        <div className='hidden md:block border-0 border-e border-solid border-slate-300 p-3 pe-5' />
+        <div className='hidden md:block border-0 border-e border-solid border-slate-300 dark:border-slate-700  p-3 pe-5' />
         <div className='flex-1 hidden md:block'>
           <strong className='mb-1 block opacity-75 text-base'>Sivun tekijät</strong>
           <div className="flex flex-wrap ps-1">
@@ -92,7 +92,7 @@ export default function FooterWrapper(props) {
             </Link>
           </div>
         </div>
-        <div className='hidden md:block border-0 border-e border-solid border-slate-300 p-3 pe-5' />
+        <div className='hidden md:block border-0 border-e border-solid border-slate-300 dark:border-slate-700 p-3 pe-5' />
         <div className='flex-1 text-end'>
           <strong className='mb-1 block opacity-75 text-base'>Jaa tämä artikkeli</strong>
           <div class="flex justify-end gap-2">

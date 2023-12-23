@@ -13,7 +13,7 @@ function Category({ link, title, description, icon, image, variation }) {
     visual = <img src={image} alt={title} width={variation == 'large' ? '40' : '48'} className='block' />
   }
   return (
-    <Link to={link} className={clsx("shadow-md bg-white border border-solid border-slate-100 p-4 rounded-xl flex items-center text-slate-800 hover:no-underline hover:text-primary hover:scale-[1.02] transition-all", variation == "large" ? "p-6" : "p-4")}>
+    <Link to={link} className={clsx("shadow-md bg-white border border-solid border-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:text-cloud p-4 rounded-xl flex items-center text-slate-800 hover:no-underline hover:text-primary hover:scale-[1.02] transition-all", variation == "large" ? "p-6" : "p-4")}>
       <div className={clsx(variation == "large" ? "mr-5" : "mr-4")}>
         {visual}
       </div>
