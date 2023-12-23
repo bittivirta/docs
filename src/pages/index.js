@@ -2,7 +2,7 @@ import React from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import CategoryIndex from '@site/src/components/CategoryIndex';
-import { faBook, faBuilding, faGamepadAlt, faHotel, faUsbDrive, faUsers } from "@fortawesome/pro-thin-svg-icons";
+import { faBook, faBuilding, faGamepadAlt, faHotel, faMemoPad, faUsbDrive, faUsers } from "@fortawesome/pro-thin-svg-icons";
 
 
 function HomepageHeader() {
@@ -26,10 +26,10 @@ export default function Home() {
           <h2 className="text-3xl">Valitse aihe, josta kaipaat lisätietoa</h2>
           <CategoryIndex cols={3} variation="large" items={[
             {
-              "link": "/client-area",
-              "icon": faUsers,
-              "title": "Asiakasalue",
-              "description": "Asiakasalueen käyttöohjeet"
+              "link": "/general",
+              "icon": faMemoPad,
+              "title": "Yleinen",
+              "description": "Yleiset palveluiden käyttöohjeet"
             },
             {
               "link": "/hosting/web",
