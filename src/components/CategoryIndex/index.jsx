@@ -10,7 +10,7 @@ function Category({ link, title, description, icon, image, variation }) {
   if (icon) {
     visual = <FontAwesomeIcon icon={icon} size={variation == 'large' ? '4x' : '2x'} fixedWidth />
   } else if (image) {
-    visual = <img src={image} alt={title} width={variation == 'large' ? '40' : '48'} className='block' />
+    visual = <img src={image} alt={title} width={variation == 'large' ? '30' : '38'} className='block' />
   }
   return (
     <Link to={link} className={clsx("shadow-md bg-white border border-solid border-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:text-cloud p-4 rounded-xl flex items-center text-slate-800 hover:no-underline hover:text-primary hover:scale-[1.02] transition-all", variation == "large" ? "p-6" : "p-4")}>
