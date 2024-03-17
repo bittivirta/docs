@@ -198,13 +198,6 @@ main {
   font-weight: 500;
 }
 
-kbd {
-  font-family: var(--ifm-font-family-base);
-  word-break: keep-all;
-  white-space: nowrap;
-  @apply px-1.5 py-1 text-xs inline-block min-w-[1.5rem] font-semibold text-center text-gray-800 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500 shadow-xs;
-}
-
 .navbar__inner {
   @apply container mx-auto;
 }
@@ -215,4 +208,50 @@ main img {
 
 .alert div :last-child {
   @apply mb-0;
+}
+
+
+table {
+  @apply bg-white dark:bg-slate-900 p-3 rounded-2xl w-full;
+}
+
+table thead,
+table tbody {
+  @apply w-full;
+}
+
+table tr {
+  @apply border-none;
+}
+
+
+table td,
+table th,
+table thead tr {
+  @apply border-none;
+}
+
+table tr th {
+  @apply dark:bg-slate-100/5 text-left;
+}
+
+table tr:nth-child(2n),
+table th {
+  @apply bg-argon dark:bg-slate-100/5 border-separate;
+}
+
+table tr td:first-child,
+table tr th:first-child {
+  @apply rounded-tl-xl rounded-bl-xl;
+}
+
+table tr td:last-child,
+table tr th:last-child {
+  @apply rounded-tr-xl rounded-br-xl;
+}
+
+code {
+  word-break: keep-all;
+  white-space: nowrap;
+  @apply px-1.5 py-1 text-xs inline-block min-w-[1.5rem] font-semibold text-center text-slate-700 bg-slate-100 border border-slate-300 rounded-lg dark:bg-slate-100/10 dark:text-slate-100 dark:border-slate-100/10 shadow-xs;
 }

@@ -1,0 +1,6 @@
+.key {
+  font-family: var(--ifm-font-family-base);
+  word-break: keep-all;
+  white-space: nowrap;
+  @apply px-1.5 py-1 text-xs inline-block min-w-[1.5rem] font-semibold text-center text-slate-700 bg-slate-100 border border-slate-300 rounded-lg dark:bg-slate-100/10 dark:text-slate-100 dark:border-slate-100/10 shadow-xs;
+}
