@@ -6,7 +6,7 @@
 @import url(https://cdn.bittivirta.fi/css/fonts/fira-code-nerd.css);
 
 :root {
-  --ifm-color-primary: #1145ca;
+  --ifm-color-primary: #1060ee;
   --ifm-color-primary-dark: #0f3eb6;
   --ifm-color-primary-darker: #0e3bac;
   --ifm-color-primary-darkest: #0c308d;
@@ -237,7 +237,7 @@ table tr th {
 
 table tr:nth-child(2n),
 table th {
-  @apply bg-argon dark:bg-slate-100/5 border-separate;
+  @apply bg-silicon-100 dark:bg-slate-100/5 border-separate;
 }
 
 table tr td:first-child,

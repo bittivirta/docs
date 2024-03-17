@@ -1,184 +1,184 @@
-import Stepper, { Step } from "@site/src/components/Stepper";
-import Hotkey from "@site/src/components/Hotkey";
 
-# Minecraft-palvelimen asennus
 
-Jos etsit helppoa tapaa perustaa Minecraft-palvelimen, tämä ei ole oikea
-ratkaisu. Jos tavoitteenasi on saada palvelin päälle muutamalla klikkauksella -
-suosittelemme Bittivirran tarjoamia pelipalvelimia. Bittivirran pelipalvelin
-lähtee toimintaan parilla klikkauksella, etkä tarvitse tätä monivaiheista
-ohjetta lainkaan. Kaikki tämä tapahtuu siis Bittivirran pelipalvelimissa
-automaattisesti. Lue lisää täällä: https://bittivirta.cloud/pelipalvelimet.php
 
-Jos kuitenkin haluat säätää palvelimen kanssa enemmän, esim. muokata
-JVM-argumentteja tai perustaa suuremman palvelinryppään (BungeeCord), tässä on
-sinulle oikea ohje. Olemme pyrkineet yksinkertaistamaan palvelimen
-asennusvaiheet mahdollisimman helpoiksi, jotta uusimmatkin Linux-pohjaisten
-käyttöjärjestelmien käyttäjät pysyvät perässä.
 
-Jos olet juuri hankkinut virtuaalipalvelimen, suosittelemme lukemaan tämän
-ohjeen: [Pikaohjeet virtuaalipalvelimen käyttöön](../quick-start)
 
-<Stepper title="Minecraft-palvelimen asennus Linuxille">
-  <Step>
-    Tarvitsemme Javan Minecraft-palvelimen luomiseen, sillä Minecraft on sillä
-    ohjelmoitu ja vaatii sen toimiakseen.
 
-    Jos asennat vanhemman Minecraft-version, tarvitset myös vanhemman Java-version.
-    Tässä suuntaa antava ohjeistus javan versioille:
 
-    - **Minecraft 1.17+** - Java 16
-      - `sudo apt install openjdk-16-jre`
-    - **Minecraft 1.12-1.16.5** - Java 11
-      - `sudo apt install openjdk-11-jre`
-    - **Minecraft 1.11.2** (ja vanhemmat) - Java 8
-      - `sudo apt install openjdk-8-jre`
 
-    Javan version voit tarkistaa aina komennolla `java -version`.
 
-    Halutessasi voit asentaa vaikka kaikki kolme javan versiota, mutta oletuksena
-    kuitenkin käytetään aina uusinta versiota. Jos asennat uudemman Java-version,
-    mutta sinun tarvitseekin käyttää vanhempaa versiota, sinun tulee muuttaa
-    palvelimen käynnistyskomennon `java`-komennon tilalle javan absoluuttinen polku,
-    eli esim. /usr/lib/jvm/java-1.8.0-openjdk-amd64.
 
-    Listan absoluuttisista poluista saat komennolla
-    `update-java-alternatives --list`:
 
-    ```sh title="Java-versioiden absoluuttiset polut" {1}
-    $ update-java-alternatives --list
-    java-1.11.0-openjdk-amd64 1111 /usr/lib/jvm/java-1.11.0-openjdk-amd64
-    java-1.16.0-openjdk-amd64 1611 /usr/lib/jvm/java-1.16.0-openjdk-amd64
-    java-1.8.0-openjdk-amd64 1081 /usr/lib/jvm/java-1.8.0-openjdk-amd64
-    ```
 
-  </Step>
-  <Step>
-    Tarvitsemme paikan, jossa palvelimen tiedostot ovat. Lisäksi meidän pitää ladata
-    palvelimen .jar-tiedosto, joka luo meille tiedostot ja käynnistää palvelimen.
 
-    Luomme kansion ja siirrymme siihen:
-    ```sh title="Kansion luonti"
-    $ mkdir /home/minecraft/ && cd /home/minecraft/
-    ```
 
-  </Step>
-  <Step>
-    Hyväksymme Minecraftin EULA:n luomalla tiedoston eula.txt:
 
-    ```sh title="EULA:n hyväksyminen"
-    $ echo "eula=true" >> eula.txt
-    ```
 
-    Huomaathan, että luomalla edellisen tiedoston hyväksyt seuraavat ehdot:
-    https://account.mojang.com/terms &
-    https://account.mojang.com/documents/minecraft_eula
 
-  </Step>
-  <Step>
-    Seuraavaksi lataamme **server.jar**-tiedoston. Siirry osoitteeseen
-    https://purpurmc.org/downloads ja valitse haluamasi versio klikkaamalla
-    latauspainiketta oikealla hiiren painikkeella ja valitsemalla URL-osoitteen
-    kopiointi leikepöydälle. Huomaathan, että tarvitset .jar-tiedoston **linkin**
-    sen lataamiseen palvelimelle. Saat tämän myls selaimesi lataushistorian avulla,
-    jonne pääset näppäinyhdistelmällä <Hotkey>Ctrl + J</Hotkey> tai <Hotkey>⌘ + ⇧ + J</Hotkey>.
 
-    Seuraavassa esimerkissä korvaa `$LINKKI` kopioimallasi linkillä. Tämä onnistuu
-    helpoiten, kun kirjoitat koodin käsin, liittämällä linkin `$LINKKI`-tekstin
-    tilalle (Dollarinmerkkiä ei siis tule kirjoittaa konsoliin).
 
-    ```sh title="Server.jar:n lataaminen"
-    $ $LINKKI -O server.jar
-    ```
 
-  </Step>
-  <Step>
-    Seuraavaksi luomme palvelimen käynnistysskriptin:
-    ```sh title="start.sh:n luonti"
-    $ "java -Xmx2G -Xms2G -jar server.jar nogui" >> start.sh && chmod +x start.sh
-    ```
-    Tässä on nyt siis kohta, jossa korvaat "java"-tekstin javan asennuksen
-    absoluuttisella polulla, mikäli palvelimellesi on asennettu useampi Java-versio.
 
-    Mikäli haluat palvelimellesi enemmän kuin 2GB RAM-muistia käyttöön, voit korvata
-    käynnistyskomennosta 2-numeron haluamallasi numerolla. Hyvä nyrkkisääntö
-    kuitenkin on, että jätät palvelimen käyttöjärjestelmälle vähintään 1GB
-    RAM-muistia käyttöön. Jos palvelimellasi on käytössä enemmänkin muistia eikä
-    sille ole muuta käyttöä, kannattaa se valjastaa tätä 1GB vajaa kokonaisuudessaan
-    Minecraftin käyttöön.
 
-  </Step>
-  <Step>
-    Jotta Minecraft-palvelin pysyy päällä jatkuvasti, tarvitaan siihen jokin
-    työkalu. Tähän helpoin on Screen. Screenillä voimme avata konsoli-ikkunoita,
-    jotka pysyvät päällä palvelimella vaikka sulkisit etäyhteyden palvelimelle.
 
-    Kerromme tässä ohjeessa kaiken tarpeellisen Minecraft-palvelimen
-    käynnistämisestä Screenissä, mutta olemme kirjoittaneet myös tarkemmat käyttöohjeet
-    Screenin käyttöön. Mikäli sinua kiinnostaa tutustua tarkemmin Screeniin:
-    [Screenin käyttö unix-pohjaisilla käyttöjärjestelmillä](../screen).
 
-    Asenna Screen komennolla
 
-    ```sh title="Screenin asennus"
-    $ sudo apt install screen
-    ```
 
-  </Step>
-  <Step>
-    Seuraavaksi luomme uuden Screenin:
 
-    ```sh title="Screenin luonti"
-    screen -s Minecraft /home/minecraft/start.sh
-    ```
 
-    Screen käynnistää aiemmin luomamme .sh-tiedoston ja palvelin käynnistyy.
-    Konsolisi toimii nyt Minecraft-palvelimen konsolina. Minecraftin konsolista
-    pääset palaamaan tavalliseen Bash-konsoliin näppäinyhdistelmällä <Hotkey>Ctrl + A + D</Hotkey>.
 
-    Minecraftin Screeniin pääset takaisin seuraavalla komennolla:
-    ```sh title="Screenin avaaminen"
-    screen -r Minecraft
-    ```
 
-    Palvelimelle pääset liittymään palvelimen IP-osoitteella.
 
-  </Step>
-  <Step>
-    Mikäli jostakin syystä palvelin sammuu, voimme luoda komennon, joka ajetaan
-    palvelimen käynnistyksen yhteydessä.
 
-    Tehdään tämä muokkaamalla crontabia. Muokkaimeen pääset komennolla `crontab -e`.
-    Ensimmäisellä kerralla sinulta kysytään, mitä tekstieditoria käytät. Nano on
-    helpoin. Paina siis <Hotkey>1</Hotkey> ja <Hotkey>Enter</Hotkey>.
 
-    ```sh title="Crontab-kysymys"
-    root@bittivirta: crontab -e
-        no crontab for root - using an empty one
 
-        Select an editor. To change later, run 'select-editor'.
-        1. /bin/nano <---- easiest
-        2. /usr/bin/vim.basic
-        3. /usr/bin/vim.tiny
-        4. /bin/ed
 
-        Choose 1-4 [1]:
-    ```
 
-  </Step>
-  <Step>
-    Lisää tekstitiedoston pohjalle teksti:
-    ```bash title="Crontab"
-    @reboot screen -s Minecraft /home/minecraft/start.sh
-    ```
 
-    Lisättyäsi teksti, paina <Hotkey>Ctrl + X</Hotkey>, tämän jälkeen <Hotkey>Y</Hotkey> ja <Hotkey>Enter</Hotkey>.
 
-    Ja Minecraft-palvelimesi käynnistyy uudelleen automaattisesti, kun palvelimesi
-    uudelleenkäynnistyy. Näppärää, eikö!
 
-  </Step>
-  <Step>
-    Nyt palvelimesi on valmis. Voit liittyä palvelimelle Minecraftissä palvelimesi IP-osoitteella!
-  </Step>
-</Stepper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

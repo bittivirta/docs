@@ -100,7 +100,7 @@ const config = {
         title: "Docs",
         logo: {
           alt: "Bittivirta Logo",
-          src: "https://cdn.bittivirta.fi/brand/logo/logo.svg",
+          src: "https://cdn.bittivirta.fi/logo/logo.svg",
         },
         items: [
           {
@@ -148,7 +148,7 @@ const config = {
         theme: { light: 'neutral', dark: 'forest' },
         options: {
           themeVariables: {
-            'primaryColor': '#BB2528',
+            'primaryColor': '#1060ee',
           },
         }
       },
