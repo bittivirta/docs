@@ -44,18 +44,17 @@ export default function Stepper({ title, children }) {
         }
       </div>
       <div className={style.step}>
-        {showAll ?
-          children.map((child, index) => (<div key={index} className="flex pb-5 mb-5 border-dashed border-0 border-b-2 last:border-b-0 border-slate-200">
+        {children.map((child, index) => (
+          <div key={index} className="flex pb-5 mb-5 border-dashed border-0 border-b-2 last:border-b-0 border-slate-200"
+            style={{ display: showAll || index === currentStep ? "flex" : "none" }}>
             <div>
               <span className={style.step_current}>{index + 1}</span>
             </div>
             <div className='mt-1' style={{ width: "calc(100% - 60px)" }}>
-              <Step key={index}>{child}</Step>
+              {child}
             </div>
-          </div>))
-          :
-          children[currentStep]
-        }
+          </div>)
+        )}
       </div>
       <div className='flex gap-3 justify-between'>
         <div className='flex gap-2'>
