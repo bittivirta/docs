@@ -54,7 +54,7 @@ export default function Stepper({ title, children }) {
             </div>
           </div>))
           :
-          <Step>{children[currentStep]}</Step>
+          children[currentStep]
         }
       </div>
       <div className='flex gap-3 justify-between'>
