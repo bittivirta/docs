@@ -104,7 +104,7 @@
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.docs.paginator.navAriaLabel": {
-    "message": "Docs pages",
+    "message": "Dokumentaatiosivut",
     "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
@@ -342,5 +342,50 @@
   },
   "stepper.previous": {
     "message": "Edellinen"
+  },
+  "home.pages.title": {
+    "message": "Valitse aihe, josta kaipaat lisätietoa"
+  },
+  "home.pages.general.title": {
+    "message": "Yleinen"
+  },
+  "home.pages.general.subtitle": {
+    "message": "Yleiset palveluiden käyttöohjeet"
+  },
+  "home.pages.webhosting.title": {
+    "message": "Webhotelli"
+  },
+  "home.pages.webhosting.subtitle": {
+    "message": "Webhitellien käyttöohjeet"
+  },
+  "home.pages.vps.title": {
+    "message": "Virtuaalipalvelimet"
+  },
+  "home.pages.vps.subtitle": {
+    "message": "Virtuaalipalvelimien käyttöohjeet"
+  },
+  "home.pages.game.title": {
+    "message": "Pelipalvelimet"
+  },
+  "home.pages.game.subtitle": {
+    "message": "Pelipalvelimien käyttöohjeet"
+  },
+  "home.pages.docs.title": {
+    "message": "Dokumentaatio"
+  },
+  "home.pages.docs.subtitle": {
+    "message": "Dokumentaation käyttöohjeet"
+  },
+  "home.pages.company.title": {
+    "message": "Yritys"
+  },
+  "home.pages.company.subtitle": {
+    "message": "Tietoa yrityksestä"
+  },
+  "home.questions.title": {
+    "message": "Puuttuuko ohje?"
+  },
+  "home.questions.subtitle": {
+    "message": "Jos et löydä etsimääsi, ota yhteyttä asiakaspalveluumme. Autamme mielellämme!"
   }
 }

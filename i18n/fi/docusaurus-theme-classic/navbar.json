@@ -7,6 +7,10 @@
     "message": "Bittivirta Logo",
     "description": "The alt text of navbar logo"
   },
+  "item.label.General": {
+    "message": "Yleinen",
+    "description": "Navbar item with label General"
+  },
   "item.label.Client Area": {
     "message": "Asiakasalue",
     "description": "Navbar item with label Client Area"

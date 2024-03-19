@@ -41,6 +41,10 @@ const config = {
     ],
   ],
 
+  scripts: [
+    "/crisp.js",
+  ],
+
   presets: [
     [
       "classic",

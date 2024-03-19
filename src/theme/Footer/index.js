@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className="bg-slate-800 text-blue-100">
       <div className="container py-10">
         <div className="flex gap-10 items-center justify-between">
-          <Image img="https://cdn.bittivirta.fi/brand/logo/light/logo.svg" height={40} />
+          <Image img="https://cdn.bittivirta.fi/logo/logo-light.svg" height={40} />
           <div className='text-end'>
             <p className='m-0'>Copyright © Bittivirta - All rights reserved</p>
             <p className='m-0 flex gap-2 justify-end'>
