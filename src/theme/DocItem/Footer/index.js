@@ -24,24 +24,27 @@ export default function FooterWrapper(props) {
         "Accept": "application/vnd.github.v3+json"
       }
     }).then(response => response.json()).then(data => {
-      data = data.map(commit => ({
-        "author": commit.commit.author.name,
-        "author_url": commit.author.html_url,
-        "author_username": commit.author.login,
-        "author_avatar": commit.author.avatar_url,
-      }));
-      data = data.reduce((acc, cur) => {
-        if (!acc.find(item => item.author_username === cur.author_username)) {
-          acc.push(cur);
+      if (data[0]?.commit) {
+        data = data.map(commit => ({
+          "author": commit.commit.author.name,
+          "author_url": commit.author.html_url,
+          "author_username": commit.author.login,
+          "author_avatar": commit.author.avatar_url,
+        }));
+        data = data.reduce((acc, cur) => {
+          if (!acc.find(item => item.author_username === cur.author_username)) {
+            acc.push(cur);
+          }
+          return acc;
+        }, []);
+        data = {
+          "contributors_count": data.length,
+          "contributors": data
         }
-        return acc;
-      }, []);
-      data = {
-        "contributors_count": data.length,
-        "contributors": data
+        setContributors(data);
       }
-      setContributors(data);
-    });
+    }
+    );
   }, [metadata])
   return (
     <>
