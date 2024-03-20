@@ -1,0 +1,33 @@
+# Selainikkuna
+
+Voit rakentaa joko itse selainikkunan sisällön tai käyttää iframe-ikkunaa. Ikkunan sisältö voi olla Markdown-sisältöä tai muuallakin dokumentaatiossa toimivaa MDX-sisältöä.
+
+## Esimerkki Markdown-sisällöllä
+
+```MDX
+<BrowserWindow url="https://docs.bittivirta.fi/">
+Markdown-sisältöä, joka näkyy selainikkunassa.
+
+Tämä voi olla **lihavoitua** tekstiä, [linkkejä](https://docs.bittivirta.fi/) ja sisältää kuvia.
+
+![Kuva](https://placekitten.com/200/300)
+</BrowserWindow>
+```
+
+<BrowserWindow url="https://docs.bittivirta.fi/">
+Markdown-sisältöä, joka näkyy selainikkunassa.
+
+Tämä voi olla **lihavoitua** tekstiä, [linkkejä](https://docs.bittivirta.fi/) ja sisältää kuvia.
+
+![Kuva](https://placekitten.com/200/300)
+</BrowserWindow>
+
+## Esimerkki Iframe-ikkunalla
+
+Selainikkuna tukee myös iframe-ikkunaa, joka voi näyttää esimerkiksi ulkoisen sivuston. Huomaa, että harva sivusto sallii näyttämisen iframe-ikkunassa tietoturvasta johtuen.
+
+```MDX
+<BrowserWindow url="https://docs.bittivirta.fi/" iframe />
+```
+
+<BrowserWindow url="https://docs.bittivirta.fi/" iframe />

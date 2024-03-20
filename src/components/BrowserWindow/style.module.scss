@@ -1,0 +1,28 @@
+.window {
+  @apply bg-silicon-100 rounded-lg p-2 shadow-md;
+}
+
+.window .frame {
+  @apply bg-white rounded-md p-5;
+}
+
+.window .iframe {
+  @apply w-full m-0 rounded-md;
+  height: 500px;
+}
+
+.window .header {
+  @apply flex items-center justify-between;
+}
+
+.window .header .controls {
+  @apply px-2 flex items-center justify-center -mt-2;
+}
+
+.window .header .url {
+  @apply bg-white rounded-full p-1 px-3 mb-2 flex-1;
+}
+
+.window .header .right {
+  @apply text-silicon-400 px-2 flex items-center justify-center -mt-2 text-xl ml-2;
+}

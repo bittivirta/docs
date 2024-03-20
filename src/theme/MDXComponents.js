@@ -10,6 +10,7 @@ import { far } from '@fortawesome/pro-regular-svg-icons'; // Import all solid ic
 
 import Stepper, { Step } from "@site/src/components/Stepper";
 import Hotkey from "@site/src/components/Hotkey";
+import BrowserWindow from "@site/src/components/BrowserWindow";
 import Image from "@theme/IdealImage";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -23,6 +24,7 @@ export default {
   ...MDXComponents,
   Icon: FontAwesomeIcon,
   Hotkey,
+  BrowserWindow,
   Stepper,
   Step,
   Image,
