@@ -66,6 +66,7 @@ h1.hero__title {
 code {
   font-family: 'Fira Code Nerd', monospace !important;
   font-weight: 500 !important;
+  text-align: left !important;
 }
 
 .theme-code-block-error-line {
@@ -212,7 +213,7 @@ main img {
 
 
 table {
-  @apply bg-white dark:bg-slate-900 p-3 rounded-2xl w-full;
+  @apply bg-white dark:bg-slate-900 p-3 rounded-2xl w-fit shadow-md mb-8;
 }
 
 table thead,
@@ -232,12 +233,16 @@ table thead tr {
 }
 
 table tr th {
-  @apply dark:bg-slate-100/5 text-left;
+  @apply dark:bg-slate-100/5 text-left bg-blue-600 text-white;
 }
 
 table tr:nth-child(2n),
 table th {
-  @apply bg-silicon-100 dark:bg-slate-100/5 border-separate;
+  @apply bg-silicon-100/50 dark:bg-slate-100/5 border-separate;
+}
+
+table tr td:not(:last-child) {
+  @apply border-solid border-0 border-r-2 border-silicon-100;
 }
 
 table tr td:first-child,
@@ -254,4 +259,25 @@ code {
   word-break: keep-all;
   white-space: nowrap;
   @apply px-1.5 py-1 text-xs inline-block min-w-[1.5rem] font-semibold text-center text-slate-700 bg-slate-100 border border-slate-300 rounded-lg dark:bg-slate-100/10 dark:text-slate-100 dark:border-slate-100/10 shadow-xs;
+}
+
+
+.alert {
+  @apply bg-silicon-100 border-silicon-500 shadow-sm;
+}
+
+.alert.alert--info {
+  @apply bg-cloud-200 border-cloud-500 shadow-sm;
+}
+
+.alert.alert--danger {
+  @apply bg-live-200 border-live-500 shadow-sm;
+}
+
+.alert.alert--success {
+  @apply bg-circuit-200 border-circuit-500 shadow-sm;
+}
+
+.alert.alert--warning {
+  @apply bg-gold-200 border-gold-500 shadow-sm;
 }
