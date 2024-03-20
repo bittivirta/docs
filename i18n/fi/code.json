@@ -28,10 +28,10 @@
     "description": "The default label used for the Danger admonition (:::danger)"
   },
   "theme.admonition.info": {
-    "message": "Info",
+    "message": "Tärkeää",
     "description": "The default label used for the Info admonition (:::info)"
   },
-  "theme.admonition.caution": {
+  "theme.admonition.warning": {
     "message": "Varoitus",
     "description": "The default label used for the Caution admonition (:::caution)"
   },
