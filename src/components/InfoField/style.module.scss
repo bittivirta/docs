@@ -1,0 +1,19 @@
+.field {
+  @apply bg-white shadow-md rounded-md p-1 flex gap-3 mr-4 items-center;
+}
+
+.field .title {
+  @apply bg-silicon-100 text-silicon-700 font-bold p-1 px-3 rounded flex gap-2;
+}
+
+.field .content {
+  @apply me-3;
+}
+
+.fieldContainer {
+  @apply flex items-start mb-8;
+}
+
+.fieldContainer:has(+.fieldContainer) {
+  @apply mb-2;
+}
