@@ -100,6 +100,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: "img/social-card.png",
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true,
+        }
+      },
       navbar: {
         title: "Docs",
         logo: {
