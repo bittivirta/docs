@@ -1,0 +1,47 @@
+---
+sidebar: null
+---
+
+# Kuvakkeet
+
+Voit käyttää kuvakkeita tekstissä tukemaan sisältöäsi. Kuvakkeet ovat hyödyllisiä, kun haluat korostaa tiettyä kohtaa tai tehdä tekstistäsi visuaalisesti mielenkiintoisemman. Kuvakkeet voivat olla myös hyödyllisiä, kun haluat lisätä väriä ja eloa tekstiisi.
+
+## Käyttö
+
+Kuvakkeina voit käyttää Font Awesome -kirjaston kuvakkeita. Bittivirralla on käytössä Font Awesomen Pro-kirjasto, joka sisältää paljon enemmän kuvakkeita kuin ilmaisversio. Versiona käytetään 6-versiota.
+
+Kuvakkeet ovat saatavilla `Icon`-komponentilla. Voit käyttää kuvakkeita seuraavasti:
+
+```mdx
+  <Icon icon={"tyyli", "kuvake"} size="koko" color="väri" fixedWidth={true} />
+```
+
+Esimerkiksi:
+
+```mdx
+  <Icon icon={"fas", "home"} size="2x"/>
+  <Icon icon={"fas", "envelope"} size="2x" color="#1060ee"/>
+  <Icon icon={"fas", "phone"} size="2x" color="#ee1030" fixedWidth />
+```
+
+<BrowserWindow url="https://docs.bittivirta.fi/">
+  <div className="flex gap-4">
+    <Icon icon={"fas", "home"} />
+    <Icon icon={"fas", "envelope"} />
+    <Icon icon={"fas", "phone"} />
+  </div>
+</BrowserWindow>
+
+```mdx
+  <Icon icon={"fas", "home"} size="2x"/>
+  <Icon icon={"fas", "envelope"} size="2x" color="#1060ee"/>
+  <Icon icon={"fas", "phone"} size="2x" color="#ee1030" fixedWidth />
+```
+
+<BrowserWindow url="https://docs.bittivirta.fi/">
+  <div className="flex gap-4">
+    <Icon icon={"fas", "home"} size="2x"/>
+    <Icon icon={"fas", "envelope"} size="2x" color="#1060ee"/>
+    <Icon icon={"fas", "phone"} size="2x" color="#ee1030" fixedWidth />
+  </div>
+</BrowserWindow>
