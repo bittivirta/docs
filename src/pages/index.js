@@ -71,7 +71,7 @@ export default function Home() {
         <div className="container py-20">
           <h2 className="text-3xl"><Translate id="home.questions.title" /></h2>
           <p className="text-xl"><Translate id="home.questions.subtitle" /></p>
-          <Button to="/company/contact-us"><FontAwesomeIcon icon={faEnvelope} fixedWidth /> <Translate id="home.questions.button" /></Button>
+          <Button to="/company/contact-us" size="lg"><FontAwesomeIcon icon={faEnvelope} fixedWidth /> <Translate id="home.questions.button" /></Button>
         </div>
       </main>
     </Layout>
