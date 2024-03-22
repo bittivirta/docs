@@ -1,6 +1,11 @@
 
 import MDXComponents from '@theme-original/MDXComponents';
+
+// FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import the FontAwesomeIcon component.
+import { config as faConfig } from '@fortawesome/fontawesome-svg-core' // Import the configuration.
+import '@fortawesome/fontawesome-svg-core/styles.css' // Import the CSS.
+faConfig.autoAddCss = false // Tell Font Awesome to skip adding the CSS automatically since it's being imported above.
 import { library } from '@fortawesome/fontawesome-svg-core'; // Import the library component.
 import { fab } from '@fortawesome/free-brands-svg-icons'; // Import all brands icons.
 import { fas } from '@fortawesome/pro-solid-svg-icons'; // Import all solid icons.
@@ -8,10 +13,13 @@ import { fal } from '@fortawesome/pro-light-svg-icons'; // Import all solid icon
 import { fat } from '@fortawesome/pro-thin-svg-icons'; // Import all solid icons.
 import { far } from '@fortawesome/pro-regular-svg-icons'; // Import all solid icons.
 
+// Docusaurus components
 import Link from '@docusaurus/Link';
 import Image from "@theme/IdealImage";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+
+// Custom components
 import BrowserWindow from "@site/src/components/BrowserWindow";
 import Button from '@site/src/components/Button';
 import CategoryIndex from '@site/src/components/CategoryIndex';
