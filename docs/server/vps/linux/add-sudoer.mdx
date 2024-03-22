@@ -1,0 +1,49 @@
+# Sudo-käyttäjän lisääminen
+
+Sudo-käyttäjällä on oikeudet käyttää `sudo`-komentoa, eli ajaa komentoja
+`root`-käyttäjän oikeuksilla ja kirjautua tuolle tilille.
+
+:::danger
+Älä jaa sudo-oikeuksia kenellekkään, johon et luota. Sudo-käyttäjillä
+on oikeus tehdä palvelimella **mitä vaan**.
+:::
+
+<Stepper title="Sudo-käyttäjän lisääminen">
+  <Step>
+      Asenna sudo komennolla `apt install sudo`
+  </Step>
+  <Step>
+    Lisää käyttäjä: korvaa `$NEWUSER` käyttäjänimellä, jonka
+    haluat lisätä:
+    ```sh
+    $ sudo adduser $NEWUSER
+    ```
+    Käyttöjärjestelmä kysyy sinulta vielä käyttäjän tiedot ja salasanan käyttäjälle.
+
+    Käytä vahvaa salasanaa!
+
+  </Step>
+  <Step>
+    Lisää käyttäjä sudo-ryhmään
+    ```sh
+    $ sudo usermod -aG sudo $NEWUSER
+    ```
+
+    Nyt käyttäjällä on oikeudet ajaa komentoja `sudo`-komentoa. Seuraavaksi
+    voit vielä kokeilla, toimiko käyttäjän lisääminen.
+
+  </Step>
+  <Step>
+    Vaihda kirjautuminen uudelle käyttäjälle:
+    ```sh
+    $ sudo su $NEWUSER
+    ```
+  </Step>
+  <Step>
+    Kokeile komentoa, joka vaatii root-oikeudet
+    ```sh
+    $ sudo ls /root
+    ```
+    Jos saat virheen, käyttäjän lisääminen sudo-ryhmään epäonnistui.
+  </Step>
+</Stepper>

@@ -1,0 +1,38 @@
+{
+  "title": {
+    "message": "Bittivirta",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Bittivirta Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Client Area": {
+    "message": "Client Area",
+    "description": "Navbar item with label Client Area"
+  },
+  "item.label.Server": {
+    "message": "Server",
+    "description": "Navbar item with label Server"
+  },
+  "item.label.Hosting": {
+    "message": "Hosting",
+    "description": "Navbar item with label Hosting"
+  },
+  "item.label.Game Servers": {
+    "message": "Game Servers",
+    "description": "Navbar item with label Game Servers"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Company": {
+    "message": "Company",
+    "description": "Navbar item with label Company"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

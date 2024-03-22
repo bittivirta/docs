@@ -1,0 +1,79 @@
+{
+  "name": "bittivirta-docs",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "build": "bun run infogen && docusaurus build",
+    "clear": "docusaurus clear",
+    "deploy": "docusaurus deploy",
+    "dev": "bun run start",
+    "docusaurus": "docusaurus",
+    "serve": "docusaurus serve",
+    "start": "bun run infogen && docusaurus start",
+    "swizzle": "docusaurus swizzle",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "write-translations": "docusaurus write-translations",
+    "dep:upgrade": "bun x npm-check-updates -ui",
+    "infogen": "branch=$(git rev-parse --abbrev-ref HEAD) && mkdir -p .tmp && printf '{\"branch\":\"%s\"}' \"$branch\" > ./.tmp/info.json"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.1.1",
+    "@docusaurus/plugin-google-gtag": "^3.1.1",
+    "@docusaurus/plugin-ideal-image": "^3.1.1",
+    "@docusaurus/preset-classic": "^3.1.1",
+    "@docusaurus/theme-common": "^3.1.1",
+    "@docusaurus/theme-live-codeblock": "^3.1.1",
+    "@docusaurus/theme-mermaid": "^3.1.1",
+    "@easyops-cn/docusaurus-search-local": "^0.40.1",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/pro-light-svg-icons": "^6.5.1",
+    "@fortawesome/pro-regular-svg-icons": "^6.5.1",
+    "@fortawesome/pro-solid-svg-icons": "^6.5.1",
+    "@fortawesome/pro-thin-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@korhox/react-scrollfade": "1.2.0",
+    "@mdx-js/react": "^3.0.1",
+    "clsx": "^2.1.0",
+    "copy-text-to-clipboard": "^3.2.0",
+    "docusaurus-plugin-image-zoom": "^2.0.0",
+    "docusaurus-plugin-sass": "^0.2.5",
+    "prism-react-renderer": "^2.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-loadable": "^5.5.0",
+    "react-markdown": "^9.0.1",
+    "rehype-stringify": "^10.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.0",
+    "sass": "^1.72.0",
+    "tailwindcss": "^3.4.1",
+    "unified": "^11.0.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.18",
+    "babel-plugin-macros": "^3.1.0",
+    "postcss": "^8.4.35"
+  },
+  "trustedDependencies": [
+    "sharp",
+    "react-loadable"
+  ],
+  "engines": {
+    "node": "20.x",
+    "bun": ">=1.0.31"
+  }
+}

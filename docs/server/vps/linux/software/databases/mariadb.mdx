@@ -1,0 +1,245 @@
+# MySQL / MariaDB
+
+Saatat tarvita MySQL-tietokantoja erilaisten verkkosivusovellusten käyttämiseen,
+kuten esimerkiksi WordPress. Tässä asennusohjeessa asennamme MariaDB:n, eli
+täysin MySQL:ää vastaavan palvelinohjelmiston.
+
+Jos olet juuri ostanut palvelimesi, käy lukemassa tämä ohje ennen tämän ohjeen
+noudattamista: [Pikaohjeet virtuaalipalvelimen käyttöön](../../quick-start)
+
+<Stepper title="Sudo-käyttäjän lisääminen">
+  <Step>
+    Päivitetään apt-lista
+
+    ```sh
+    // terminal
+    apt update
+    ```
+  </Step>
+  <Step>
+    Halutessasi voit päivittää myös palvelimen ohjelmistot (suositeltu):
+
+    ```sh
+    // terminal
+    apt upgrade && apt autoremove
+    ```
+  </Step>
+  <Step>
+    Asennetaan MariaDB
+
+    ```sh
+    // terminal
+    apt install mariadb-server
+    ```
+  </Step>
+  <Step>
+    Ajetaan MySQL:n tietoturva-asennus
+
+    Suosittelemme vastaamaan kysymyksiin seuraavasti:
+
+    ```txt title="Tietoturva-asennus"
+    // terminal
+    mysql_secure_installation
+
+    NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+    SERVERS IN PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!
+
+    In order to log into MariaDB to secure it, we'll need the current
+    password for the root user. If you've just installed MariaDB, and
+    you haven't set the root password yet, the password will be blank,
+    so you should just press enter here.
+
+    // script
+    Enter current password for root (enter for none):
+    OK, successfully used password, moving on...
+
+    Setting the root password ensures that nobody can log into the MariaDB
+    root user without the proper authorisation.
+
+    You already have a root password set, so you can safely answer 'n'.
+    // comment
+    Jos sinulla ei ole root-salasanaa, se kannattaa asettaa vastaamalla Y
+    // script
+    Change the root password? [Y/n] N
+    ... skipping.
+
+    By default, a MariaDB installation has an anonymous user, allowing anyone
+    to log into MariaDB without having to have a user account created for
+    them. This is intended only for testing, and to make the installation
+    go a bit smoother. You should remove them before moving into a
+    production environment.
+
+    // script
+    Remove anonymous users? [Y/n] Y
+    ... Success!
+
+    Normally, root should only be allowed to connect from 'localhost'. This
+    ensures that someone cannot guess at the root password from the network.
+
+    // script
+    Disallow root login remotely? [Y/n] Y
+    ... Success!
+
+    By default, MariaDB comes with a database named 'test' that anyone can
+    access. This is also intended only for testing, and should be removed
+    before moving into a production environment.
+
+    // script
+    Remove test database and access to it? [Y/n] Y
+    - Dropping test database...
+    ... Success!
+    - Removing privileges on test database...
+    ... Success!
+
+    Reloading the privilege tables will ensure that all changes made so far
+    will take effect immediately.
+
+    // script
+    Reload privilege tables now? [Y/n] Y
+    ... Success!
+
+    Cleaning up...
+
+    All done! If you've completed all of the above steps, your MariaDB
+    installation should now be secure.
+
+    Thanks for using MariaDB!
+
+    // terminal
+
+    ```
+  </Step>
+  <Step>
+    Nyt MySQL on asennettu onnistuneesti. Voit käyttää nyt MySQL:ää kirjoittamalla
+    konsoliin komennon `mysql`. Tietokantaan ei kuitenkaan pääse vielä muualta. Jos
+    haluat lisätä tietokannan ja käyttäjän esim. WordPressille, jatka ohjeen
+    seuraamista.
+  </Step>
+  <Step>
+    Seuraavaksi lisätään tietokanta.
+
+    Siirry ensin MySQL-konsoliin komennolla:
+
+    ```sh
+    // terminal
+    sudo mysql
+    ```
+
+    Ja lisätään tietokanta "wordpress". Voit lisätä myös muun nimisen tietokannan
+    samaan tapaan.
+
+    ```sql
+    -- mariadb
+    CREATE USER 'wordpress';
+    ```
+
+    Voit poistua MySQL-konsolista komennolla `quit` tai painamalla <Hotkey>ctrl+c</Hotkey>.
+  </Step>
+  <Step>
+    MySQL:ssä sinun tulee luoda käyttäjä, jolla voit selata tietokantoja.
+    Suosittelemme, että teet jokaiselle tietokannalle ja eri tarpeeseen eri
+    käyttäjän. Huomioithan, että käyttäjän IP-osoite määritellään oikeuksiltaan eri
+    käyttäjäksi.
+
+    Palaa takaisin MySQL-konsoliin komennolla:
+
+    ```sh
+    // terminal
+    sudo mysql
+    ```
+
+    Tässä luodaan käyttäjä "wordpress". Voit lisätä toisen käyttäjän samaan tapaan.
+    Kirjoita salasanan kohdalle oikeasti turvallinen salasana. Turvallisessa
+    salasanassa on erikokoisia kirjaimia, numeroita ja erikoismerkkejä. Et
+    kuitenkaan voi käyttää '-merkkiä.
+
+
+    ```sql
+    -- mariadb
+    CREATE USER 'wordpress'@'localhost' IDENTIFIED BY 'turvallinnen salasana';
+    ```
+
+    Voit poistua MySQL-konsolista komennolla `quit` tai painamalla <Hotkey>Ctrl+C</Hotkey>.
+  </Step>
+  <Step>
+    Jotta käyttäjä voi tehdä yhtään mitään MySQL-palvelimella, sille tarvitsee
+    lisätä oikeuksia. Voit lisätä niitä vain vähän kerrallaan. Mitä vähemmän lisäät
+    oikeuksia käyttäjälle, sitä parempi tietoturva palvelimella on.
+
+    Komennot suoritetaan MySQL-konsolissa:
+
+    ```sh
+    // terminal
+    sudo mysql
+    ```
+
+    Kaikkien yleisten oikeuksien antaminen yhteen tietokantaan:
+
+    ```sql
+    -- mariadb
+    GRANT ALL PRIVILEGES ON 'wordpress'.* TO 'wordpress'@'localhost';
+    ```
+
+    Kaikkien yleisten oikeuksien antaminen yhteen tietokantaan ja vain tiettyyn
+    tauluun [harvemmin käytetty]
+
+    ```sql
+    -- mariadb
+    GRANT ALL PRIVILEGES ON 'wordpress'.'wp_posts' TO 'wordpress'@'localhost';
+    ```
+
+    Suosittelemme lisäämään seuraavat oikeudet vain tietyllä käyttäjän
+    IP-osoitteella ja vain, kuin todella tarvitset oikeuksia näin paljon.
+    Tarvittaessa voit lisätä useamman käyttäjän samoilla oikeuksilla ja eri
+    IP-osotteilla.
+
+    Kaikkien yleisten oikeuksien antaminen kaikkiin tietokantoihin (korvaa IP
+    käyttäjän IP-osoitteella):
+
+
+    ```sql
+    -- mariadb
+    GRANT ALL PRIVILEGES ON *.* TO 'käyttäjä'@'IP';
+    ```
+
+    Root-oikeuksien lisääminen käyttäjälle:
+
+    ```sql
+    -- mariadb
+    GRANT ALL PRIVILEGES ON *.* TO 'käyttäjä'@'IP' WITH GRANT OPTION;
+    ```
+
+    Voit poistua MySQL-konsolista komennolla `quit` tai painamalla <Hotkey>Ctrl+C</Hotkey>.
+  </Step>
+  <Step>
+    Jotta palvelimeen voi ottaa yhteyttä ulkoverkosta, sinun tulee käydä
+    muokkaamassa palvelimen bind-address. Oletuksena palvelimelle voi ottaa yhteyttä
+    vain palvelimella itsellään, eli osoitteella `localhost` tai `172.0.0.1`.
+
+    Avataan tiedosto muokkaimessa:
+
+    ```sh
+    // terminal
+    sudo nano /etc/mysql/my.cnf
+    ```
+
+    Ja lisätään seuraava koodi tiedoston loppuun:
+
+    ```apacheconf title="/etc/mysql/my.cnf"
+    [mysqld]
+    bind-address            = 0.0.0.0
+    ```
+
+    Tallenetaan painamalla näppäimiä <Hotkey>Ctrl+X</Hotkey> ja seuraavaksi <Hotkey>Y</Hotkey> ja sitten <Hotkey>Enter</Hotkey>.
+
+    Seuraavaksi käynnistämme MySQL-palvelimen uudelleen, jotta asetukset
+    tallentuvat:
+
+    ```sh
+    // terminal
+    sudo systemctl restart mariadb
+    ```
+  </Step>
+</Stepper>
+
+

@@ -1,0 +1,86 @@
+# BungeeCordin asennus
+
+Kun olet hankkinut itsellesi Minecraft-palvelimen, avaa palvelimesi
+hallintapaneeli osoitteessa [Gamepanel.fi](https://gamepanel.fi/) ja kirjaudu
+sisään.
+
+Siirry tiedostonhallintaan (tai yhdistä palvelimeen SFTP avulla)
+![](https://cdn.bittivirta.fi/docimg/crisp/13filemanager_xma422.png)
+
+Täällä voit poistaa kaikki vanhat tiedostot ja kansiot.
+
+Kun olet poistanut nämä tiedostot voit siirtyä
+[lataamaan waterfall-x.jar](https://papermc.io/downloads#Waterfall) tiedoston
+PaperMC:n sivustolta.
+![](https://cdn.bittivirta.fi/docimg/crisp/14waterfall-download_1lsqpwd.png)
+
+Waterfall on sama kuin Bungeecord, mutta optimoitu suuremmille pelaajamäärille.
+
+Kun olet ladannut uusimman tai haluamasi waterfall-x.jar tiedoston, siirry
+takaisin palvelimesi tiedostonhallintaan ja lataa tiedostoihin waterfall-x.jar
+tiedosto. Muista nimetä tämä tiedosto uudelleen **server.jar** nimiseksi
+tiedostoksi. Muuten palvelin ei käynnisty.
+
+![](https://cdn.bittivirta.fi/docimg/crisp/15upload_jl5854.png)
+
+Tämän jälkeen voitkin suoraan siirtyä palvelimen konsoliin ja käynnistää
+palvelimen ensimmäistä kertaa, jotta palvelin lataa tarvittavat tiedostot.
+
+## Palvelinten yhdistäminen BungeeCordiin
+
+Emme käy läpi kaikkia BungeeCordin konfiguraatioon liittyviä asioita tässä
+tietopaketissa, mutta käymme nopeasti läpi palvelinten yhdistämisen. Voit lukea
+lisää BungeeCordista ja sen konfiguroimisesta
+[SpigotMC.org](https://www.spigotmc.org/wiki/bungeecord-configuration-guide/)
+omilta sivuilta.
+
+Avaa config.yml tiedosto BungeeCord palvelimesi tiedostonhallinnasta (tai SFTP
+kautta), me haluamme muokata riviä 20. Rivistä eteenpäin pitäisi näkyä näin:
+
+```yaml
+lobby:
+    motd: "&1Just another BungeeCord - Forced Host"
+    address: localhost:25565
+    restricted: false
+```
+
+Tässä on esimerkki palvelimen yhdistämisestä. Huomioi että _"restricted"_
+tarkoittaa sitä että palvelimelle pystyy yhdistämään ainoastaan pelaajat, joilla
+on _bungeecord.server.[palvelimen nimi]_ permission. _"lobby"_ ylläolevassa
+tarkoittaa palvelimen nimeä, se voi siis olla mikä tahansa (ilman välejä).
+
+Lisätäksesi uuden palvelimen BungeeCordiin sinun tulee kopioida nämä ylläolevat
+4 riviä ja kirjoittaa niihin yhdistettävän palvelimen tiedot.
+
+## Yhdistättavän palvelimen asetukset
+
+Sinun tulee myös vaihtaa paria kohtaa yhdistettävän palvelimen asetuksista.
+Siirry siis yhdistettävän palvelimen tiedostonhallintaan ja avaa **spigot.yml**
+tiedosto ja etsi sieltä seuraavat rivit ja korvaa **false** sanalla **true.**
+Tämän jälkeen tallenna.
+
+```yaml
+settings:
+    bungeecord: false
+```
+
+Seuraavaksi avaa **server.properties** tiedosto ja etsi sieltä alla oleva rivi
+ja korvaa sana **true**, sanalla **false** `online-mode=true`
+
+Tämän jälkeen uudelleen käynnistä palvelin ja nyt voit yhdistää palvelimelle
+BungeeCordin välityksellä!
+
+# Tietoturvan huomiointi
+
+Asenna sekä bungeecrodin ja tavallisille Minecraft-palvelimille plugin
+BungeeGuard. Tämä estää suoraan Minecraft-palvelimelle liittymisen ilman
+BungeeGuard-autentikointia.
+
+Kun olet ladannut BungeeGuardin Waterfall-palvelimelle (proxy) käy kopioimassa
+BungeeGuardin kansiosta pluginin luoma token, jonka kopioit muiden palvelimien
+BungeeGuardin config-tiedostoon.
+
+BungeeGuard:
+[https://www.spigotmc.org/resources/bungeeguard.79601/](https://www.spigotmc.org/resources/bungeeguard.79601/)
+
+Voit asantaa saman jar-tiedoston kaikkien palvelimien plugins-kansioihin

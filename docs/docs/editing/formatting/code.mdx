@@ -1,0 +1,228 @@
+# Koodilohko
+
+Koodilohko on luotu koodin näyttämiseen. Koodilohko tukee myös rivinumeroita ja kopiointipainiketta. Lisäksi koodilohko tukee useiden kielien syntaksin korostusta, ja voit antaa koodille otsikon. Voit myös merkitä koodin rivejä, jotka haluat korostaa.
+
+````markdown
+```html title="/var/www/html/index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Esimerkki</title>
+  </head>
+  <body>
+    <h1>Esimerkki</h1>
+    <p>Tämä on esimerkki.</p>
+  </body>
+</html>
+```
+````
+
+Koodilohko muotoillaan seuraavanlaiseksi:
+
+```html title="/var/www/html/index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Esimerkki</title>
+  </head>
+  <body>
+    <h1>Esimerkki</h1>
+    <p>Tämä on esimerkki.</p>
+  </body>
+</html>
+```
+
+## Rivien korostaminen
+
+Voit korostaa koodilohkon rivejä tietyillä kommenteilla. Tee kommentti käyttämäsi kielen kommenttityylillä. Esimerkiksi:
+
+### Yksi rivi kerrallaan:
+
+````markdown
+```js
+function helloWorld() {
+  // highlight
+  console.log('Hei maailma!');
+}
+```
+````
+
+```js
+function helloWorld() {
+  // highlight
+  console.log('Hei maailma!');
+}
+```
+
+### Useampi rivi kerralla:
+
+````markdown
+```js
+function helloWorld() {
+  // highlight-start
+  console.log('Hei maailma!');
+  console.log('Mitä kuuluu?');
+  console.log('Hyvää päivää!');
+  // highlight-end
+}
+```
+````
+
+```js
+function helloWorld() {
+  // highlight-start
+  console.log('Hei maailma!');
+  console.log('Mitä kuuluu?');
+  console.log('Hyvää päivää!');
+  // highlight-end
+}
+```
+
+### Komentorivin näyttäminen
+
+Voit näyttää koodilohkossa myös komentorivin. Tämä onnistuu lisäämällä komentorivin alkuun `terminal`:
+
+````markdown
+```sh
+// terminal
+echo "Hei maailma!"
+```
+````
+
+```sh
+// terminal
+echo "Hei maailma!"
+```
+
+Komentorivityyli löytyy myös MariaDB:lle ja MySQL:lle
+
+````markdown
+```sh
+// mariadb
+CREATE USER 'wordpress';
+```
+````
+
+```sh
+// mariadb
+CREATE USER 'wordpress';
+```
+
+### Kommentti koodilohkossa
+
+Jos jokin koodikieli ei tue kommentteja, voit lisätä kommentin koodilohkoon seuraavasti:
+
+````markdown
+```txt
+// comment
+Tämä on kommentti.
+Tämä taas normaalia tekstiä
+```
+````
+
+```txt
+// comment
+Tämä on kommentti.
+Tämä taas normaalia tekstiä
+```
+
+
+## Tuetut kielet
+
+Koodilohko tukee seuraavia kieliä:
+
+<div className="grid md:grid-cols-2">
+<div>
+
+- `txt` (oletus, tavallinen teksti)
+- `bash`, `sh`, `shell` Bash
+- `log` Lokitiedostot
+- `diff` Diff-tiedostot
+- `ini` INI-tiedostot
+- `json` JSON-tiedostot
+- `yaml`, `yml` YAML-tiedostot
+- `mermaid` Mermaid-kaaviot
+- `nginx` NGINX-konfiguraatiot
+- `php` PHP-koodi
+- `sql` SQL-koodi
+- `markup`, `html`, `xml`, `svg`, `mathml`, `ssml`, `atom`, `rss` Muotoilu
+- `jsx` JSX-koodi
+
+</div>
+<div>
+
+- `tsx` TSX-koodi
+- `swift` Swift-koodi
+- `kotlin` Kotlin-koodi
+- `objectivec`, `objec` Objective-C-koodi
+- `js`, `javascript`, `js-extras` JavaScript-koodi
+- `reason` Reason-koodi
+- `rust` Rust-koodi
+- `graphql` GraphQL-koodi
+- `go` Go-koodi
+- `cpp` C++-koodi
+- `markdown` Markdown-muotoilu
+- `python`, `py` Python-koodi
+- `java` Java-koodi
+
+</div>
+</div>
+
+Jos haluat lisätä tuen uudelle kielelle, voit pyytää sitä [GitHubissa](https://github.com/bittivirta/docs/issues) tai lisätä sen itse dokumentaation asetuksiin, tiedostoon `docusaurus.config.js` asetukseen `config.themeConfig.prism.additionalLanguages`. Koodikielet, jotka eivät ole Prismissä, eivät toimi. Listan tuetuista kielistä löydät [Prismin sivuilta](https://prismjs.com/#supported-languages).
+
+## Monikielinen tuki
+
+Voit halutessasi näyttää useamman kielen tai tavan koodilohkoissa. Tämä onnistuu välilehdillä. Voit luoda välilehdet tabs-komponentilla. Jokaisella välilehdellä on oma koodilohkonsa. Tämä onnistuu esimerkiksi seuraavasti:
+
+````jsx
+<Tabs>
+  <TabItem value="js" label="JavaScript">
+    ```js
+    function helloWorld() {
+      console.log('Hei maailma!');
+    }
+    ```
+  </TabItem>
+  <TabItem value="py" label="Python">
+    ```py
+    def hello_world():
+      print("Hei maailma!")
+    ```
+  </TabItem>
+  <TabItem value="java" label="Java">
+    ```java
+    class HelloWorld {
+      public static void main(String args[]) {
+        System.out.println("Hei maailma!");
+      }
+    }
+    ```
+  </TabItem>
+````
+
+Näin saamme koodilohkon kolmelle eri kielelle:
+
+<Tabs>
+  <TabItem value="js" label="JavaScript">
+    ```js
+    function helloWorld() {
+      console.log('Hei maailma!');
+    }
+    ```
+  </TabItem>
+  <TabItem value="py" label="Python">
+    ```py
+    def hello_world():
+      print("Hei maailma!")
+    ```
+  </TabItem>
+  <TabItem value="java" label="Java">
+    ```java
+    class HelloWorld {
+      public static void main(String args[]) {
+        System.out.println("Hei maailma!");
+      }
+    }
+    ```
+  </TabItem>
+</Tabs>

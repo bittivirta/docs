@@ -1,0 +1,62 @@
+# Haarauttaminen
+
+## Haarauttaminen GitHubin kautta
+
+Tee haarautus käyttämällä GitHubin Fork-painiketta. Kun olet tehnyt muutoksia, luo uusi pull request, jossa muutokset tarkastetaan ja hyväksytään.
+
+### Henkilökunta / maintainer
+
+Jos teet muutoksia ilman haarautusta, älä lähetä muutoksia suoraan päähaaraan (main). Lähetä muutokset uuteen haaraan ja luo uusi pull request, jossa muutokset tarkastetaan ja hyväksytään.
+
+Kun luot uuden haaran, käytä nimessä joko `feature/ominaisuus` tai `fix/korjaus` -muotoa.
+
+Nimeä uusi haara seuraavasti:
+
+- `feature/ominaisuus` Uusi ominaisuus
+- `fix/korjaus` Korjaa virhe
+
+Esimerkiksi:
+
+- `feature/new-minecraft-guide` Lisää ohjeet Minecraft-palvelimen käyttöönottoon
+- `fix/typos` Korjaa kirjoitusvirheitä
+
+## Muutoksien tekeminen
+
+Muutoksissa (commiteissa) käytetään [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) -menettelyä sekä [Gitmojia](https://gitmoji.dev/) ilmaisemaan tehtyä muutosta. Muutoksissa tulee olla otsikko, emoji ja kuvaus. Otsikko tulee aloittaa jollain seuraavista sanoista:
+
+- `fix`: Korjaa virhe
+- `feat`: Uusi ominaisuus
+
+Emoji ilmaisee muutoksen tyyppiä. Emoji tulee lisätä otsikon eteen. Emoji voi olla esimerkiksi seuraavista:
+
+- `:bug:` Korjaa virhe
+- `:sparkles:` Uusi ominaisuus
+- `:pencil2:` Korjaa kirjoitusvirhe
+- `:recycle:` Uudelleenjärjestele ohjeita
+
+Kuvaus tulee olla englanniksi ja se tulee aloittaa isolla kirjaimella. Kuvaus tulee olla yksinkertainen ja selkeä. Kuvaus kirjoitetaan imperatiivisessa muodossa (käskymuoto). Kuvaus voi olla esimerkiksi seuraavista:
+
+- `Fix typo`
+- `Add new guide`
+- `Update guide`
+- `Fix broken link`
+
+Jos muutos koskee jotakin tiettyä GitHub issueta, tulee issue mainita muutoksen laajemmassa kuvauksessa GitHubin laajemmalla mallilla. Esimerkiksi:
+
+```git
+fix: :bug: Fix typo
+
+Fixes bittivirta/docs#1
+```
+
+## Muutosten lähettäminen
+
+Kun olet tehnyt muutoksia, voit lähettää muutokset tarkastettavaksi. Ennen muutosten lähettämistä päivitä oma haarasi uusimpaan versioon päähaarasta (main). Tämän jälkeen voit lähettää muutokset GitHubiin ja luoda uuden pull requestin. Pull requestin otsikon tulee noudattaa muutosten tekemisessä käytettyä otsikointia. Pull requestin kuvaus tulee sisältää tietoa tehdyistä muutoksista.
+
+
+## Ei paniikkia
+
+Jos et ole varma, miten jokin asia tehdään, älä epäröi kysyä apua. Voit kysyä apua esimerkiksi asiakaspalvelustamme, Discordissa tai GitHubin kautta. Voit myös tehdä muutoksia ja lähettää ne tarkastettavaksi, jolloin muutokset voidaan tarkistaa ja tarvittaessa korjata.
+
+Emme odota, että kaikki osaavat kaiken. Tärkeintä on, että yrität ja opit uutta! :heart: Arvostamme kaikkia tekemiäsi muutoksia, vaikka ne eivät olisikaan täydellisiä.
+

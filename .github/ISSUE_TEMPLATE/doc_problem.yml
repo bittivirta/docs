@@ -1,0 +1,23 @@
+name: Documentation Problem
+description: Report a problem with the documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a problem with the documentation. Please fill out the information below to help us fix the problem.
+  - type: input
+    id: doc_url
+    attributes:
+      label: Documentation URL
+      description: The URL of the documentation page with the problem
+      placeholder: https://docs.bittivirta.fi/server/vps/linux/quick-start
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the problem with the documentation
+      placeholder: The documentation says that I should do X, but when I do that, Y happens instead.
+    validations:
+      required: true

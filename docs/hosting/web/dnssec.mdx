@@ -1,0 +1,46 @@
+# DNSSEC
+
+DNSSEC parantaa turvallisuutta siten, että kukaan ei voi väärentää
+nimipalvelimiasi. Bittivirran kaikki webhotellit tukevat DNSSEC-ominaisuutta ja
+suosittelemme vahvasti sen käyttöönottoa. Myös fi-verkkotunnuksien myöntäjä
+Traficom suosittelee vahvasti DNSSEC:n käyttöä.
+
+Traficomin esite DNSSEC-ominaisuudesta löytyy [täältä](./assets/dnssec.pdf)
+
+
+<Stepper>
+  <Step>
+    Avaa Plesk asiakasalueella OneClick-kirjautumisella tai kirjaudu Pleskiin
+    osoitteessa [https://plesk.bittivirta.fi/](https://plesk.bittivirta.fi/)
+  </Step>
+  <Step>
+    Valitse verkkotunnus jota hallitset, valitse "Isännöinti ja DNS" ja valitse DNNSSEC
+
+    <Image img={require("./assets/go-to-dnssec.png")} />
+  </Step>
+  <Step>
+    Allekirjoita DNS-vyöhyke
+
+    <Image img={require("./assets/sign.png")} />
+  </Step>
+  <Step>
+    Täytä avaintietolomake ja paina OK
+
+    Voit jättää tiedot oletusarvoisiksi.
+
+    <Image img={require("./assets/form.png")} />
+  </Step>
+  <Step>
+    Lähetä DS-resurssitietueet verkkotunnuksen rekisteröitsijälle
+
+    <Image img={require("./assets/done.png")} />
+
+    Bittivirralla ei ole vielä käytössä automaattista DNSSEC-avaimien talletusta,
+    joten joudut olemaan yhteydessä asiakaspalveluun. Asiakaspalvelu lisää
+    DNSSEC-tietueesi puolestasi verkkotunnuksen rekisteriin. Sinun ei tarvitse
+    lähettää DNSSEC-tietueita meille, löydämme ne nimipalvelimiltasi jos käytät
+    Bittivirran nimipalvelimia tai olet lisännyt tietueet nimipalvelimillesi. Jos
+    käytössäsi on muu verkkotunnuksen palveluntarjoaja, lähetä DS-tietueet heille
+    heidän järjestelmien kautta.
+  </Step>
+</Stepper>

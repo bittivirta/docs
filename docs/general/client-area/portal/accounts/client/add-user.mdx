@@ -1,0 +1,35 @@
+# Käyttäjän lisääminen
+
+Voit lisätä asiakastilillesi uusia käyttäjiä. Voit valita kaikki - tai vain osan käyttöoikeuksista.
+
+<Stepper>
+  <Step>
+    Avaa "Käyttäjätilit" käyttäjävalikosta.
+
+    <Image img={require("./assets/alikäyttäjätilit.png")} style={{maxWidth:"450px"}} />
+  </Step>
+  <Step>
+    Paina "Kutsu uusi alikäyttäjä" -painiketta.
+
+    <Image img={require("./assets/kutsu-alikäyttäjä.png")} />
+  </Step>
+  <Step>
+    (1) Anna käyttäjän sähköposti, (2) valitse, annatko kaikki oikeudet vai tietyt, (3) valitse oikeudet, jos valitsit vain tietyt ja paina (4) "Lähetä kutsu".
+
+    <Image img={require("./assets/kutsu-alikäyttäjä-ikkuna.png")} />
+  </Step>
+  <Step>
+    Voit halutessasi joko (1) lähettää uudelleen tai (2) perua kutsun.
+
+    <Image img={require("./assets/kutsuttu.png")} />
+  </Step>
+  <Step>
+    Pyydä käyttäjää tarkistamaan sähköpostinsa ja hyväksymään kutsun. Kutsu on voimassa 7 päivää, jonka jälkeen se vanhenee. Kutsun vanhettua voit lähettää uuden kutsun yllä olevan kohdan mukaisesti.
+
+    Käyttäjä voi joko rekisteröityä tai kirjautua sisään, jos hänellä on jo tili.
+
+    Kutsu näyttää tältä:
+
+    <Image img={require("./assets/kutsu-sähköposti.png")} />
+  </Step>
+</Stepper>

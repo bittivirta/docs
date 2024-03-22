@@ -1,0 +1,186 @@
+# Markdown
+
+Tekstiä muotoillaan Markdownilla. Markdown on yksinkertainen tapa muotoilla tekstiä. Se on suunniteltu niin, että se on helppo lukea ja kirjoittaa.
+
+Sen lisäksi, että sisältömme on Markdownia, se on myös Reactia. Voit käyttää React-komponentteja Markdownissa. Tämä tarkoittaa, että voit käyttää kaikkia React-komponentteja ja HTML-elementtejä Markdownissa.
+
+## Otsikot
+
+Otsikot luodaan käyttämällä `#` -merkkiä. Voit lisätä useita `#` -merkkejä otsikon alkuun, jolloin otsikosta tulee pienempi. Ensimmäisen tason otsikko on aina tiedoston alussa, eikä sitä saa käyttää kuin kerran. Alemmat tasot voivat esiintyä useammin.
+
+```md
+# Otsikko 1
+## Otsikko 2
+### Otsikko 3
+#### Otsikko 4
+```
+
+## Teksti
+
+Voit muotoilla tekstiä käyttämällä seuraavia Markdownin syntakseja:
+
+```markdown
+**lihavoitu** tai __lihavoitu__
+_kursivoitu_ tai *kursivoitu*
+~~yliviivattu~~
+```
+
+:::result
+**lihavoitu** tai __lihavoitu__<br />
+_kursivoitu_ tai *kursivoitu*<br />
+~~yliviivattu~~
+:::
+
+
+
+## Listat
+
+Voit luoda listoja käyttämällä `-` tai `*` -merkkejä. Voit myös luoda sisäkkäisiä listoja sisentämällä listan sisällä.
+
+```markdown
+- Ensimmäinen kohta
+- Toinen kohta
+  - Ensimmäinen sisäkkäinen kohta
+  - Toinen sisäkkäinen kohta
+- Kolmas kohta
+```
+
+:::result
+- Ensimmäinen kohta
+- Toinen kohta
+  - Ensimmäinen sisäkkäinen kohta
+  - Toinen sisäkkäinen kohta
+- Kolmas kohta
+:::
+
+### Valintaruutulista
+
+Valintaruutulista luodaan käyttämällä `- [ ]` -syntaksia.
+
+```markdown
+- [ ] Ensimmäinen kohta
+- [x] Toinen kohta
+- [ ] Kolmas kohta
+```
+
+:::result
+- [ ] Ensimmäinen kohta
+- [x] Toinen kohta
+- [ ] Kolmas kohta
+:::
+
+
+## Linkit
+
+Voit luoda linkkejä käyttämällä `[teksti](linkki)` -syntaksia.
+
+```markdown
+[Linkki](https://www.sirkulaattori.fi)
+```
+
+:::result
+[Linkki](https://www.sirkulaattori.fi)
+:::
+
+## Kuvat
+
+Kuvat tuodaan käyttämällä aina `Image` -komponenttia. Kuvan polku annetaan `img` -asetuksen kautta. Voit myös antaa kuvan maksimileveyden `style` -asetuksen kautta. Kuvan korvaava teksti annetaan `alt` -asetuksen kautta.
+
+```jsx
+<Image
+  alt="Kortti sosiaaliselle medialle"
+  img={require("@site/static/img/social-card.png")}
+  style={{maxWidth:400}}
+/>
+```
+
+:::result
+<Image
+  alt="Kortti sosiaaliselle medialle"
+  img={require("@site/static/img/social-card.png")}
+  style={{maxWidth:400}}
+/>
+:::
+
+Markdownin kuva-syntaksia ei voi käyttää, koska se ei tue kuvan maksimileveyden asettamista, eikä kuvan korvaavaa tekstiä. Kuvan korvaava teksti on tärkeä, koska se auttaa ruudunlukijan käyttäjiä ymmärtämään kuvan sisällön.
+
+## Koodi
+
+Koodi-komponentti on hieman tavallista Markdownia monipuolisempi. Se tukee useita kieliä, ja voit antaa koodille otsikon. Koodi-komponentti on myös helppo kopioida leikepöydälle.
+
+Koodia varten löydät kokonaan oman sivun: [Koodi](code).
+
+## Pikanäppäimet
+
+Voit ilmaista pikanäppäimiä `<Hotkey />` -komponentilla. Lue lisää: [Pikanäppäimet](hotkeys).
+
+## Ohjeiden askellus
+
+Ohjeiden askellus on yksi tapa esittää ohjeita. Se on hyödyllinen, kun ohjeet ovat pitkiä ja niitä on vaikea hahmottaa yhdellä silmäyksellä. Ohjeiden askellus on myös hyödyllinen, kun ohjeet ovat monimutkaisia ja niiden suoritusjärjestys on tärkeä.
+
+Löydät ohjeiden askellusta varten kokonaan oman sivun: [Ohjeiden askellus](stepper).
+
+## Taulukot
+
+Taulukot luodaan käyttämällä `|` -merkkejä. Voit lisätä taulukkoon otsikon käyttämällä `-` -merkkejä. Taulukon sisältö erotetaan `|` -merkeillä. Taulukon sisältöä voi muotoilla käyttämällä Markdownia.
+
+```markdown
+| Otsikko 1 | Otsikko 2 | Otsikko 3 |
+|-----------|-----------|-----------|
+| Rivi 1    | Rivi 1    | Rivi 1    |
+| Rivi 2    | Rivi 2    | Rivi 2    |
+| Rivi 3    | Rivi 3    | Rivi 3    |
+```
+
+:::result
+| Otsikko 1 | Otsikko 2 | Otsikko 3 |
+|-----------|-----------|-----------|
+| Rivi 1    | Rivi 1    | Rivi 1    |
+| Rivi 2    | Rivi 2    | Rivi 2    |
+| Rivi 3    | Rivi 3    | Rivi 3    |
+:::
+
+## Lainaukset
+
+Lainaukset luodaan käyttämällä `>` -merkkiä.
+
+```markdown
+> Tämä on lainaus.
+>> Tämä on sisäkkäinen lainaus.
+>>> Tämä on sisäkkäisen sisäkkäinen lainaus.
+```
+
+
+:::result
+> Tämä on lainaus.
+>> Tämä on sisäkkäinen lainaus.
+>>> Tämä on sisäkkäisen sisäkkäinen lainaus.
+:::
+
+## Sisällysluettelo
+
+Sisällysluettelo luodaan automaattisesti sivun oikeaan reunaan. Sisällysluettelo sisältää kaikki sivun otsikot.
+
+## Tekstin sisäinen koodi
+
+Voit lisätä tekstiin koodia käyttämällä `code` -elementtiä.
+
+```markdown
+Tämä on `koodia`.
+```
+
+:::result
+Tämä on `koodia`.
+:::
+
+## Emojit
+
+Voit lisätä emojin käyttämällä `:emoji:` -syntaksia.
+
+```markdown
+:smile: :+1: :tada: :rocket:
+```
+
+:::result
+:smile: :+1: :tada: :rocket:
+:::

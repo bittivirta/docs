@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(https://cdn.bittivirta.fi/css/fonts/asap.css);
+@import url(https://cdn.bittivirta.fi/css/fonts/fira-code-nerd.css);
+
+:root {
+  --ifm-color-primary: #1060ee;
+  --ifm-color-primary-dark: #0f3eb6;
+  --ifm-color-primary-darker: #0e3bac;
+  --ifm-color-primary-darkest: #0c308d;
+  --ifm-color-primary-light: #134cde;
+  --ifm-color-primary-lighter: #144fe8;
+  --ifm-color-primary-lightest: #2f65ee;
+
+  --ifm-background-color: #f8fafc;
+
+  --ifm-alert-background-color: #1d355a;
+
+  --docusaurus-highlighted-code-line-bg: rgba(155, 181, 206, 0.17);
+  --docusaurus-hover-code-line-bg: rgba(155, 181, 206, 0.08);
+  --ifm-code-font-size: 95%;
+
+  --ifm-font-family-base: "Asap", sans-serif;
+  --ifm-font-family-monospace: "Fira Code Nerd", monospace;
+}
+
+[data-theme="dark"] {
+  --ifm-color-primary: #9bb5f8;
+  --ifm-color-primary-dark: #7599f5;
+  --ifm-color-primary-darker: #638bf4;
+  --ifm-color-primary-darkest: #2a61f0;
+  --ifm-color-primary-light: #c1d1fb;
+  --ifm-color-primary-lighter: #d3dffc;
+  --ifm-color-primary-lightest: #ffffff;
+
+  --ifm-background-color: #171e2d !important;
+  --ifm-background-surface-color: #242d3c !important;
+
+  --docusaurus-highlighted-code-line-bg: rgba(155, 181, 206, 0.17);
+  --docusaurus-hover-code-line-bg: rgba(155, 181, 206, 0.08);
+  --ifm-code-font-size: 95%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--ifm-font-family-base);
+}
+
+.navbar {
+  @apply shadow-md;
+}
+
+.navbar__title {
+  display: none;
+}
+
+h1.hero__title {
+  letter-spacing: -2px;
+}
+
+code {
+  font-family: 'Fira Code Nerd', monospace !important;
+  font-weight: 500 !important;
+  text-align: left !important;
+}
+
+.theme-code-block-error-line {
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+  padding-left: calc(var(--ifm-pre-padding) - 5px) !important;
+  border-left: 5px solid;
+  @apply bg-danger/50 border-danger;
+}
+
+.theme-code-block-script-line {
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  margin-left: -5px;
+  padding: 0 var(--ifm-pre-padding);
+  padding-left: calc(var(--ifm-pre-padding) - 5px) !important;
+  border-left: 5px solid;
+  background: var(--docusaurus-highlighted-code-line-bg);
+  @apply border-info;
+}
+
+.theme-code-block-script-line :last-child::after {
+  content: " ↩︎";
+  opacity: 0.50;
+}
+
+.theme-code-block-terminal-line * {
+  font-weight: 700;
+}
+
+.theme-code-block-terminal-line::before {
+  content: "$ root@bittivps:~# ";
+  opacity: 0.75;
+}
+
+.theme-code-block-mariadb-line * {
+  font-weight: 700;
+}
+
+.theme-code-block-mariadb-line::before {
+  content: "MariaDB [(table)]> ";
+  opacity: 0.75;
+}
+
+.theme-code-block-mysql-line * {
+  font-weight: 700;
+}
+
+.theme-code-block-mysql-line::before {
+  content: "MySQL [(table)]> ";
+  opacity: 0.75;
+}
+
+.theme-code-block-comment-line {
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+  padding-left: calc(var(--ifm-pre-padding) - 5px) !important;
+  border-left: 5px solid;
+  background-color: #6c975e11;
+  border-color: #6c975e;
+}
+
+.theme-code-block-comment-line * {
+  color: #6c975e;
+}
+
+.theme-code-block-comment-line :first-child span::before {
+  content: "// ";
+  color: #6c975e;
+  opacity: 0.50;
+}
+
+.main-wrapper {
+  @apply mt-5;
+
+  .theme-doc-sidebar-container {
+    @apply py-3;
+    border: 0 !important;
+
+    nav {
+      padding-left: 0 !important;
+      padding-right: 20px !important;
+    }
+  }
+
+  >.theme-back-to-top-button {
+    width: 3rem !important;
+  }
+
+  > :not(.hero) {
+    @apply container mx-auto;
+  }
+
+  .theme-doc-markdown ol li:before {
+    content: counter(item);
+    display: inline-flex;
+    margin-left: -3.2rem;
+    margin-right: 0.5rem;
+    height: 2rem;
+    min-width: 2rem;
+    width: 2rem;
+    background-color: var(--ifm-color-primary);
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .theme-doc-markdown ol li {
+    list-style: none;
+    counter-increment: item;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+
+  .theme-doc-markdown ol li p {
+    margin-top: 3px;
+  }
+
+}
+
+main {
+  a {
+    @apply font-bold;
+  }
+
+  font-weight: 500;
+}
+
+.navbar__inner {
+  @apply container mx-auto;
+}
+
+main img {
+  @apply rounded-lg;
+}
+
+.alert div :last-child {
+  @apply mb-0;
+}
+
+
+table {
+  @apply bg-white dark:bg-slate-900 p-3 rounded-2xl w-fit shadow-md mb-8;
+}
+
+table thead,
+table tbody {
+  @apply w-full;
+}
+
+table tr {
+  @apply border-none;
+}
+
+
+table td,
+table th,
+table thead tr {
+  @apply border-none;
+}
+
+table tr th {
+  @apply dark:bg-slate-100/5 text-left bg-blue-600 text-white;
+}
+
+table tr:nth-child(2n),
+table th {
+  @apply bg-silicon-100/50 dark:bg-slate-100/5 border-separate;
+}
+
+table tr td:not(:last-child) {
+  @apply border-solid border-0 border-r-2 border-silicon-100;
+}
+
+table tr td:first-child,
+table tr th:first-child {
+  @apply rounded-tl-xl rounded-bl-xl;
+}
+
+table tr td:last-child,
+table tr th:last-child {
+  @apply rounded-tr-xl rounded-br-xl;
+}
+
+code {
+  word-break: keep-all;
+  white-space: nowrap;
+  @apply px-1.5 py-1 text-xs inline-block min-w-[1.5rem] font-semibold text-center text-slate-700 bg-slate-100 border border-slate-300 rounded-lg dark:bg-slate-100/10 dark:text-slate-100 dark:border-slate-100/10 shadow-xs;
+}
+
+
+.alert {
+  @apply bg-silicon-100 border-silicon-500 shadow-sm;
+}
+
+.alert.alert--info {
+  @apply bg-cloud-200 border-cloud-500 shadow-sm;
+}
+
+.alert.alert--danger {
+  @apply bg-live-200 border-live-500 shadow-sm;
+}
+
+.alert.alert--success {
+  @apply bg-circuit-200 border-circuit-500 shadow-sm;
+}
+
+.alert.alert--warning {
+  @apply bg-gold-200 border-gold-500 shadow-sm;
+}
