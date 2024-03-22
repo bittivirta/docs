@@ -3,7 +3,10 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import CategoryIndex from '@site/src/components/CategoryIndex';
 import Translate from '@docusaurus/Translate';
-import { faBook, faBuilding, faGamepadAlt, faHotel, faMemoPad, faUsbDrive, faUsers } from "@fortawesome/pro-thin-svg-icons";
+import Button from '@site/src/components/Button';
+import { faBook, faBuilding, faGamepadAlt, faHotel, faMemoPad, faUsbDrive } from "@fortawesome/pro-thin-svg-icons";
+import { faEnvelope } from "@fortawesome/pro-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 function HomepageHeader() {
@@ -68,6 +71,7 @@ export default function Home() {
         <div className="container py-20">
           <h2 className="text-3xl"><Translate id="home.questions.title" /></h2>
           <p className="text-xl"><Translate id="home.questions.subtitle" /></p>
+          <Button to="/company/contact-us"><FontAwesomeIcon icon={faEnvelope} fixedWidth /> <Translate id="home.questions.button" /></Button>
         </div>
       </main>
     </Layout>

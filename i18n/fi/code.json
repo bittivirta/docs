@@ -387,5 +387,8 @@
   },
   "home.questions.subtitle": {
     "message": "Jos et löydä etsimääsi, ota yhteyttä asiakaspalveluumme. Autamme mielellämme!"
+  },
+  "home.questions.button": {
+    "message": "Ota yhteyttä"
   }
 }
