@@ -1,7 +1,11 @@
 .button {
-  @apply bg-blue-600 text-white/90 inline-block mb-8 font-bold p-2 px-4 rounded-full hover:scale-105 transition-all hover:no-underline hover:text-white;
+  @apply bg-blue-600 text-white/90 inline-block mb-8 font-bold p-2 px-4 rounded-full hover:scale-105 transition-all hover:no-underline hover:text-white me-2;
 }
 
 .button.lg {
   @apply text-xl p-3 px-6;
+}
+
+.button svg {
+  @apply mr-2;
 }
