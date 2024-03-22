@@ -6,7 +6,6 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/pro-solid-svg-icons';
 
 export default function DocItemPaginator() {
   const { metadata } = useDoc();
-  console.log(metadata);
   const navButtonClasses = 'flex flex-1 items-center justify-between gap-3  md:ms-auto text-start border border-solid border-slate-100 p-3 px-4 rounded-xl bg-white dark:bg-slate-800 dark:border-slate-700 dark:text-silicon-200 shadow-lg text-blue-800 hover:no-underline hover:scale-[1.02] transition-all';
   const navButtonLeft = "text-start md:text-end";
   const navButtonRight = "text-start";
