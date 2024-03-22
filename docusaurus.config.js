@@ -48,8 +48,7 @@ const config = {
   presets: [
     [
       "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
@@ -67,7 +66,7 @@ const config = {
           trackingID: 'G-C7W0T4C3ZR',
           anonymizeIP: true,
         },
-      }),
+      },
     ],
   ],
 
