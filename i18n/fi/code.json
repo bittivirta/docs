@@ -343,6 +343,12 @@
   "stepper.previous": {
     "message": "Edellinen"
   },
+  "home.hero.title": {
+    "message": "Bittivirta Docs"
+  },
+  "home.hero.subtitle": {
+    "message": "Tervetuloa Bittivirta Docs -palveluun. Täältä löydät ohjeita palveluidemme käyttöön."
+  },
   "home.pages.title": {
     "message": "Valitse aihe, josta kaipaat lisätietoa"
   },

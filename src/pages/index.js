@@ -14,8 +14,8 @@ function HomepageHeader() {
   return (
     <header className="hero -mt-5 bg-waves-animated bg-cover">
       <div className="container py-10">
-        <h1 className="text-6xl text-white">{siteConfig.title}</h1>
-        <p className="text-2xl text-white">{siteConfig.tagline}</p>
+        <h1 className="text-6xl text-white"><Translate id="home.hero.title" /></h1>
+        <p className="text-2xl text-white"><Translate id="home.hero.subtitle" /></p>
       </div>
     </header>
   );
