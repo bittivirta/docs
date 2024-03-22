@@ -2,7 +2,7 @@ import style from "./style.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-export default function Hotkey({ children, title, icon, link }) {
+export default function InfoField({ children, title, icon, link }) {
   return <div class={style.fieldContainer}>
     <div class={style.field}>
       <div class={style.title}>
