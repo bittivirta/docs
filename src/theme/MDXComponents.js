@@ -8,15 +8,16 @@ import { fal } from '@fortawesome/pro-light-svg-icons'; // Import all solid icon
 import { fat } from '@fortawesome/pro-thin-svg-icons'; // Import all solid icons.
 import { far } from '@fortawesome/pro-regular-svg-icons'; // Import all solid icons.
 
-import Stepper, { Step } from "@site/src/components/Stepper";
-import Hotkey from "@site/src/components/Hotkey";
-import BrowserWindow from "@site/src/components/BrowserWindow";
-import InfoField from "@site/src/components/InfoField";
+import Link from '@docusaurus/Link';
 import Image from "@theme/IdealImage";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrowserWindow from "@site/src/components/BrowserWindow";
+import Button from '@site/src/components/Button';
 import CategoryIndex from '@site/src/components/CategoryIndex';
-import Link from '@docusaurus/Link';
+import Stepper, { Step } from "@site/src/components/Stepper";
+import InfoField from "@site/src/components/InfoField";
+import Hotkey from "@site/src/components/Hotkey";
 
 library.add(fab, fas, fal, fat, far); // Add all icons to the library so you can use them without importing them individually.
 
@@ -24,14 +25,15 @@ export default {
   // Re-use the default mapping
   ...MDXComponents,
   Icon: FontAwesomeIcon,
-  Hotkey,
-  BrowserWindow,
-  InfoField,
-  Stepper,
-  Step,
+  Link,
   Image,
   Tabs,
   TabItem,
+  BrowserWindow,
+  Button,
   CategoryIndex,
-  Link
+  Hotkey,
+  InfoField,
+  Stepper,
+  Step,
 };
