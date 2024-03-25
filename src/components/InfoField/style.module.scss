@@ -1,9 +1,11 @@
 .field {
   @apply bg-white shadow-md rounded-md p-1 flex gap-3 mr-4 items-center;
+  @apply dark:bg-silicon-800;
 }
 
 .field .title {
   @apply bg-silicon-100 text-silicon-700 font-bold p-1 px-3 rounded flex gap-2;
+  @apply dark:bg-silicon-700 dark:text-silicon-100;
 }
 
 .field .content {

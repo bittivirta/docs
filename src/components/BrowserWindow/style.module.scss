@@ -1,9 +1,11 @@
 .window {
   @apply bg-silicon-100 rounded-lg p-2 shadow-md mb-8;
+  @apply dark:bg-silicon-800;
 }
 
 .window .frame {
   @apply bg-white rounded-md p-5;
+  @apply dark:bg-silicon-900;
 }
 
 .window .iframe {
@@ -21,6 +23,7 @@
 
 .window .header .url {
   @apply bg-white rounded-full p-1 px-3 mb-2 flex-1;
+  @apply dark:bg-silicon-900;
 }
 
 .window .header .right {
