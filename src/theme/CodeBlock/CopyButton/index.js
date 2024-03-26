@@ -45,7 +45,7 @@ export default function CopyButton({ code, className, icon }) {
       )}
       onClick={handleCopyCode}>
       <span className={styles.copyButtonIcons} aria-hidden="true">
-        <FontAwesomeIcon icon={icon ? icon : faCopy} className={styles.copyButtonIcon} />
+        <FontAwesomeIcon icon={icon ? icon : faCopy} className={clsx(styles.copyButtonIcon, "mt-[0.15rem]")} />
         <FontAwesomeIcon icon={faCheck} className={styles.copyButtonSuccessIcon} />
       </span>
     </button>

@@ -1,3 +1,6 @@
+.copyButton {
+  @apply bg-silicon-900 !important;
+}
 :global(.theme-code-block:hover) .copyButtonCopied {
   opacity: 1 !important;
 }
