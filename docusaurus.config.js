@@ -1,4 +1,6 @@
 import prismVscodeDarkPlus from "./src/theme/prism-vscode-dark-plus.ts"
+const info = require("./.tmp/info.json")
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -41,9 +43,9 @@ const config = {
     ],
   ],
 
-  scripts: [
-    "/crisp.js",
-  ],
+  // scripts: [
+  //   "/crisp.js",
+  // ],
 
   presets: [
     [
@@ -52,7 +54,7 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/bittivirta/docs",
+          editUrl: "https://github.com/bittivirta/docs/blob/" + (info.branch == "master" ? "main" : info.branch) + "/",
           admonitions: {
             keywords: ['result'],
             extendDefaults: true,
@@ -62,9 +64,8 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
         },
-        gtag: {
-          trackingID: 'G-C7W0T4C3ZR',
-          anonymizeIP: true,
+        googleTagManager: {
+          containerId: 'G-C7W0T4C3ZR',
         },
       },
     ],
