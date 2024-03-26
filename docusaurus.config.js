@@ -110,6 +110,7 @@ const config = {
         logo: {
           alt: "Bittivirta Logo",
           src: "https://cdn.bittivirta.fi/logo/logo.svg",
+          srcDark: 'https://cdn.bittivirta.fi/logo/logo-alt.svg',
         },
         items: [
           {
