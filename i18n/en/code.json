@@ -194,10 +194,6 @@
     "message": "Toggle word wrap",
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
-  "theme.DocSidebarItem.toggleCollapsedCategoryAriaLabel": {
-    "message": "Toggle the collapsible sidebar category '{label}'",
-    "description": "The ARIA label to toggle the collapsible sidebar category"
-  },
   "theme.NavBar.navAriaLabel": {
     "message": "Main",
     "description": "The ARIA label for the main navigation"
@@ -342,5 +338,79 @@
   },
   "stepper.previous": {
     "message": "Previous"
+  },
+  "home.hero.title": {
+    "message": "home.hero.title"
+  },
+  "home.hero.subtitle": {
+    "message": "home.hero.subtitle"
+  },
+  "home.pages.title": {
+    "message": "home.pages.title"
+  },
+  "home.pages.general.title": {
+    "message": "home.pages.general.title"
+  },
+  "home.pages.general.subtitle": {
+    "message": "home.pages.general.subtitle"
+  },
+  "home.pages.webhosting.title": {
+    "message": "home.pages.webhosting.title"
+  },
+  "home.pages.webhosting.subtitle": {
+    "message": "home.pages.webhosting.subtitle"
+  },
+  "home.pages.vps.title": {
+    "message": "home.pages.vps.title"
+  },
+  "home.pages.vps.subtitle": {
+    "message": "home.pages.vps.subtitle"
+  },
+  "home.pages.game.title": {
+    "message": "home.pages.game.title"
+  },
+  "home.pages.game.subtitle": {
+    "message": "home.pages.game.subtitle"
+  },
+  "home.pages.docs.title": {
+    "message": "home.pages.docs.title"
+  },
+  "home.pages.docs.subtitle": {
+    "message": "home.pages.docs.subtitle"
+  },
+  "home.pages.company.title": {
+    "message": "home.pages.company.title"
+  },
+  "home.pages.company.subtitle": {
+    "message": "home.pages.company.subtitle"
+  },
+  "home.questions.title": {
+    "message": "home.questions.title"
+  },
+  "home.questions.subtitle": {
+    "message": "home.questions.subtitle"
+  },
+  "home.questions.button": {
+    "message": "home.questions.button"
+  },
+  "theme.admonition.warning": {
+    "message": "warning",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Expand sidebar category '{label}'",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Collapse sidebar category '{label}'",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.unlistedContent.title": {
+    "message": "Unlisted page",
+    "description": "The unlisted content banner title"
+  },
+  "theme.unlistedContent.message": {
+    "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
+    "description": "The unlisted content banner message"
   }
 }

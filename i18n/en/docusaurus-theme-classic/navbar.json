@@ -7,10 +7,6 @@
     "message": "Bittivirta Logo",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Client Area": {
-    "message": "Client Area",
-    "description": "Navbar item with label Client Area"
-  },
   "item.label.Server": {
     "message": "Server",
     "description": "Navbar item with label Server"
@@ -34,5 +30,9 @@
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
+  },
+  "item.label.General": {
+    "message": "General",
+    "description": "Navbar item with label General"
   }
 }

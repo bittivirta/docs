@@ -11,10 +11,6 @@
     "message": "Yleinen",
     "description": "Navbar item with label General"
   },
-  "item.label.Client Area": {
-    "message": "Asiakasalue",
-    "description": "Navbar item with label Client Area"
-  },
   "item.label.Server": {
     "message": "Palvelimet",
     "description": "Navbar item with label Server"

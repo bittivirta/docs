@@ -1,78 +1,110 @@
 {
-	"version.label": {
-		"message": "Next",
-		"description": "The label for version current"
-	},
-	"sidebar.clientAreaSidebar.category.Yrityksille": {
-		"message": "For Business",
-		"description": "The label for category Yrityksille in sidebar clientAreaSidebar"
-	},
-	"sidebar.clientAreaSidebar.category.Asiakastili": {
-		"message": "Customer Account",
-		"description": "The label for category Asiakastili in sidebar clientAreaSidebar"
-	},
-	"sidebar.clientAreaSidebar.category.Laskutus": {
-		"message": "Invoicing",
-		"description": "The label for category Laskutus in sidebar clientAreaSidebar"
-	},
-	"sidebar.clientAreaSidebar.category.Palveluiden hallinta": {
-		"message": "Service Management",
-		"description": "The label for category Palveluiden hallinta in sidebar clientAreaSidebar"
-	},
-	"sidebar.gameSidebar.category.Gamepanel": {
-		"message": "Gamepanel",
-		"description": "The label for category Gamepanel in sidebar gameSidebar"
-	},
-	"sidebar.gameSidebar.category.Työpöytäohjelmistot": {
-		"message": "Desktop Apps",
-		"description": "The label for category Työpöytäohjelmistot in sidebar gameSidebar"
-	},
-	"sidebar.gameSidebar.category.Minecraft": {
-		"message": "Minecraft",
-		"description": "The label for category Minecraft in sidebar gameSidebar"
-	},
-	"sidebar.gameSidebar.category.BungeeCord": {
-		"message": "BungeeCord",
-		"description": "The label for category BungeeCord in sidebar gameSidebar"
-	},
-	"sidebar.gameSidebar.category.Konfigurointi": {
-		"message": "Configuration",
-		"description": "The label for category Konfigurointi in sidebar gameSidebar"
-	},
-	"sidebar.gameSidebar.category.Oma verkkotunnus": {
-		"message": "Custom Domain",
-		"description": "The label for category Oma verkkotunnus in sidebar gameSidebar"
-	},
-	"sidebar.gameSidebar.category.Pluginit": {
-		"message": "Plugins",
-		"description": "The label for category Pluginit in sidebar gameSidebar"
-	},
-	"sidebar.gameSidebar.category.Rust": {
-		"message": "Rust",
-		"description": "The label for category Rust in sidebar gameSidebar"
-	},
-	"sidebar.gameSidebar.category.Valheim": {
-		"message": "Valheim",
-		"description": "The label for category Valheim in sidebar gameSidebar"
-	},
-	"sidebar.serverSidebar.category.VPS": {
-		"message": "VPS",
-		"description": "The label for category VPS in sidebar serverSidebar"
-	},
-	"sidebar.serverSidebar.category.Ubuntu/Debian": {
-		"message": "Ubuntu/Debian",
-		"description": "The label for category Ubuntu/Debian in sidebar serverSidebar"
-	},
-	"sidebar.serverSidebar.category.Windows": {
-		"message": "Windows",
-		"description": "The label for category Windows in sidebar serverSidebar"
-	},
-	"sidebar.hostingSidebar.category.Webhotellit": {
-		"message": "Web Hosting",
-		"description": "The label for category Webhotellit in sidebar hostingSidebar"
-	},
-	"sidebar.docsSidebar.category.Osallistuminen": {
-		"message": "Contributing",
-		"description": "The label for category Osallistuminen in sidebar docsSidebar"
-	}
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.gameSidebar.category.Minecraft": {
+    "message": "Minecraft",
+    "description": "The label for category Minecraft in sidebar gameSidebar"
+  },
+  "sidebar.gameSidebar.category.BungeeCord": {
+    "message": "BungeeCord",
+    "description": "The label for category BungeeCord in sidebar gameSidebar"
+  },
+  "sidebar.gameSidebar.category.Konfigurointi": {
+    "message": "Configuration",
+    "description": "The label for category Konfigurointi in sidebar gameSidebar"
+  },
+  "sidebar.gameSidebar.category.Pluginit": {
+    "message": "Plugins",
+    "description": "The label for category Pluginit in sidebar gameSidebar"
+  },
+  "sidebar.gameSidebar.category.Rust": {
+    "message": "Rust",
+    "description": "The label for category Rust in sidebar gameSidebar"
+  },
+  "sidebar.gameSidebar.category.Valheim": {
+    "message": "Valheim",
+    "description": "The label for category Valheim in sidebar gameSidebar"
+  },
+  "sidebar.serverSidebar.category.Windows": {
+    "message": "Windows",
+    "description": "The label for category Windows in sidebar serverSidebar"
+  },
+  "sidebar.generalSidebar.category.Asiakasalueet": {
+    "message": "Asiakasalueet",
+    "description": "The label for category Asiakasalueet in sidebar generalSidebar"
+  },
+  "sidebar.generalSidebar.category.Portaali": {
+    "message": "Portaali",
+    "description": "The label for category Portaali in sidebar generalSidebar"
+  },
+  "sidebar.generalSidebar.category.Tilit": {
+    "message": "Tilit",
+    "description": "The label for category Tilit in sidebar generalSidebar"
+  },
+  "sidebar.generalSidebar.category.Asiakastili": {
+    "message": "Asiakastili",
+    "description": "The label for category Asiakastili in sidebar generalSidebar"
+  },
+  "sidebar.generalSidebar.category.Käyttäjätili": {
+    "message": "Käyttäjätili",
+    "description": "The label for category Käyttäjätili in sidebar generalSidebar"
+  },
+  "sidebar.generalSidebar.category.Yrityksille": {
+    "message": "Yrityksille",
+    "description": "The label for category Yrityksille in sidebar generalSidebar"
+  },
+  "sidebar.generalSidebar.category.Laskutus": {
+    "message": "Laskutus",
+    "description": "The label for category Laskutus in sidebar generalSidebar"
+  },
+  "sidebar.generalSidebar.category.Palveluiden hallinta": {
+    "message": "Palveluiden hallinta",
+    "description": "The label for category Palveluiden hallinta in sidebar generalSidebar"
+  },
+  "sidebar.generalSidebar.category.Työpöytäohjelmat": {
+    "message": "Työpöytäohjelmat",
+    "description": "The label for category Työpöytäohjelmat in sidebar generalSidebar"
+  },
+  "sidebar.gameSidebar.category.Yleistä": {
+    "message": "Yleistä",
+    "description": "The label for category Yleistä in sidebar gameSidebar"
+  },
+  "sidebar.gameSidebar.category.Oma liittymisosoite": {
+    "message": "Oma liittymisosoite",
+    "description": "The label for category Oma liittymisosoite in sidebar gameSidebar"
+  },
+  "sidebar.gameSidebar.category.Suositut pluginit": {
+    "message": "Suositut pluginit",
+    "description": "The label for category Suositut pluginit in sidebar gameSidebar"
+  },
+  "sidebar.gameSidebar.category.Oxidemod": {
+    "message": "Oxidemod",
+    "description": "The label for category Oxidemod in sidebar gameSidebar"
+  },
+  "sidebar.serverSidebar.category.Linux": {
+    "message": "Linux",
+    "description": "The label for category Linux in sidebar serverSidebar"
+  },
+  "sidebar.serverSidebar.category.Ohjelmistot": {
+    "message": "Ohjelmistot",
+    "description": "The label for category Ohjelmistot in sidebar serverSidebar"
+  },
+  "sidebar.serverSidebar.category.Tietokannat": {
+    "message": "Tietokannat",
+    "description": "The label for category Tietokannat in sidebar serverSidebar"
+  },
+  "sidebar.hostingSidebar.category.Webotellit": {
+    "message": "Webotellit",
+    "description": "The label for category Webotellit in sidebar hostingSidebar"
+  },
+  "sidebar.docsSidebar.category.Muokkaaminen": {
+    "message": "Muokkaaminen",
+    "description": "The label for category Muokkaaminen in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Tekstin muotoilu": {
+    "message": "Tekstin muotoilu",
+    "description": "The label for category Tekstin muotoilu in sidebar docsSidebar"
+  }
 }
