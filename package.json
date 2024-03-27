@@ -1,6 +1,6 @@
 {
   "name": "bittivirta-docs",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "private": true,
   "scripts": {
     "build": "bun run infogen && docusaurus build",
@@ -32,7 +32,6 @@
     "@docusaurus/core": "^3.1.1",
     "@docusaurus/plugin-ideal-image": "^3.1.1",
     "@docusaurus/preset-classic": "^3.1.1",
-    "@docusaurus/theme-common": "^3.1.1",
     "@docusaurus/theme-live-codeblock": "^3.1.1",
     "@docusaurus/theme-mermaid": "^3.1.1",
     "@easyops-cn/docusaurus-search-local": "^0.40.1",
@@ -46,7 +45,6 @@
     "@korhox/react-scrollfade": "1.2.0",
     "@mdx-js/react": "^3.0.1",
     "clsx": "^2.1.0",
-    "copy-text-to-clipboard": "^3.2.0",
     "crisp-sdk-web": "^1.0.22",
     "docusaurus-plugin-image-zoom": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.5",
@@ -55,15 +53,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-ga4": "^2.1.0",
-    "react-loadable": "^5.5.0",
-    "react-markdown": "^9.0.1",
-    "rehype-stringify": "^10.0.0",
-    "remark-gfm": "^4.0.0",
-    "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.0",
     "sass": "^1.72.0",
-    "tailwindcss": "^3.4.1",
-    "unified": "^11.0.4"
+    "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
