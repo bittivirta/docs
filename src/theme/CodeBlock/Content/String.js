@@ -74,7 +74,7 @@ export default function CodeBlockString({
               isEnabled={wordWrap.isEnabled}
             />
           )}
-          <CopyButton className={styles.codeButton} code={code} />
+          <CopyButton className={clsx(styles.codeButton, "bg-silicon-900 ")} code={code} />
         </div>
       </div>
       <div className={styles.codeBlockContent}>
