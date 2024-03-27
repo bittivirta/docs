@@ -340,61 +340,61 @@
     "message": "Previous"
   },
   "home.hero.title": {
-    "message": "home.hero.title"
+    "message": "Bittivirta Docs"
   },
   "home.hero.subtitle": {
-    "message": "home.hero.subtitle"
+    "message": "Welcome to Bittivirta Docs. Here you can find all the information you need to get started with our services."
   },
   "home.pages.title": {
-    "message": "home.pages.title"
+    "message": "Select a category, where you would like to start"
   },
   "home.pages.general.title": {
-    "message": "home.pages.general.title"
+    "message": "General"
   },
   "home.pages.general.subtitle": {
-    "message": "home.pages.general.subtitle"
+    "message": "General information about our services"
   },
   "home.pages.webhosting.title": {
-    "message": "home.pages.webhosting.title"
+    "message": "Web Hosting"
   },
   "home.pages.webhosting.subtitle": {
-    "message": "home.pages.webhosting.subtitle"
+    "message": "Information about our web hosting services"
   },
   "home.pages.vps.title": {
-    "message": "home.pages.vps.title"
+    "message": "Virtual Private Servers"
   },
   "home.pages.vps.subtitle": {
-    "message": "home.pages.vps.subtitle"
+    "message": "Information about our VPS services"
   },
   "home.pages.game.title": {
-    "message": "home.pages.game.title"
+    "message": "Game Servers"
   },
   "home.pages.game.subtitle": {
-    "message": "home.pages.game.subtitle"
+    "message": "Information about our game servers"
   },
   "home.pages.docs.title": {
-    "message": "home.pages.docs.title"
+    "message": "Docs"
   },
   "home.pages.docs.subtitle": {
-    "message": "home.pages.docs.subtitle"
+    "message": "Information about our documentation"
   },
   "home.pages.company.title": {
-    "message": "home.pages.company.title"
+    "message": "Company"
   },
   "home.pages.company.subtitle": {
-    "message": "home.pages.company.subtitle"
+    "message": "Information about our company"
   },
   "home.questions.title": {
-    "message": "home.questions.title"
+    "message": "Missing something?"
   },
   "home.questions.subtitle": {
-    "message": "home.questions.subtitle"
+    "message": "If you didn't find the information you were looking for, feel free to ask us anything."
   },
   "home.questions.button": {
-    "message": "home.questions.button"
+    "message": "Contact us"
   },
   "theme.admonition.warning": {
-    "message": "warning",
+    "message": "Warning",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
