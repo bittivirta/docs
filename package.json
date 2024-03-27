@@ -30,7 +30,6 @@
   },
   "dependencies": {
     "@docusaurus/core": "^3.1.1",
-    "@docusaurus/plugin-google-gtag": "^3.1.1",
     "@docusaurus/plugin-ideal-image": "^3.1.1",
     "@docusaurus/preset-classic": "^3.1.1",
     "@docusaurus/theme-common": "^3.1.1",
@@ -67,9 +66,9 @@
     "unified": "^11.0.4"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.18",
+    "autoprefixer": "^10.4.19",
     "babel-plugin-macros": "^3.1.0",
-    "postcss": "^8.4.35"
+    "postcss": "^8.4.38"
   },
   "trustedDependencies": [
     "sharp",
