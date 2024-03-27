@@ -1,6 +1,6 @@
 {
   "name": "bittivirta-docs",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "private": true,
   "scripts": {
     "build": "bun run infogen && docusaurus build",
