@@ -86,5 +86,6 @@ export default function Hotkey({ children }) {
     }
     if (index < keys.length - 1) hotkeys.push(<span key={"kbd-" + key + "-" + index + "-plus"} className="mx-[0.1rem]">+</span>);
   })
+  if (hotkeys.length == 1) return hotkeys[0];
   return <span className={style.hotkey}>{hotkeys}</span>
 }
