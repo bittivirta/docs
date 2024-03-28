@@ -221,7 +221,7 @@ main img {
 
 
 table {
-  @apply bg-white dark:bg-slate-900 p-3 rounded-2xl w-fit shadow-md mb-8;
+  @apply bg-white dark:bg-silicon-900 p-3 rounded-2xl w-fit shadow-md mb-8;
 }
 
 table thead,
@@ -241,12 +241,12 @@ table thead tr {
 }
 
 table tr th {
-  @apply dark:bg-slate-100/5 text-left bg-blue-600 text-white;
+  @apply dark:bg-silicon-100/5 text-left bg-blue-600 text-white;
 }
 
 table tr:nth-child(2n),
 table th {
-  @apply bg-silicon-100/50 dark:bg-slate-100/5 border-separate;
+  @apply bg-silicon-100/50 dark:bg-silicon-100/5 border-separate;
 }
 
 table tr td:not(:last-child) {
@@ -266,7 +266,7 @@ table tr th:last-child {
 code {
   word-break: keep-all;
   white-space: nowrap;
-  @apply px-1.5 py-1 text-xs inline-block min-w-[1.5rem] font-semibold text-center text-slate-700 bg-slate-100 border border-slate-300 rounded-lg dark:bg-slate-100/10 dark:text-slate-100 dark:border-slate-100/10 shadow-xs;
+  @apply px-1.5 py-1 text-xs inline-block font-semibold text-center bg-silicon-50 border border-silicon-200 rounded-lg dark:bg-silicon-100/10 dark:text-silicon-100 dark:border-silicon-100/10 shadow-xs;
 }
 
 

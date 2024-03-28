@@ -1,3 +1,6 @@
+import Colors from "@site/src/components/other/minecraft/Colors";
+import Formats from "@site/src/components/other/minecraft/Formats";
+
 # Tekstin värit ja muotoilut
 
 Minecraftissa voit monessa paikassa käyttää värikoodeja. Värikoodeja voi käyttää
@@ -6,37 +9,39 @@ esim. MOTD-teksteissä ja Essentials-lisäosan avulla chatissa ja kylteissä.
 MOTD-tekstiä lisäteessäsi server.properties-tiedostossa, voit käyttää §-koodin
 värikoodeja tekstin muotoiluun.
 
-Saat `&` -merkin useimmilla näppäimistöillä painamalla `shift` + `6` (tai
-suomeksi `vaihto` + `6` ). `§` -merkin taas saat useimmilla näppäimistöillä - no
-painamalla itse merkkiä.
+Saat `&` -merkin useimmilla näppäimistöillä painamalla <Hotkey>shift+6</Hotkey>.
+`§` -merkin taas saat useimmilla näppäimistöillä painamalla itse merkin näppäintä,
+joka sijaitsee useimmiten <Hotkey>esc</Hotkey>-näppäimen alla.
 
 ## Värikoodit ja niiden arvot
 
-[tulossa]
+<Colors items={[
+  { code: "&0", name:"Musta", hex:"#000000"},
+  { code: "&1", name:"Tummansininen", hex:"#0000AA"},
+  { code: "&2", name:"Tummanvihreä", hex:"#00AA00"},
+  { code: "&3", name:"Tumma turkoosi", hex:"#00AAAA"},
+  { code: "&4", name:"Tummanpunainen", hex:"#AA0000"},
+  { code: "&5", name:"Tumma violetti", hex:"#AA00AA"},
+  { code: "&6", name:"Kulta", hex:"#FFAA00"},
+  { code: "&7", name:"Harmaa", hex:"#AAAAAA"},
+  { code: "&8", name:"Tummanharmaa", hex:"#555555"},
+  { code: "&9", name:"Sininen", hex:"#5555FF"},
+  { code: "&a", name:"Vihreä", hex:"#55FF55", light:true},
+  { code: "&b", name:"Turkoosi", hex:"#55FFFF", light:true},
+  { code: "&c", name:"Punainen", hex:"#FF5555"},
+  { code: "&d", name:"Violetti", hex:"#FF55FF"},
+  { code: "&e", name:"Keltainen", hex:"#FFFF55", light:true},
+  { code: "&f", name:"Valkoinen", hex:"#FFFFFF", light:true},
+]} />
+
 
 ## Lihavointi, kallistaminen, yliviivaaminen yms.
 
-[tulossa]
-
-## Voit yhdistellä koodeja eri lailla, sadaksesi eri tuloksia
-
-```
-§nMinecraft Formatting§r
-
-§00 §11 §22 §33
-§44 §55 §66 §77
-§88 §99 §aa §bb
-§cc §dd §ee §ff
-
-§rk §kMinecraft
-§rl §lMinecraft
-§rm §mMinecraft
-§rn §nMinecraft
-§ro §oMinecraft
-§rr §rMinecraft
-```
-
-![](https://cdn.bittivirta.fi/docimg/crisp/mc-format_5pgebx.gif)
-
-Esimerkki Minecraftin wikistä:
-https://minecraft.fandom.com/wiki/Formatting_codes
+<Formats items={[
+  { code: "&k", name:"Obfuskoitu" },
+  { code: "&l", name:"Lihavoitu" },
+  { code: "&m", name:"Yliviivattu" },
+  { code: "&n", name:"Alleviivattu" },
+  { code: "&o", name:"Kallistettu" },
+  { code: "&r", name:"Nollaus" },
+]} />
