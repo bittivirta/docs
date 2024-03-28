@@ -1,0 +1,19 @@
+.formats {
+  @apply grid grid-cols-3 gap-3;
+}
+
+.format {
+  @apply p-3 px-4 w-full rounded-lg shadow-lg flex items-center justify-between bg-white;
+}
+
+.format span {
+  @apply drop-shadow-lg;
+}
+
+.format span.name {
+  @apply uppercase text-base;
+}
+
+.format span.code {
+  @apply text-xl font-bold;
+}

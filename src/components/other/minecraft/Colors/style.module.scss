@@ -1,0 +1,19 @@
+.colors {
+  @apply grid grid-cols-3 gap-3;
+}
+
+.color {
+  @apply p-3 px-4 w-full rounded-lg shadow-lg flex items-center justify-between bg-black text-white font-semibold;
+}
+
+.color span {
+  @apply drop-shadow-lg;
+}
+
+.color span.name {
+  @apply uppercase text-sm;
+}
+
+.color span.code {
+  @apply text-xl font-bold;
+}
