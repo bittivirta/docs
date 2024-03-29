@@ -29,6 +29,9 @@ export default function DocItemPaginator() {
   const currentLanguage = siteConfig.i18n.currentLocale || siteConfig.i18n.defaultLocale;
   moment.locale(currentLanguage);
 
+  const authors = require("@site/static/authors.json");
+  const pageAuthors = metadata?.frontMatter?.authors;
+
   const handleFeedback = (feedback) => {
     if (feedback === "dislike") {
       ReactGA.event({
@@ -51,41 +54,26 @@ export default function DocItemPaginator() {
 
 
   useEffect(() => {
-    fetch(`https://api.github.com/repos/bittivirta/docs/commits?${new URLSearchParams({ "path": metadata?.source?.replace("@site/", "") || "README.md" })}`, {
-      headers: {
-        "Accept": "application/vnd.github.v3+json"
-      }
-    }).then(response => response.json()).then(data => {
-      if (data[0]?.commit) {
-        setLastCommit(data[0].commit);
-        setFirstCommit(data[data.length - 1].commit);
-        data = data.map(commit => ({
-          "author": commit.commit.author.name,
-          "author_url": commit.author.html_url,
-          "author_username": commit.author.login,
-          "author_avatar": commit.author.avatar_url,
-        }));
-        data = data.reduce((acc, cur) => {
-          if (!acc.find(item => item.author_username === cur.author_username)) {
-            acc.push(cur);
-          }
-          return acc;
-        }, []);
-        data = {
-          "contributors_count": data.length,
-          "contributors": data
-        }
-        setContributors(data);
-      }
+    let contributors = [];
+    for (let i = 0; i < pageAuthors?.length; i++) {
+      contributors.push({
+        name: pageAuthors[i],
+        avatar: authors[pageAuthors[i]].avatar
+      })
     }
-    );
+
+    setContributors({
+      "contributors_count": contributors.length || 0,
+      "contributors": contributors
+    })
+
   }, [metadata])
+
   const navButtonClasses = "flex flex-1 items-center justify-between gap-3  md:ms-auto text-start border border-solid border-slate-100 p-3 px-4 rounded-xl bg-white dark:bg-slate-800 dark:border-slate-700 dark:text-silicon-200 shadow-lg text-blue-800 hover:no-underline hover:scale-[1.02] transition-all";
   const navButtonLeft = "text-start md:text-end";
   const navButtonRight = "text-start";
+
   return <div className="mt-20">
-
-
     <div className="flex w-full gap-4 mt-6">
       <div className="flex flex-col justify-center">
         {!feedback && <>
@@ -109,13 +97,13 @@ export default function DocItemPaginator() {
         <strong className="mb-1 block opacity-75 text-base">Sivun tekijät</strong>
         <div className="flex flex-wrap ps-1">
           {contributors?.contributors_count > 0 ? contributors?.contributors.map(contributor => (
-            <div key={"contributor-" + contributor.author_username}>
-              <Link to={contributor.author_url} target="_blank" rel="noopener noreferrer" className={clsx(styles.footerButton, "group -ms-1")}>
-                <img src={contributor.author_avatar} alt={contributor.author_username} width={40} className="rounded-full" />
+            <div key={"contributor-" + contributor.name}>
+              <div target="_blank" rel="noopener noreferrer" className={clsx(styles.footerButton, "group -ms-2")}>
+                <img src={contributor.avatar} alt={contributor.name} width={40} className="rounded-full" />
                 <div role="tooltip" className={clsx(styles.tooltip, "group-hover:opacity-100")}>
-                  <span>{contributor.author_username}</span>
+                  <span>{contributor.name}</span>
                 </div>
-              </Link>
+              </div>
             </div>
           )) :
             <div className={clsx(styles.footerButton, "group -ms-1")}>
@@ -145,18 +133,6 @@ export default function DocItemPaginator() {
             <FontAwesomeIcon icon={faXTwitter} />
           </Link>
         </div>
-      </div>
-    </div>
-
-
-    <div className="flex w-full gap-4 mt-4 opacity-50">
-      <div className="text-base">
-        <span className="font-bold opacity-75">Muokattu: </span>
-        <span className="">{moment(lastCommit?.author?.date).format("LL")}</span>
-      </div>
-      <div className="text-base">
-        <span className="font-bold opacity-75">Lisätty: </span>
-        <span className="">{moment(firstCommit?.author?.date).format("LL")}</span>
       </div>
     </div>
 

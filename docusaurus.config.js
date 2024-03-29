@@ -13,6 +13,8 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
 
+  staticDirectories: ['static'],
+
   i18n: {
     defaultLocale: "fi",
     locales: ["fi", "en"],
