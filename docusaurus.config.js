@@ -1,4 +1,5 @@
 import prismVscodeDarkPlus from "./src/theme/prism-vscode-dark-plus.ts"
+import redirectsConf from "./redirects.config.js"
 const info = require("./.tmp/info.json")
 
 
@@ -41,6 +42,14 @@ const config = {
         min: 640, // min resized image's size. if original is lower, use that size.
         steps: 2, // the max number of images generated between min and max (inclusive)
         disableInDev: false,
+      },
+    ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        fromExtensions: ['html', 'htm'],
+        toExtensions: ['zip'],
+        redirects: redirectsConf,
       },
     ],
   ],
