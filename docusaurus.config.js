@@ -1,7 +1,6 @@
-import prismVscodeDarkPlus from "./src/theme/prism-vscode-dark-plus.ts"
-import redirectsConf from "./redirects.config.js"
-const info = require("./.tmp/info.json")
-
+import prismVscodeDarkPlus from "./src/theme/prism-vscode-dark-plus.ts";
+import redirectsConf from "./redirects.config.js";
+const info = require("./.tmp/info.json");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -14,7 +13,7 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
 
-  staticDirectories: ['static'],
+  staticDirectories: ["static"],
 
   i18n: {
     defaultLocale: "fi",
@@ -45,10 +44,10 @@ const config = {
       },
     ],
     [
-      '@docusaurus/plugin-client-redirects',
+      "@docusaurus/plugin-client-redirects",
       {
-        fromExtensions: ['html', 'htm'],
-        toExtensions: ['zip'],
+        fromExtensions: ["html", "htm"],
+        toExtensions: ["zip"],
         redirects: redirectsConf,
       },
     ],
@@ -65,9 +64,12 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/bittivirta/docs/blob/" + (info.branch == "master" ? "main" : info.branch) + "/",
+          editUrl:
+            "https://github.com/bittivirta/docs/blob/" +
+            (info.branch == "master" ? "main" : info.branch) +
+            "/",
           admonitions: {
-            keywords: ['result'],
+            keywords: ["result"],
             extendDefaults: true,
           },
         },
@@ -76,7 +78,7 @@ const config = {
           customCss: require.resolve("./src/css/custom.scss"),
         },
         googleTagManager: {
-          containerId: 'G-C7W0T4C3ZR',
+          containerId: "G-C7W0T4C3ZR",
         },
       },
     ],
@@ -91,135 +93,139 @@ const config = {
     },
   },
 
-  themes: [
-    '@docusaurus/theme-mermaid',
-    [
-      // @ts-ignore
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      // @ts-ignore
-      ({
-        hashed: true,
-        language: ["en", "fi"],
-      }),
+  themes: ["@docusaurus/theme-mermaid"],
 
-
-    ],
-  ],
-
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      image: "img/social-card.png",
-      docs: {
-        sidebar: {
-          autoCollapseCategories: true,
-        }
+  themeConfig: {
+    image: "img/social-card.png",
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
       },
-      navbar: {
-        title: "Docs",
-        logo: {
-          alt: "Bittivirta Logo",
-          src: "https://cdn.bittivirta.fi/logo/logo.svg",
-          srcDark: 'https://cdn.bittivirta.fi/logo/logo-alt.svg',
+    },
+    navbar: {
+      title: "Docs",
+      logo: {
+        alt: "Bittivirta Logo",
+        src: "https://cdn.bittivirta.fi/logo/logo.svg",
+        srcDark: "https://cdn.bittivirta.fi/logo/logo-alt.svg",
+      },
+      items: [
+        {
+          type: "docSidebar",
+          sidebarId: "generalSidebar",
+          label: "General",
         },
-        items: [
-          {
-            type: "docSidebar",
-            sidebarId: "generalSidebar",
-            label: "General",
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "serverSidebar",
-            label: "Server",
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "hostingSidebar",
-            label: "Hosting",
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "gameSidebar",
-            label: "Game Servers",
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "docsSidebar",
-            label: "Docs",
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "companySidebar",
-            label: "Company",
-          },
-          {
-            type: "localeDropdown",
-            position: "right",
-          },
-          {
-            href: "https://github.com/bittivirta/docs",
-            label: "GitHub",
-            position: "right",
-          },
-        ],
-      },
-      mermaid: {
-        theme: { light: 'neutral', dark: 'forest' },
-        options: {
-          themeVariables: {
-            'primaryColor': '#1060ee',
-          },
-        }
-      },
-      footer: {
-        copyright: `Copyright © ${new Date().getFullYear()} Bittivirta - All rights reserved`,
-      },
-      prism: {
-        theme: prismVscodeDarkPlus,
-        darkTheme: prismVscodeDarkPlus,
-        additionalLanguages: ['bash', "log", "diff", "ini", "json", "mermaid", "nginx", "php", "sql", "css", "java", "apacheconf"],
-        magicComments: [
-          {
-            className: 'theme-code-block-highlighted-line',
-            line: 'highlight',
-            block: { start: 'highlight-start', end: 'highlight-end' },
-          },
-          {
-            className: 'theme-code-block-error-line',
-            line: 'error',
-          },
-          {
-            className: 'theme-code-block-terminal-line',
-            line: 'terminal',
-          },
-          {
-            className: 'theme-code-block-script-line',
-            line: 'script',
-          },
-          {
-            className: 'theme-code-block-comment-line',
-            line: 'comment',
-          },
-          {
-            className: 'theme-code-block-mariadb-line',
-            line: 'mariadb',
-          },
-          {
-            className: 'theme-code-block-mysql-line',
-            line: 'mysql',
-          },
-        ],
-      },
-      zoom: {
-        selector: ".markdown :not(em) > img",
-        background: {
-          light: "rgb(255, 255, 255)",
-          dark: "rgb(50, 50, 50)",
+        {
+          type: "docSidebar",
+          sidebarId: "serverSidebar",
+          label: "Server",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "hostingSidebar",
+          label: "Hosting",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "gameSidebar",
+          label: "Game Servers",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "docsSidebar",
+          label: "Docs",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "companySidebar",
+          label: "Company",
+        },
+        {
+          type: "localeDropdown",
+          position: "right",
+        },
+        {
+          href: "https://github.com/bittivirta/docs",
+          label: "GitHub",
+          position: "right",
+        },
+      ],
+    },
+    mermaid: {
+      theme: { light: "neutral", dark: "forest" },
+      options: {
+        themeVariables: {
+          primaryColor: "#1060ee",
         },
       },
-    }),
+    },
+    footer: {
+      copyright: `Copyright © ${new Date().getFullYear()} Bittivirta - All rights reserved`,
+    },
+    prism: {
+      theme: prismVscodeDarkPlus,
+      darkTheme: prismVscodeDarkPlus,
+      additionalLanguages: [
+        "bash",
+        "log",
+        "diff",
+        "ini",
+        "json",
+        "mermaid",
+        "nginx",
+        "php",
+        "sql",
+        "css",
+        "java",
+        "apacheconf",
+      ],
+      magicComments: [
+        {
+          className: "theme-code-block-highlighted-line",
+          line: "highlight",
+          block: { start: "highlight-start", end: "highlight-end" },
+        },
+        {
+          className: "theme-code-block-error-line",
+          line: "error",
+        },
+        {
+          className: "theme-code-block-terminal-line",
+          line: "terminal",
+        },
+        {
+          className: "theme-code-block-script-line",
+          line: "script",
+        },
+        {
+          className: "theme-code-block-comment-line",
+          line: "comment",
+        },
+        {
+          className: "theme-code-block-mariadb-line",
+          line: "mariadb",
+        },
+        {
+          className: "theme-code-block-mysql-line",
+          line: "mysql",
+        },
+      ],
+    },
+    zoom: {
+      selector: ".markdown :not(em) > img",
+      background: {
+        light: "rgb(255, 255, 255)",
+        dark: "rgb(50, 50, 50)",
+      },
+    },
+    algolia: {
+      appId: "V4QRIKNL6I",
+      apiKey: "8f500916e3d389c5cb0a6e43069f0083",
+      indexName: "bittivirta",
+      contextualSearch: false,
+      searchPagePath: "search",
+    },
+  },
 };
 
 module.exports = config;
