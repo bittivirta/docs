@@ -1,6 +1,6 @@
 {
   "name": "bittivirta-docs",
-  "version": "3.0.9",
+  "version": "3.0.10",
   "private": true,
   "scripts": {
     "build": "bun run infogen && docusaurus build",
@@ -29,13 +29,12 @@
     ]
   },
   "dependencies": {
-    "@docusaurus/core": "^3.1.1",
-    "@docusaurus/plugin-client-redirects": "^3.1.1",
-    "@docusaurus/plugin-ideal-image": "^3.1.1",
-    "@docusaurus/preset-classic": "^3.1.1",
-    "@docusaurus/theme-live-codeblock": "^3.1.1",
-    "@docusaurus/theme-mermaid": "^3.1.1",
-    "@easyops-cn/docusaurus-search-local": "^0.40.1",
+    "@docusaurus/core": "^3.2.1",
+    "@docusaurus/plugin-client-redirects": "^3.2.1",
+    "@docusaurus/plugin-ideal-image": "^3.2.1",
+    "@docusaurus/preset-classic": "^3.2.1",
+    "@docusaurus/theme-live-codeblock": "^3.2.1",
+    "@docusaurus/theme-mermaid": "^3.2.1",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/pro-light-svg-icons": "^6.5.1",
