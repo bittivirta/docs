@@ -13,6 +13,7 @@
     "swizzle": "docusaurus swizzle",
     "write-heading-ids": "docusaurus write-heading-ids",
     "write-translations": "docusaurus write-translations",
+    "translate": "docusaurus write-translations",
     "dep:upgrade": "bun x npm-check-updates -ui",
     "infogen": "branch=$(git rev-parse --abbrev-ref HEAD) && mkdir -p .tmp && printf '{\"branch\":\"%s\"}' \"$branch\" > ./.tmp/info.json"
   },
@@ -29,12 +30,12 @@
     ]
   },
   "dependencies": {
-    "@docusaurus/core": "^3.2.1",
-    "@docusaurus/plugin-client-redirects": "^3.2.1",
-    "@docusaurus/plugin-ideal-image": "^3.2.1",
-    "@docusaurus/preset-classic": "^3.2.1",
+    "@docusaurus/core": "^3.4.0",
+    "@docusaurus/plugin-client-redirects": "^3.4.0",
+    "@docusaurus/plugin-ideal-image": "^3.4.0",
+    "@docusaurus/preset-classic": "^3.4.0",
     "@docusaurus/theme-live-codeblock": "^3.2.1",
-    "@docusaurus/theme-mermaid": "^3.2.1",
+    "@docusaurus/theme-mermaid": "^3.4.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/pro-light-svg-icons": "^6.5.1",
