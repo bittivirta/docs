@@ -508,5 +508,11 @@
   "theme.SearchModal.placeholder": {
     "message": "Search docs",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
+  },
+  "home.pages.domain.title": {
+    "message": "Verkkotunnukset"
+  },
+  "home.pages.domain.subtitle": {
+    "message": "Verkkotunnusten käyttöohjeet"
   }
 }
