@@ -127,6 +127,11 @@ const config = {
         },
         {
           type: "docSidebar",
+          sidebarId: "domainSidebar",
+          label: "Domains",
+        },
+        {
+          type: "docSidebar",
           sidebarId: "gameSidebar",
           label: "Game Servers",
         },

@@ -3,10 +3,6 @@
     "message": "Seuraava",
     "description": "The label for version current"
   },
-  "sidebar.gameSidebar.category.BungeeCord": {
-    "message": "BungeeCord",
-    "description": "The label for category BungeeCord in sidebar gameSidebar"
-  },
   "sidebar.gameSidebar.category.Pluginit": {
     "message": "Pluginit",
     "description": "The label for category Pluginit in sidebar gameSidebar"
@@ -95,10 +91,6 @@
     "message": "Tietokannat",
     "description": "The label for category Tietokannat in sidebar serverSidebar"
   },
-  "sidebar.hostingSidebar.category.Webotellit": {
-    "message": "Webotellit",
-    "description": "The label for category Webotellit in sidebar hostingSidebar"
-  },
   "sidebar.docsSidebar.category.Muokkaaminen": {
     "message": "Muokkaaminen",
     "description": "The label for category Muokkaaminen in sidebar docsSidebar"
@@ -106,5 +98,17 @@
   "sidebar.docsSidebar.category.Tekstin muotoilu": {
     "message": "Tekstin muotoilu",
     "description": "The label for category Tekstin muotoilu in sidebar docsSidebar"
+  },
+  "sidebar.gameSidebar.category.Proxy-palvelin": {
+    "message": "Proxy-palvelin",
+    "description": "The label for category Proxy-palvelin in sidebar gameSidebar"
+  },
+  "sidebar.hostingSidebar.category.Webhotellit": {
+    "message": "Webhotellit",
+    "description": "The label for category Webhotellit in sidebar hostingSidebar"
+  },
+  "sidebar.domainSidebar.category.Suomen fi-verkkotunnus": {
+    "message": "Suomen fi-verkkotunnus",
+    "description": "The label for category Suomen fi-verkkotunnus in sidebar domainSidebar"
   }
 }
