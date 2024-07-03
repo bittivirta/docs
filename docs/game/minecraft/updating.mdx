@@ -1,0 +1,29 @@
+---
+authors:
+  - korhox
+---
+
+
+# Päivittäminen
+
+Tässä ohjeessa käydään läpi, miten Minecraft-palvelimen päivittäminen tapahtuu. Päivittäminen on tärkeää, sillä uusimmat versiot tuovat mukanaan uusia ominaisuuksia ja korjaavat vanhoja ongelmia.
+
+Bittivirralla oletusarvoisesti käytössä oleva Minecraft-palvelinohjelmisto on [Purpur](https://purpurmc.org/), joka on optimoitu versio [Paper](https://papermc.io/)-palvelinohjelmistosta. Purpur on yhteensopiva Pufferfishin, Paperin, Spigotin ja Bukkitin kanssa, ja näin ollen se on hyvä valinta monenlaisiin palvelimiin.
+
+## Päivityksen valmistelu
+
+Ennen päivitystä on hyvä varmistaa, että palvelin on varmuuskopioitu. Varmuuskopioinnin avulla voit palauttaa palvelimen toimivan tilan, jos päivitys aiheuttaa ongelmia.
+
+Voit varmuuskopioida palvelimesi Backups-välilehdeltä. Jos sinulla ei ole vapaita varmuuskopiopaikkaoja, voit poistaa vanhoja varmuuskopioita tai ostaa lisää tilaa kysymällä asiakaspalvelusta.
+
+Voit myös ladata varmuuskopion omalle tietokoneellesi SFTP-yhteyden kautta. SFTP-yhteyden luomisesta on ohje [täällä](/general/desktop/filezilla). Löydät palvelimesi tiedot Gamepanelissa kohdasta "Settings" &rarr; "SFTP".
+
+## Päivitys
+
+1. Sammuta palvelin
+2. Poista palvelimeltasi "server.jar"-tiedosto
+3. Lataa uusin palvelinohjelmisto [Purpurin sivuilta](https://purpurmc.org/downloads). Valitse ensin Minecraft-version mukainen versio ja lataa sitten uusin, eli ylimmäinen tiedosto listassa.
+4. Lataa tiedosto palvelimelle.
+5. Vaihda tiedoston nimi "server.jar"-tiedostoksi. Muuten palvelin ei käynnisty.
+6. Käynnistä palvelin
+7. Tarkista, että palvelin käynnistyy ongelmitta ja että kaikki toimii odotetusti. Mikäli palvelimella on ongelmia, voit palauttaa ottamasi varmuuskopion.
