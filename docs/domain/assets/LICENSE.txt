@@ -1,0 +1,11 @@
+This directory contains exceptions to the original repository LICENSE.md file. Please refer to the original repository LICENSE.md file for more information.
+
+## License exceptions
+
+### C-Soft Oy
+
+Company ID: 0678742-2
+
+No attribution required. Commercial use allowed. Modifications allowed. Relicensing not allowed.
+
+**Files:** `lifecycle-en.dio` and `lifecycle-fi.dio`
