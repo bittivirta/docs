@@ -1,5 +1,6 @@
-import prismVscodeDarkPlus from "./src/theme/prism-vscode-dark-plus.ts";
 import redirectsConf from "./redirects.config.js";
+
+import prismVscodeDarkPlus from "./src/theme/prism-vscode-dark-plus.ts";
 const info = require("./.tmp/info.json");
 
 /** @type {import('@docusaurus/types').Config} */
@@ -73,7 +74,12 @@ const config = {
             extendDefaults: true,
           },
         },
-        blog: false,
+        blog: {
+          path: "news",
+          routeBasePath: "news",
+          blogTitle: "News",
+          blogDescription: "News and updates from Bittivirta",
+        },
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
         },
@@ -144,6 +150,10 @@ const config = {
           type: "docSidebar",
           sidebarId: "companySidebar",
           label: "Company",
+        },
+        {
+          label: "News",
+          to: "news",
         },
         {
           type: "localeDropdown",

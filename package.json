@@ -1,12 +1,12 @@
 {
   "name": "bittivirta-docs",
-  "version": "3.0.10",
+  "version": "3.1.0",
   "private": true,
   "scripts": {
     "build": "bun run infogen && docusaurus build",
     "clear": "docusaurus clear",
     "deploy": "docusaurus deploy",
-    "dev": "bun run start",
+    "dev": "bun run start --port 3100",
     "docusaurus": "docusaurus",
     "serve": "docusaurus serve",
     "start": "bun run infogen && docusaurus start",

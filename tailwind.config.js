@@ -3,12 +3,15 @@ module.exports = {
   corePlugins: {
     preflight: false, // disable Tailwind's reset
   },
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./docs/**/*.{md,mdx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./docs/**/*.{md,mdx}",
+    "./news/**/*.{md,mdx}",
+  ],
   darkMode: ["class", '[data-theme="dark"]'],
   theme: {
     extend: {
       colors: {
-
         primary: "#1060ee",
         info: "#10bbff",
         success: "#40bb10",
@@ -95,8 +98,10 @@ module.exports = {
         },
       },
       backgroundImage: {
-        waves: "url('https://cdn.bittivirta.fi/background/waves/still/blue.svg')",
-        "waves-animated": "url('https://cdn.bittivirta.fi/background/waves/animated/blue.svg')"
+        waves:
+          "url('https://cdn.bittivirta.fi/background/waves/still/blue.svg')",
+        "waves-animated":
+          "url('https://cdn.bittivirta.fi/background/waves/animated/blue.svg')",
       },
       boxShadow: {
         xs: "0 1px 1px rgba(0,0,0,.05)",

@@ -38,5 +38,9 @@
   "item.label.Domains": {
     "message": "Verkkotunnukset",
     "description": "Navbar item with label Domains"
+  },
+  "item.label.News": {
+    "message": "Uutiset",
+    "description": "Navbar item with label News"
   }
 }
