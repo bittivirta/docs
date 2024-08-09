@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url(https://cdn.bittivirta.fi/css/fonts/asap.css);
+@import url(https://cdn.bittivirta.fi/css/fonts/dmsans.css);
 @import url(https://cdn.bittivirta.fi/css/fonts/fira-code-nerd.css);
 
 :root {
@@ -14,7 +15,7 @@
   --ifm-color-primary-lighter: #144fe8;
   --ifm-color-primary-lightest: #2f65ee;
 
-  --ifm-background-color: #F8F9FC;
+  --ifm-background-color: #f8f9fc;
 
   --docusaurus-highlighted-code-line-bg: rgba(155, 181, 206, 0.17);
   --docusaurus-hover-code-line-bg: rgba(155, 181, 206, 0.08);
@@ -25,7 +26,7 @@
 }
 
 [data-theme="dark"] {
-  --ifm-color-primary: #9bb5f8;
+  --ifm-color-primary: #2d94ff;
   --ifm-color-primary-dark: #7599f5;
   --ifm-color-primary-darker: #638bf4;
   --ifm-color-primary-darkest: #2a61f0;
@@ -34,7 +35,7 @@
   --ifm-color-primary-lightest: #ffffff;
 
   --ifm-background-color: #141820 !important;
-  --ifm-background-surface-color: #1D222B !important;
+  --ifm-background-surface-color: #1d222b !important;
 
   --docusaurus-highlighted-code-line-bg: rgba(155, 181, 206, 0.17);
   --docusaurus-hover-code-line-bg: rgba(155, 181, 206, 0.08);
@@ -55,14 +56,23 @@ textarea {
 
 .navbar__title {
   display: none;
+  font-weight: 900;
 }
 
-h1.hero__title {
-  letter-spacing: -2px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Sans", "Asap", Verdana, sans-serif;
+}
+.font-display {
+  font-family: "DM Sans", "Asap", Verdana, sans-serif;
 }
 
 code {
-  font-family: 'Fira Code Nerd', monospace !important;
+  font-family: "Fira Code Nerd", monospace !important;
   font-weight: 500 !important;
   text-align: left !important;
 }
@@ -89,7 +99,7 @@ code {
 
 .theme-code-block-script-line :last-child::after {
   content: " ↩︎";
-  opacity: 0.50;
+  opacity: 0.5;
 }
 
 .theme-code-block-terminal-line * {
@@ -136,7 +146,7 @@ code {
 .theme-code-block-comment-line :first-child span::before {
   content: "// ";
   color: #6c975e;
-  opacity: 0.50;
+  opacity: 0.5;
 }
 
 .main-wrapper {
@@ -152,7 +162,7 @@ code {
     }
   }
 
-  >.theme-back-to-top-button {
+  > .theme-back-to-top-button {
     width: 3rem !important;
   }
 
@@ -196,7 +206,6 @@ code {
       @apply list-disc;
     }
   }
-
 }
 
 main {
@@ -219,7 +228,6 @@ main img {
   @apply mb-0;
 }
 
-
 table {
   @apply bg-white dark:bg-silicon-900 p-3 rounded-2xl w-fit shadow-md mb-8;
 }
@@ -232,7 +240,6 @@ table tbody {
 table tr {
   @apply border-none;
 }
-
 
 table td,
 table th,
@@ -268,7 +275,6 @@ code {
   white-space: nowrap;
   @apply px-1.5 py-1 text-xs inline-block font-semibold text-center bg-silicon-50 border border-silicon-200 rounded-lg dark:bg-silicon-100/10 dark:text-silicon-100 dark:border-silicon-100/10 shadow-xs;
 }
-
 
 .alert {
   @apply bg-silicon-100 border-silicon-500 shadow-sm;

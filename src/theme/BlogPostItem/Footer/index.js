@@ -53,7 +53,7 @@ export default function BlogPostItemFooter() {
                   {Object.entries(tags).map(([key, tag]) => (
                     <span
                       key={key}
-                      className="bg-white rounded p-1 px-3 text-sm shadow-sm"
+                      className="bg-white dark:bg-silicon-900 rounded-lg p-1 px-3 text-sm shadow-sm"
                     >
                       {tag.label}
                     </span>
