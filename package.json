@@ -15,7 +15,7 @@
     "write-translations": "docusaurus write-translations",
     "translate": "docusaurus write-translations",
     "dep:upgrade": "bun x npm-check-updates -ui",
-    "infogen": "branch=$(git rev-parse --abbrev-ref HEAD) && mkdir -p .tmp && printf '{\"branch\":\"%s\"}' \"$branch\" > ./.tmp/info.json"
+    "infogen": "bun run generateBranchInfo.js"
   },
   "browserslist": {
     "production": [
