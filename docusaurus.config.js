@@ -115,11 +115,7 @@ const config = {
           sidebarId: "generalSidebar",
           label: "General",
         },
-        {
-          type: "docSidebar",
-          sidebarId: "serverSidebar",
-          label: "Server",
-        },
+
         {
           type: "docSidebar",
           sidebarId: "hostingSidebar",
@@ -129,6 +125,11 @@ const config = {
           type: "docSidebar",
           sidebarId: "domainSidebar",
           label: "Domains",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "serverSidebar",
+          label: "Server",
         },
         {
           type: "docSidebar",
