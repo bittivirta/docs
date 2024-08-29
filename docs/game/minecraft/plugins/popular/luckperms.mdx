@@ -5,7 +5,9 @@ authors:
 
 # Luckperms
 
-![](https://cdn.bittivirta.fi/docimg/crisp/luckperms_yojx8p.png)
+<Image
+    img={require("./assets/luckperms/luckperms.png")}
+/>
 
 ## LuckPerms lyhyesti
 
@@ -92,7 +94,10 @@ oikeuksia käyttää LuckPermsin komentoja.
 Antaaksesi oikeuksia, kirjaudu palvelimesi konsoliin ja kirjoita komento:<br />
 `lp user <pelaajanimesi> permission set luckperms.* true`
 
-![](https://cdn.bittivirta.fi/docimg/crisp/1624735639756_1sbtq45.png)
+<Image
+  style={{maxWidth:"500px"}}
+  img={require("./assets/luckperms/set.png")}
+/>
 
 Tässä komennossa asetamme itsellemme oikeuden `luckperms.*`. Komennon `*`-merkki
 tarkoittaa kaikkia permissioneita. Koska merkin edessä on teksti `luckperms.`,
@@ -109,23 +114,35 @@ Teemme tässä esimerkissä admin-groupin ja lisäämme sille oikeuden.
 
 #### Luodaan group:
 
-![](https://cdn.bittivirta.fi/docimg/crisp/1624739218226_ph7tsk.png)
+<Image
+  style={{maxWidth:"400px"}}
+  img={require("./assets/luckperms/create_admin.png")}
+/>
 
 #### Lisätään groupille oikeus Minecraftin /ban -komentoon
 
 `lp group admin permission set minecraft.command.ban true`
-![](https://cdn.bittivirta.fi/docimg/crisp/1624739267750_1uckk7w.png)
+<Image
+  style={{maxWidth:"600px"}}
+  img={require("./assets/luckperms/ban.png")}
+/>
 
 #### Jos myöhemmin haluat poistaa permissionin
 
 `lp group admin permission unset minecraft.command.ban`
-![](https://cdn.bittivirta.fi/docimg/crisp/1624739408229_1u6sslw.png)
+<Image
+  style={{maxWidth:"600px"}}
+  img={require("./assets/luckperms/unset_ban.png")}
+/>
 
 ### Pelaajan lisääminen grouppiin
 
 Voit lisätä pelaajalle groupin permissionit lisäämällä käyttäjälle "parentin"
 `lp user <pelaaja> parent add <group>`
-![](https://cdn.bittivirta.fi/docimg/crisp/1624739533449_62mxe3.png)
+<Image
+  style={{maxWidth:"600px"}}
+  img={require("./assets/luckperms/inherit.png")}
+/>
 
 ### Asetetaan group perimään oikeudet toiselta groupilta
 
@@ -137,7 +154,10 @@ Komento `lp group <group> parent add <perittävä group>`
 Tässä esimerkissä admin-groupille lisätään samat oikeudet, kuin modeilla on ja
 siitä vielä edelleen modeille default-oikeudet. Näin ollen myös admineilla on
 default-groupin oikeudet.
-![](https://cdn.bittivirta.fi/docimg/crisp/1624743824105_1ly3cop.png)
+<Image
+  style={{maxWidth:"700px"}}
+  img={require("./assets/luckperms/group_inherit.png")}
+/>
 
 ### Poistetaan group pelaajalta
 
