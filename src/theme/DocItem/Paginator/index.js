@@ -56,10 +56,9 @@ export default function DocItemPaginator() {
   useEffect(() => {
     let contributors = [];
     for (let i = 0; i < pageAuthors?.length; i++) {
-      contributors.push({
-        name: pageAuthors[i],
-        avatar: authors[pageAuthors[i]].avatar
-      })
+      contributors.push(
+        authors[pageAuthors[i]]
+      )
     }
 
     setContributors({
@@ -97,14 +96,15 @@ export default function DocItemPaginator() {
         <strong className="mb-1 block opacity-75 text-base">Sivun tekijät</strong>
         <div className="flex flex-wrap ps-1">
           {contributors?.contributors_count > 0 ? contributors?.contributors.map(contributor => (
-            <div key={"contributor-" + contributor.name}>
+            <Link to={contributor.link || "#"} key={"contributor-" + contributor.name}>
               <div target="_blank" rel="noopener noreferrer" className={clsx(styles.footerButton, "group -ms-2")}>
                 <img src={contributor.avatar} alt={contributor.name} width={40} className="rounded-full" />
                 <div role="tooltip" className={clsx(styles.tooltip, "group-hover:opacity-100")}>
                   <span>{contributor.name}</span>
                 </div>
               </div>
-            </div>
+            </Link>
+            
           )) :
             <div className={clsx(styles.footerButton, "group -ms-1")}>
               <FontAwesomeIcon icon={faQuestion} />
