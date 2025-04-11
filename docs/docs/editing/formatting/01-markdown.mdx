@@ -45,8 +45,8 @@ Voit luoda listoja käyttämällä `-` tai `*` -merkkejä. Voit myös luoda sis�
 ```markdown
 - Ensimmäinen kohta
 - Toinen kohta
-  - Ensimmäinen sisäkkäinen kohta
-  - Toinen sisäkkäinen kohta
+  (TAB)- Ensimmäinen sisäkkäinen kohta
+  (TAB)- Toinen sisäkkäinen kohta
 - Kolmas kohta
 ```
 
@@ -89,7 +89,7 @@ Voit luoda linkkejä käyttämällä `[teksti](linkki)` -syntaksia.
 
 ## Kuvat
 
-Kuvat tuodaan käyttämällä aina `Image` -komponenttia. Kuvan polku annetaan `img` -asetuksen kautta. Voit myös antaa kuvan maksimileveyden `style` -asetuksen kautta. Kuvan korvaava teksti annetaan `alt` -asetuksen kautta.
+Kuvat tuodaan käyttämällä aina `Image` -komponenttia. Kuvan polku annetaan `img` -asetuksen kautta ja sen tulisi olla kuva joka on oikeassa `assets`-kansiossa. Voit myös antaa kuvan maksimileveyden `style` -asetuksen kautta. Kuvan korvaava teksti annetaan `alt` -asetuksen kautta.
 
 ```jsx
 <Image
@@ -113,7 +113,7 @@ Markdownin kuva-syntaksia ei voi käyttää, koska se ei tue kuvan maksimileveyd
 
 Koodi-komponentti on hieman tavallista Markdownia monipuolisempi. Se tukee useita kieliä, ja voit antaa koodille otsikon. Koodi-komponentti on myös helppo kopioida leikepöydälle.
 
-Koodia varten löydät kokonaan oman sivun: [Koodi](code).
+Koodia varten löydät kokonaan oman sivun: [Koodilohko](code).
 
 ## Pikanäppäimet
 

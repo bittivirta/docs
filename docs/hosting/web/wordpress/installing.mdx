@@ -1,0 +1,45 @@
+---
+sidebar_position: 1
+authors:
+  - hotakainen
+---
+
+# Wordpressin asennus
+
+Näin asennat Wordpressin Pleskin kautta:
+
+<Stepper>
+  <Step>
+    Avaa Plesk asiakasalueella OneClick-kirjautumisella tai kirjaudu Pleskiin
+    osoitteessa [https://plesk.bittivirta.fi/](https://plesk.bittivirta.fi/)
+
+    <Image img={require("./assets/installing/home-to-plesk.png")} />
+  </Step>
+  <Step>
+    Valitse "Wordpress" joko sivupaneelista (1) tai koontinäytön kautta "WP Toolkit" (2)
+    <Image img={require("./assets/installing/plesk-home.png")} />
+  </Step>
+  <Step>
+    Valitse "Asenna WordPress"
+    <Image img={require("./assets/installing/install.png")} />
+  </Step>
+  <Step>
+    Voit muokata asetuksia haluamallasi tavalla, suosituksena on kuitenkin vain:
+    * "verkkosivun otsikko"- osuuden muokkaaminen (2).
+    * Järjestelmävalvojan tiedot ovat satunnaisesti luodut, joten varmista että tallennat käyttäjänimen (6) ja salasanan (7) turvalliseen paikkaan. 
+    * Salasanan saa näkyviin painamalla "luo" nappulan vieressä olevaa silmän kuvaa.
+    
+    Tämän jälkeen voit painaa "Asenna" painiketta (11)
+    <Image img={require("./assets/installing/install-steps.png")} />
+  </Step>
+  <Step>
+    Kun asennus on valmis, saat ehdotuksen asentaa lisäosia.
+
+    Lisäosat eivät ole välttämättömiä, joten suoituksena on painaa "Ei kiitos" (1)
+    <Image img={require("./assets/installing/install-complete.png")} />
+  </Step>
+  <Step>
+    Nyt Wordpress on asennettu ja valmis käytettäväksi!
+  </Step>
+
+</Stepper>

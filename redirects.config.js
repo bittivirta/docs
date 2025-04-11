@@ -24,8 +24,8 @@ const redirects = [
     "to": "/server/vps/linux/"
   },
   {
-    "from": "/asiakasalue/maksaminen/etukateismaksu",
-    "to": "/general/client-area/portal/invoicing/prepayments"
+    "from": ["/asiakasalue/maksaminen/etukateismaksu","/general/client-area/portal/invoicing/prepayments"],
+    "to": "/general/portal/invoicing/prepayments"
   },
   {
     "from": ["/en/docs", "/fi/docs"],
@@ -56,20 +56,20 @@ const redirects = [
     "to": "/hosting/web/"
   },
   {
-    "from": ["/en/client-area", "/fi/client-area"],
-    "to": "/general/client-area/"
+    "from": ["/en/client-area", "/fi/client-area","/general/client-area/"],
+    "to": "/general/"
   },
   {
-    "from": ["/en/client-area/invoicing", "/fi/client-area/invoicing"],
-    "to": "/general/client-area/portal/invoicing/"
+    "from": ["/en/client-area/invoicing", "/fi/client-area/invoicing","/general/client-area/portal/invoicing/"],
+    "to": "/general/portal/invoicing/"
   },
   {
-    "from": ["/en/client-area/b2b", "/fi/client-area/b2b"],
-    "to": "/general/client-area/portal/b2b/"
+    "from": ["/en/client-area/b2b", "/fi/client-area/b2b","/general/client-area/portal/b2b/"],
+    "to": "/general/portal/b2b/"
   },
   {
-    "from": ["/en/client-area/services/", "/fi/client-area/services/"],
-    "to": "/general/client-area/portal/service-management/"
+    "from": ["/en/client-area/services/", "/fi/client-area/services/","/general/client-area/portal/service-management/"],
+    "to": "/general/portal/service-management/"
   },
   {
     "from": ["/en/game/rust/", "/fi/game/rust/"],

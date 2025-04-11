@@ -1,22 +1,32 @@
 {
   "korhox": {
     "name": "Juuso Korhonen",
-    "avatar": "/img/authors/korhox.png"
+    "avatar": "/img/authors/korhox.png",
+    "link": "https://github.com/korhox/"
   },
   "Lagerkrans": {
     "name": "Patrick Lagerkrans",
-    "avatar": "/img/authors/Lagerkrans.jpeg"
+    "avatar": "/img/authors/Lagerkrans.jpeg",
+    "link": "https://github.com/Lagerkrans/"
   },
   "Random67839": {
     "name": "Mikko Salonen",
-    "avatar": "/img/authors/Random67839.png"
+    "avatar": "/img/authors/Random67839.png",
+    "link": "https://github.com/Random67839/"
   },
   "tlitola": {
     "name": "Touko Litola",
-    "avatar": "/img/authors/tlitola.png"
+    "avatar": "/img/authors/tlitola.png",
+    "link": "https://github.com/tlitola/"
   },
   "newbNox": {
     "name": "Patrik Tuominen",
-    "avatar": "/img/authors/newbNox.png"
+    "avatar": "/img/authors/newbNox.png",
+    "link": "https://github.com/newbNox/"
+  },
+  "hotakainen": {
+    "name": "Marko Hotakainen",
+    "avatar": "/img/authors/hotakainen.webp",
+    "link": "https://github.com/HillaHotakainen/"
   }
 }

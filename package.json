@@ -1,6 +1,6 @@
 {
   "name": "bittivirta-docs",
-  "version": "3.0.10",
+  "version": "3.0.11",
   "private": true,
   "scripts": {
     "build": "bun run infogen && docusaurus build",
@@ -15,7 +15,7 @@
     "write-translations": "docusaurus write-translations",
     "translate": "docusaurus write-translations",
     "dep:upgrade": "bun x npm-check-updates -ui",
-    "infogen": "branch=$(git rev-parse --abbrev-ref HEAD) && mkdir -p .tmp && printf '{\"branch\":\"%s\"}' \"$branch\" > ./.tmp/info.json"
+    "infogen": "bun run generateBranchInfo.js"
   },
   "browserslist": {
     "production": [

@@ -1,4 +1,5 @@
 ---
+sidebar_position: 4
 authors:
   - korhox
 ---
@@ -7,12 +8,19 @@ authors:
 
 1. Paina näppäimistösi näppäimiä Windows+R samanaikaisesti
 2. Kirjoita auenneen ruudun tekstikenttään teksti %appdata% ja kikkaa OK.
-   ![](https://cdn.bittivirta.fi/docimg/crisp/image_9we03d.png)
+
+   <Image
+   style= {{maxWidth:"500px"}}
+    img={require("./assets/custom-map-and-multiple-worlds/run.png")}
+   />
 3. Avaa kansio .minecraft ja tämän jälkeen kansio saves.
 4. Klikkaa maailmaa, jonka haluat siirtää palvelimellesi oikealla hiiren
    painikkeella ja paketoi kansio zip-tiedostoon haluamallasi ohjelmistolla tai:
    Valitse "Lähetä kohteeseen..." » "Pakattu (zip) tiedosto"
-   ![](https://cdn.bittivirta.fi/docimg/crisp/image_1nyvkh2.png)
+   <Image
+   style= {{maxWidth:"700px"}}
+    img={require("./assets/custom-map-and-multiple-worlds/send.png")}
+   />
 5. Siirrä zip-tiedosto esim. työpöydälle tai ladattuihin tiedostoihin
 6. Siirry Gamepanelissa (https://gamepanel.fi/) tiedostojenhallintaan
    valitsemalla ensin palvelimesi, sitten "Management" ja "File Management".
@@ -20,12 +28,17 @@ authors:
    valitsemalla tiedosto, jonka haluat tuoda palvelimelle.
 8. Etsi lataamasi tiedosto File Managementista, napsauta kolmea pistettä ja
    "Decompress"
-   ![](https://cdn.bittivirta.fi/docimg/crisp/image_1fmw2g.png)
+   <Image
+    img={require("./assets/custom-map-and-multiple-worlds/decompress.png")}
+   />
 9. Avaa nyt samassa tiedostolistauksessa näkyvä tiedosto server.properties
    klikkaamalla sen nimeä.
 10. Etsi tiedostosta kohta level-name ja kirjoita sen perään maailmasi nimi.
     Maailman nimen tulee olla sama, kuin kansiolla.
-    ![](https://cdn.bittivirta.fi/docimg/crisp/image_nn8y5m.png)
+      <Image
+      style= {{maxWidth:"500px"}}
+      img={require("./assets/custom-map-and-multiple-worlds/world_name.png")}
+      />
 11. Tallenna tiedosto.
 12. Käynnistä palvelimesi uudelleen Gamepanelissa kohdassa System » Console ja
     klikkaamalla nappia Restart.

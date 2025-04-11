@@ -11,14 +11,18 @@ Kirjaudu Gamepaneliin osoitteessa
 [https://gamepanel.fi/](https://gamepanel.fi/), valitse palvelin jolle teemme
 osoitteen. Kopioi IP-osoite sekä portti.
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_1pifx1h.png)
+<Image
+  img={require("./assets/domain-cloudflare/ip_address.png")}
+/>
 
 ## 2. Luodaan tietue CloudFlareen
 
 Siirry CloudFlaressa DNS-hallintaan (valitse verkkotunnuksesi ja klikkaa
 DNS-painiketta ylhäällä sivuston hallinnassa) ja lisää seuraava tietue:
 
-![](https://cdn.bittivirta.fi/docimg/crisp/image_15633yb.png)
+<Image
+  img={require("./assets/domain-cloudflare/dns.png")}
+/>
 
 Tyyppi on `SRV`. Name-kohtaan voit laittaa minkä tahansa tekstin, jonka haluat
 jolla palvelimelle liitytään (jos haluat, että etuliitettä ei ole, laita
