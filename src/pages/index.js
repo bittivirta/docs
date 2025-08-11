@@ -1,9 +1,6 @@
-import React from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Layout from "@theme/Layout";
-import CategoryIndex from "@site/src/components/CategoryIndex";
 import Translate from "@docusaurus/Translate";
-import Button from "@site/src/components/Button";
+
 import {
   faBook,
   faBuilding,
@@ -15,6 +12,13 @@ import {
 } from "@fortawesome/pro-thin-svg-icons";
 import { faEnvelope } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import CategoryIndex from "@site/src/components/CategoryIndex";
+import Button from "@site/src/components/Button";
+
+import Layout from "@theme/Layout";
+
+import React from "react";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -53,7 +57,7 @@ export default function Home() {
                 description: <Translate id="home.pages.general.subtitle" />,
               },
               {
-                link: "/hosting/web",
+                link: "/web-hosting",
                 icon: faHotel,
                 title: <Translate id="home.pages.webhosting.title" />,
                 description: <Translate id="home.pages.webhosting.subtitle" />,

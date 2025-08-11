@@ -1,5 +1,6 @@
-import prismVscodeDarkPlus from "./src/theme/prism-vscode-dark-plus.ts";
 import redirectsConf from "./redirects.config.js";
+
+import prismVscodeDarkPlus from "./src/theme/prism-vscode-dark-plus.ts";
 const info = require("./.tmp/info.json");
 
 /** @type {import('@docusaurus/types').Config} */
@@ -49,6 +50,12 @@ const config = {
         fromExtensions: ["html", "htm"],
         toExtensions: ["zip"],
         redirects: redirectsConf,
+        createRedirects: (existingPath) => {
+          if (existingPath.startsWith("/hosting/web/")) {
+            return existingPath.replace("/hosting/web/", "/web-hosting/");
+          }
+          return undefined;
+        },
       },
     ],
   ],

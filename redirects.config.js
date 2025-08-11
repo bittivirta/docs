@@ -109,6 +109,10 @@ const redirects = [
     from: ["/en/game/gamepanel/desktop/", "/fi/game/gamepanel/desktop/"],
     to: "/general/desktop/",
   },
+  {
+    from: ["/hosting/web"],
+    to: "/web-hosting",
+  },
 ];
 
 module.exports = redirects;
