@@ -1,0 +1,40 @@
+# Kirjautuminen
+
+Sähköpostitiliin kirjautuminen onnistuu joko kolmannen osapuolen sähköpostiohjelmalla tai webmailin kautta. Webmail on selainpohjainen sähköpostiohjelma, joka mahdollistaa sähköpostien lukemisen ja lähettämisen suoraan selaimessa.
+
+## Webmailiin kirjautuminen
+
+Webmailiin pääset osoitteessa [https://webmail.bittivirta.fi](https://webmail.bittivirta.fi). Kirjaudu sisään sähköpostiosoitteellasi ja salasanallasi. Jos olet unohtanut salasanasi, voit nollata sen ohjeiden mukaan: [Salasanan nollaaminen](./reset-password).
+
+## Sähköpostiohjelman käyttäminen
+
+Voit käyttää sähköpostitiliäsi myös kolmannen osapuolen sähköpostiohjelmalla, kuten Mozilla Thunderbird, Microsoft Outlook, Apple Mail tai Gmail. Näissä ohjelmissa sinun tulee määrittää sähköpostitili manuaalisesti tai automaattisesti riippuen ohjelman tarjoamista ominaisuuksista.
+
+### Ohjetyökalu
+
+Avaa tämä ohje laitteella, johon haluat määrittää sähköpostitilin. Ohje näyttää sinulle tarvittavat asetukset sähköpostiohjelman määrittämiseen laitekohtaisesti.
+
+Mikäli sähköpostiosoitetta ei löydy webhotellista, ohjaa ohje sinut Pleskin kirjautumissivulle.
+
+<form action="https://plesk.bittivirta.fi/configure-mail-client.php" method="get" target="_blank" className="flex gap-2">
+  <input type="email" id="emailaddress" name="emailaddress" placeholder="Sähköpostiosoite" required className="bg-white rounded-full flex-1 border text-lg py-2 px-4 border-solid border-slate-200 shadow outline-0" />
+  <button type="submit" className="bg-primary px-5 rounded-full text-white font-bold text-lg border-0 shadow">Näytä ohjeet</button>
+</form>
+
+### Sähköpostimääritykset
+
+Sähköpostin määritykset ovat seuraavat:
+
+| Asetus            | Arvo                      |
+| ----------------- | ------------------------- |
+| Palvelin (isäntä) | `plesk.bittivirta.fi`     |
+| Portti, IMAP      | 993                       |
+| Portti, SMTP      | 465                       |
+| Salauksen tyyppi  | SSL/TLS                   |
+| Käyttäjätunnus    | sähköpostiosoitteesi      |
+| Salasana          | Sähköpostitilisi salasana |
+
+Jos haluat käyttää POP3-protokollaa, käytä porttia 995 IMAPin sijaan. Muista, että POP3 lataa sähköpostit paikallisesti laitteellesi ja poistaa ne palvelimelta, ellei toisin ole määritetty. IMAP puolestaan synkronoi sähköpostit palvelimen kanssa, joten voit käyttää sähköpostia useilla laitteilla ilman, että viestit katoavat. Lisäksi IMAP tukee sähköpostin kansioita ja merkkauksia, kun taas POP3 ei.
+
+POP3-protokollan portti on 995 ja SSL/TLS-salaus on suositeltavaa käyttää turvallisuuden takaamiseksi.
+
