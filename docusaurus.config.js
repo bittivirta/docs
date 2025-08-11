@@ -50,12 +50,6 @@ const config = {
         fromExtensions: ["html", "htm"],
         toExtensions: ["zip"],
         redirects: redirectsConf,
-        createRedirects: (existingPath) => {
-          if (existingPath.startsWith("/hosting/web/")) {
-            return existingPath.replace("/hosting/web/", "/web-hosting/");
-          }
-          return undefined;
-        },
       },
     ],
   ],

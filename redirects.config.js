@@ -39,7 +39,7 @@ const redirects = [
   },
   {
     from: ["/en/web", "/fi/web"],
-    to: "/hosting/web/",
+    to: "/web-hosting/",
   },
   {
     from: ["/en/company", "/fi/company"],
@@ -59,7 +59,7 @@ const redirects = [
   },
   {
     from: ["/en/domain", "/fi/domain"],
-    to: "/hosting/web/",
+    to: "/domain/",
   },
   {
     from: ["/en/client-area", "/fi/client-area", "/general/client-area/"],
@@ -110,8 +110,52 @@ const redirects = [
     to: "/general/desktop/",
   },
   {
-    from: ["/hosting/web"],
-    to: "/web-hosting",
+    from: ["/hosting/web/"],
+    to: "/web-hosting/",
+  },
+  {
+    from: ["/hosting/web/dnssec"],
+    to: "/web-hosting/dnssec",
+  },
+  {
+    from: ["/hosting/web/email/"],
+    to: "/web-hosting/email/",
+  },
+  {
+    from: ["/hosting/web/email/create-mailbox"],
+    to: "/web-hosting/email/create",
+  },
+  {
+    from: ["/hosting/web/email/login"],
+    to: "/web-hosting/email/login",
+  },
+  {
+    from: ["/hosting/web/email/reset-password"],
+    to: "/web-hosting/email/reset-password",
+  },
+  {
+    from: ["/hosting/web/nameserver"],
+    to: "/web-hosting/nameserver",
+  },
+  {
+    from: ["/hosting/web/panel-login"],
+    to: "/web-hosting/panel-login",
+  },
+  {
+    from: ["/hosting/web/reset-password"],
+    to: "/web-hosting/reset-password",
+  },
+  {
+    from: ["/hosting/web/saittikone/"],
+    to: "/web-hosting/saittikone/",
+  },
+  {
+    from: ["/hosting/web/ssl-letsencrypt/"],
+    to: "/web-hosting/ssl-letsencrypt",
+  },
+  {
+    from: ["/hosting/web/wordpress/"],
+    to: "/web-hosting/wordpress/",
   },
 ];
 
