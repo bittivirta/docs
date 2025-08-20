@@ -130,10 +130,6 @@ const redirects = [
     to: "/web-hosting/email/login/",
   },
   {
-    from: ["/web-hosting/email/login"],
-    to: "/web-hosting/email/login/",
-  },
-  {
     from: ["/hosting/web/email/reset-password"],
     to: "/web-hosting/email/reset-password",
   },
