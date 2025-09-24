@@ -147,7 +147,11 @@ const redirects = [
   },
   {
     from: ["/hosting/web/saittikone/"],
-    to: "/web-hosting/saittikone/",
+    to: "/web-hosting/sitejet/",
+  },
+  {
+    from: ["/web-hosting/saittikone/"],
+    to: "/web-hosting/sitejet/",
   },
   {
     from: ["/hosting/web/ssl-letsencrypt/"],
