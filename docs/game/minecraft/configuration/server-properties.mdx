@@ -18,6 +18,13 @@ Yksityisellä serverillä on suositeltavaa pitää [pääsylista](./whitelist) a
 
 Taulossa on listattuna kaikki Minecraft palvelimen tiedoston <code>server.properties</code> -asetukset ja niiden kuvaukset.
 Taulun komennot ja <code>server.properties</code> tiedosto on haettu Minecraftin versiosta 1.21.9.
+
+server.properties tiedoston asetukset ovat muotoa <code>nimi=arvo</code>. <br />
+Esimerkiksi:
+- Asetuksessa: <code>level-name=world</code> on <code>level-name</code> merkkijono tyyppinen asetus, mikä saa syötteekseen merkkijonon: <code>world</code>
+- Asetuksessa: <code>max-players=20</code> on <code>max-players</code> arvo tyyppinen asetus, mikä ottaa vastaan kokonaisluvun.
+- Asetuksessa: <code>enable-query=true</code> on <code>enable-query</code> totuusarvo, joka on <code>true</code> tai <code>false</code>.
+
 <table>
   <thead>
   <tr>
@@ -30,397 +37,397 @@ Taulun komennot ja <code>server.properties</code> tiedosto on haettu Minecraftin
   <tbody>
   <tr>
     <td>accepts-transfers</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Sallii pakettien siirtämisen palvelimelta toiselle. Eli mahdollistaa <code>/transfer</code> komennon käytön palvelimellesi, millä pelaajan yhdistäminen/siirto toiselta palvelimelta hyväksytään omallesi.</td>
   </tr>
   <tr>
     <td>allow-flight</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Sallii lennon selviytymistilassa. Hyödyllinen etenkin palvelimilla, joissa käytetään lento modeja.</td>
   </tr>
   <tr>
     <td>broadcast-console-to-ops</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>true</td>
     <td>Lähettää konsolin tulostuksia palvelimella oleville operaattoreille (OP).</td>
   </tr>
   <tr>
     <td>broadcast-rcon-to-ops</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>true</td>
     <td>Lähettää konsolin <code>rcon</code> komentojen tulostuksia palvelimella oleville operaattoreille (OP) </td>
   </tr>
   <tr>
     <td>bug-report-link</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>_Tyhjä_</td>
     <td>Palvelimen osoite (URL) ongelmien raportoimiselle</td>
   </tr>
   <tr>
     <td>difficulty</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>easy</td>
     <td>Valitsee palvelimen vaikeustason. Asetusta voidaan säätää myös palvelimen sisällä komennolla: <code>/difficulty *vaikeustaso*</code></td>
   </tr>
   <tr>
     <td>enable-code-of-conduct</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Aktivoituna näyttää uudelle pelaajalle palvelimen sääntötiedoston, minkä pelaaja joutuu hyväksymään liittyäkseen palvelimelle. Yksinään asetus ei tee mitään, vaan on palvelimen tiedostoihin lisättävä: <code>/codeofconduct/en_us.txt</code></td>
   </tr>
   <tr>
     <td>enable-jmx-monitoring</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Mahdollistaa palvelimen tietojen kuten <code>avarageTickTime</code> ja <code>tickTimes</code> seurannan palvelimen ulkopuolella.</td>
   </tr>
   <tr>
     <td>enable-query</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Sallii palvelimelle tehdyt kyselyt palvelimen asetuksiin liittyen (IP-osoite, portti, kartan nimi, maksimi pelaajat, jne).</td>
   </tr>
   <tr>
     <td>enable-rcon</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Aktivoi <code>rcon</code> komennot palvelimella, mitkä mahdollistavat yhteyden palvelimen konsoliin verkon yli. **Yhteys ei ole salattu**, joten asetus ei ole suositeltavaa epäluotettavissa verkoissa.</td>
   </tr>
   <tr>
     <td>enable-status</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Asetus määrittää näkyykö palvelin listoissa aktiivisena. Asetus ei kuitenkaan pysäytä liittymästä palvelimelle.</td>
   </tr>
   <tr>
     <td>enforce-secure-profile</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Mahdollistaa käyttäjien, joilla ei ole Mojang-allekirjoitettua julkista avainta liittyä palvelimelle. Asetus vaikuttaa pääasiassa palvelimen viesteihin, jolloin kaikki viestit jätetään tarkistamatta. (= Ei viestien reportointia) </td>
   </tr>
   <tr>
     <td>enforce-whitelist</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Kun pääsylista (Whitelist) aktivoidaan tämän asetuksen ollessa <code>true</code>, kaikki pelaajat ilman käyttäjäänsä lisättynä pääsylistalle heitetään ulos palvelimelta.</td>
   </tr>
   <tr>
     <td>entity-broadcast-range-percentage</td>
-    <td>integer (10-1000)</td>
+    <td>kokonaisluku (10-1000)</td>
     <td>100</td>
     <td>Prosenttiosuus entiteettien renderöinnin etäisyydelle. Pienemmällä luvulla on mahdollista säästää resursseja, mutta entiteetit katoavat lähempänä pelaajaa. </td>
   </tr>
   <tr>
     <td>force-gamemode</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Pakottaa pelaajan pelitilan oletus pelitilaan liittyessä ollessa. <code>true</code> (Oletus asetetaan server.properties tiedostossa, esimerkiksi: <code>gamemode=survival</code>.) </td>
   </tr>
   <tr>
     <td>function-permission-level</td>
-    <td>integer (1-4)</td>
+    <td>kokonaisluku (1-4)</td>
     <td>2</td>
     <td>Asettaa vaaditun oikeustason <code>/function</code> komennon käytölle. </td>
   </tr>
   <tr>
     <td>gamemode</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>survival</td>
     <td>Asettaa palvelimen oletuspelimuodon. (<code>=survival/creative/adventure/spectator</code>)</td>
   </tr>
   <tr>
     <td>generate-structures</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>true</td>
     <td>Määrittää luoko palvelin uusia alueita luodessa rakennuksia, kuten kyliä. Ei poista ennen asetuksen asettamista <code>false</code> tilaan jo luotuja rakennuksia tallennuksesta. </td>
   </tr>
   <tr>
     <td>generator-settings</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td></td>
     <td>Määrittää millainen maailma luodaan uuden tallennuksen kohdalla.</td>
   </tr>
   <tr>
     <td>hardcore</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Määrittää vaikeamman muodon pelistä, jolloin pelaaja kuollessaan ei pääse uudelleensyntymään kyseisessä maailmassa. (Voidaan kiertää OP oikeuksilla asettamalla pelitila <code>/gamemode survival/creative</code>) </td>
   </tr>
   <tr>
     <td>hide-online-players</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Poistaa käytöstä pelaaja lista pyynnöt.</td>
   </tr>
   <tr>
     <td>initial-disabled-packs</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>_Tyhjä_</td>
     <td>Määrittää [Datapaketit], mitkä eivät käynnisty automaattisesti palvelimen käynnistymisen yhteydessä. </td>
   </tr>
   <tr>
     <td>initial-enabled-packs</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>vanilla</td>
     <td>Määrittää datapaketit, jotka aktivoidaan automaattisesti palvelimen käynnistymisen yhteydessä. </td>
   </tr>
   <tr>
     <td>level-name</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>world</td>
     <td>Luo oletuksena <code>world</code> nimisen maailman, jos sellaista ei jo löydy. Asettamalla eri nimen voi luoda uuden maailman säilyttäen edellisen palvelimen tiedostoissa. Palvelimelle oman maailman tuomiseksi kannattaa seurata näitä ohjeita: [Kartan tuominen](./multiple-worlds) </td>
   </tr>
   <tr>
     <td>level-seed</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>_Tyhjä_</td>
     <td>Maailman luomiseen käytetty siemen. Samaa siementä käyttäen kykenee palvelimelle luoda vastaavan maailman, kun toisessa saman version palvelimessa tai yksinpelissä. Tyhjä luo satunnaisen siemenen. Palvelimen sisällä siemenen saa nähtyä OP oikeuksilla <code>/seed</code> </td>
   </tr>
   <tr>
     <td>level-type</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>minecraft:normal</td>
     <td>Palvelimen luodessa uutta maailmaa, käytetään tämän asetuksen maailmatyyppiä. (Maailma voi esimerkiksi olla: <code> minecraft:normal </code>, <code> minecraft:flat </code>, <code>minecraft:large_biomes</code>, <code>minecraft:amplified</code> tai <code>minecraft:single_biome_surface</code>) </td>
   </tr>
   <tr>
     <td>log-ips</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>true</td>
     <td>Asetus määrittää kirjataanko pelaajien IP-osoitteet lokiin. </td>
   </tr>
   <tr>
     <td>management-server-enabled</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Ottaa käyttöön hallintapalvelimen (management server) etähallintaa varten. </td>
   </tr>
   <tr>
     <td>management-server-host</td>
-    <td>string</td>
+    <td>totuusarvo</td>
     <td>localhost</td>
     <td>Osoite, mistä osoitteesta hallintapalvelinta pyöritetään</td>
   </tr>
   <tr>
     <td>management-server-port</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>0</td>
     <td>Hallintapalvelimen portti. Arvo <code>0</code> valitsee satunnaisen vapaan portin. </td>
   </tr>
   <tr>
     <td>management-server-secret</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>[Random text]</td>
     <td>Hallintapalvelimen avain. </td>
   </tr>
   <tr>
     <td>management-server-tls-enabled</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>true</td>
     <td>Asetus määrittää käytetäänkö TLS-salausta hallintapaneeli yhteydessä. </td>
   </tr>
   <tr>
     <td>management-server-tls-keystore</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>_Tyhjä_</td>
     <td>Asetus asettaa palvelimen polun TLS-avaimelle. <code>management-server-tls-enabled</code> ollessa päällä palvelin vaatii tiedoston olemassaolon käynnistyäkseen. </td>
   </tr>
   <tr>
     <td>management-server-tls-keystore-password</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>_Tyhjä_</td>
     <td>Asetuksessa määritetään Keystore-tiedoston salasana sen avaamiseksi. </td>
   </tr>
   <tr>
     <td>max-chained-neighbor-updates</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>1000000</td>
     <td>Asetus asettaa rajan päivitysten määrälle, mitä yksittäinen palikka kykenee aiheuttamaan maailmassa. <code>-1</code> poistaa rajan käytöstä. </td>
   </tr>
   <tr>
     <td>max-players</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>20</td>
     <td> Asetus rajoittaa aktiivisten pelaajien määrää palvelimella.</td>
   </tr>
   <tr>
     <td>max-tick-time</td>
-    <td>integer (ms)</td>
+    <td>kokonaisluku (ms)</td>
     <td>60000</td>
     <td>Asettaa enimmäisajan tikille millisekunteina ennen, kuin palvelin pysäyttää itsensä. <code>-1</code> poistaa rajan käytöstä. </td>
   </tr>
   <tr>
     <td>max-world-size</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>29999984</td>
     <td>Asetus asettaa palvelimen luomalle maailmalle maksimi koon. </td>
   </tr>
   <tr>
     <td>motd</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>A Minecraft Server</td>
     <td>Asettaa palvelimelle näkyvän viestin (MOTD) palvelin listaukseen.</td>
   </tr>
   <tr>
     <td>network-compression-threshold</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>256</td>
     <td>Asetus määrittää lähetettyjen pakettien koko vaatimuksen niiden pakkaamiselle. Oletuksena paketoi 256 bittiset ja isommat paketit. Asettamalla <code>-1</code> poistaa pakkauksen. </td>
   </tr>
   <tr>
     <td>online-mode</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>true</td>
     <td>Varmistaa onko liittyvän pelaajan Minecraft-tili aito. Asetuksen asettaminen <code>false</code> tilaan ei ole suositeltavaa.</td>
   </tr>
   <tr>
     <td>op-permission-level</td>
-    <td>integer (1-4)</td>
+    <td>kokonaisluku (1-4)</td>
     <td>4</td>
     <td>Asettaa operaattoreille (OP) oikeustason. </td>
   </tr>
   <tr>
     <td>pause-when-empty-seconds</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>60</td>
     <td>Asettaa kuinka kauan palvelin odottaa ilman pelaajia ennen, kuin maailma pysäytetään. Asettamalla <code>0</code> poistuu tauotus käytöstä. </td>
   </tr>
   <tr>
     <td>player-idle-timeout</td>
-    <td>integer (min)</td>
+    <td>kokonaisluku (min)</td>
     <td>0</td>
     <td>Asetus potkii pelaajan, joka on ollut toimettomana asetetun minuuttimäärän. Asettamalla <code>0</code> poistaa automaattisen potkaisun pois käytöstä. </td>
   </tr>
   <tr>
     <td>prevent-proxy-connections</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Estää pelaajia liittymästä välityspalvelimen (proxy) kautta. </td>
   </tr>
   <tr>
     <td>query.port</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>25565</td>
     <td>Palvelimelle tehtyjen kyselyiden (query) portti, jos <code>enable-query=true</code>. </td>
   </tr>
   <tr>
     <td>rate-limit</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>0</td>
     <td>Rajoittaa pelaajan lähettämien yhteyspyyntöjen eli pakettien määrää. Asettamalla <code>0</code> poistuu paketti rajoitus käytöstä. </td>
   </tr>
   <tr>
     <td>rcon.password</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>_Tyhjä_</td>
     <td>Salasana palvelimen <code>rcon</code>-yhteydelle. </td>
   </tr>
   <tr>
     <td>rcon.port</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>25575</td>
     <td>Palvelimen <code>rcon</code>-portti. </td>
   </tr>
   <tr>
     <td>region-file-compression</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>deflate</td>
     <td>Palvelimen maailman alueiden (region) pakkausmenetelmä. Vaihtoehdot ovat joko: <code>deflate</code>, <code>lz4</code> tai <code>none</code>. </td>
   </tr>
   <tr>
     <td>require-resource-pack</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Jos <code>resource-pack</code> on asetettu päälle voidaan tällä asetuksella pakottaa pelaajat hyväksymään palvelimelle asetettu resurssipaketti. </td>
   </tr>
   <tr>
     <td>resource-pack</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>_Tyhjä_</td>
     <td>Palvelimelle asetettu resurssipaketti. Syötteeksi annetaan resurssipaketin lataus linkki.</td>
   </tr>
   <tr>
     <td>resource-pack-id</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>_Tyhjä_</td>
     <td>Resurssipaketin yksilöivä tunniste (UUID). Valinnainen, mutta helpottaa käyttäjien ohjelmia resurssipaketin tunnistuksessa.</td>
   </tr>
   <tr>
     <td>resource-pack-prompt</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>_Tyhjä_</td>
     <td>Palvelimella ollen käytössä <code>require-resource-pak</code>, näytetään tähän asetettu viesti sen yhteydessä.</td>
   </tr>
   <tr>
     <td>resource-pack-sha1</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>_Tyhjä_</td>
     <td>Resurssipaketin SHA1-tarkiste. Valinnainen, mutta sen avulla voidaan varmistaa resurssipaketin eheys.</td>
   </tr>
   <tr>
     <td>server-ip</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>_Tyhjä_</td>
     <td>Palvelimen osoite, johon palvelin sitoutuu. Bittivirran palvelimella ip-osoite asetetaan käynnistyksen yhteydessä automaattisesti.</td>
   </tr>
   <tr>
     <td>server-port</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>25565</td>
     <td>Palvelimen portti. Bittivirran palvelimella asetetaan automaattisesti käynnistymisen yhteydessä. </td>
   </tr>
   <tr>
     <td>simulation-distance</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>10</td>
     <td>Kuinka kaukana maailmaa simuloidaan pelaajan ympärillä. Esimerkiksi eläimet, tiputetut esineet, vesi/laava. Ei vaikuta maailman luontiin. </td>
   </tr>
   <tr>
     <td>spawn-protection</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>16</td>
     <td>Aloitusalueen suojatut alueet. Annettu arvo määrittää suojauksen alueen kaavalla: 2x+1. Esimerkiksi arvolla 1 on suojattu alue 3x3 palikan kokoinen ja oletusarvolla 33x33 palikan kokoisen alue aloituspisteellä. Asettamalla <code>0</code> poistaa suojauksen käytöstä. Suojatulta alueelta ei voi rikkoa kuutioita ilman operaattori (OP) oikeuksia. </td>
   </tr>
   <tr>
     <td>status-heartbeat-interval</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>0</td>
     <td>Palvelimen aktiivisuus-päivitysten väli. Asettamalla <code>0</code> on tarkistusväli pois käytöstä. </td>
   </tr>
   <tr>
     <td>sync-chunk-writes</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>true</td>
     <td>Kirjoittaa chunkit synkronisesti levylle vakauden parantamiseksi. Estää korruptiota kaatumisen yhteydessä. </td>
   </tr>
   <tr>
     <td>text-filtering-config</td>
-    <td>string</td>
+    <td>merkkijono</td>
     <td>_Tyhjä_</td>
     <td>Pelaajien luoman tekstin suodatus konfiguraatio. </td>
   </tr>
   <tr>
     <td>text-filtering-version</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>0</td>
     <td>Tekstisuodatuksen versionumero. </td>
   </tr>
   <tr>
     <td>use-native-transport</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>true</td>
     <td>Asetus sallii tehokkaamman paketin lähetyksen pelaajilla, jotka käyttävät Linux käyttöjärjestelmää. </td>
   </tr>
   <tr>
     <td>view-distance</td>
-    <td>integer</td>
+    <td>kokonaisluku</td>
     <td>10</td>
     <td>Kuinka pitkälle pelaajasta chunkit eli alueet luodaan/näytetään. Iso vaikutus palvelimen suorituskykyyn. </td>
   </tr>
   <tr>
     <td>white-list</td>
-    <td>boolean</td>
+    <td>totuusarvo</td>
     <td>false</td>
     <td>Ottaa käyttöön pääsylistan (whitelist) palvelimelle. Pelaajan lisäämiseen listalle voi käyttää tätä ohjetta [Pääsylista](./whitelist) </td>
   </tr>
