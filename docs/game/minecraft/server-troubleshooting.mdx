@@ -1,0 +1,213 @@
+---
+sidebar_position: 1
+authors:
+---
+
+# Ongelmatilanteet
+
+Bittivirran tarjoamat pelipalvelimet ovat lähtökohtaisesti aina päällä, kunhan tilauksesi on aktiivinen.
+Poikkeuksena tähän on esimerkiksi vikatilanteet tai muut huoltotyöt palveluissa.
+
+
+Tilanteita missä pelipalvelimesi saattaa olla pois päältä tai saavuttamattomissa:
+
+# Palvelukatkot / Huoltotyöt
+
+Bittivirralla voi olla tarpeellista tehdä ajoittain palveluihin huoltotöitä palvelun laadun parantamiseksi ja virheiden korjaamiseksi.
+Huoltotöistä ilmoitetaan pääasiassa: [Status-sivulla](https://status.bittivirta.fi/), mutta myös: [Bittivirran Discordissa](https://discord.gg/bittivirran).
+
+# Vialliset Modit / Pluginit / Datapaketit
+
+Palvelin voi kaatua käynnistymisen yhteydessä tai käynnissäolon aikana, jos palvelimella oleva lisäosa aiheuttaa kriittisen virheen.
+Usein kaatumisen yhteydessä konsoliin tulee virheviesti, sekä kaatumisesta tehdään palvelimen tiedostoihin kaatumisen logi, jotka voivat auttaa paikantamaan virheellisen lisäosan.
+Bittivirran palvelimella löydät logi-tiedostot palvelimen kansioon <code>/logs</code> eli <code>/home/container/logs</code>.
+
+# Puutteellinen RAM eli muisti
+
+Palvelimella ollessa paljon pelaajia tai runsas määrä lisäosia tarvitsee palvelin usein enemmän muistia. Muistin loppuessa palvelin voi kaatua tai ruveta toimimaan viallisesti.
+Palvelimen tilaamisen yhteydessä onkin hyvä suunnitella etukäteen paljonko muistia tarvitset palvelimelle. Usein muistisuositukset modipakettien kohdalla ovat mainittuna modipakettien sivuilla.
+
+
+:::tip Huomaa
+Seuraava taulu muistinmäärälle (RAM) on vain suuntaa antava. Bittivirralla tilaukseesi saa lisättyä ja vähennettyä muistia helposti. Muisitn vähentämisestä tilauksesta saat osan rahoista takaisin.<br /> <br />
+Vanilla/Plugini palvelin: Suositeltavaa aloittaa pienemmällä määrällä muistia ja nostat tarvittaessa.<br />
+Modi(paketti) palvelin: Suositeltavaa seurata modipaketin sivuilla olevia suosituksia. Yksittäisten modien kohdalla kannattaa kokeilla pienemmällä määrällä muistia ja nostaa tarvittaessa.
+:::
+
+
+<table>
+  <thead>
+  <tr>
+    <th>Pelaajat</th>
+    <th>Pluginit/Modit</th>
+    <th>RAM</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>4-5</td>
+    <td>0-10</td>
+    <td>4GB</td>
+  </tr>
+  <tr>
+    <td>6-10</td>
+    <td>10-20</td>
+    <td>6GB</td>
+  </tr>
+  <tr>
+    <td>11-15</td>
+    <td>20-30</td>
+    <td>8GB</td>
+  </tr>
+  <tr>
+    <td>16-20</td>
+    <td>30-40</td>
+    <td>12GB</td>
+  </tr>
+  <tr>
+    <td>21+</td>
+    <td>40+</td>
+    <td>16GB+</td>
+  </tr>
+  </tbody>
+</table>
+
+# Palvelimen prosessointi kyky
+
+Useat tekijät voivat vaikuttaa palvelimen prosessointi tasoon.  <br /> <br />
+
+Vanilla palvelimella kyseessä voi olla useita eri tekijöitä:
+- Iso määrä pelaajia,
+- Paljon eläimiä/vihollisia,
+- Punakivi laitteita etenkin kelloja,
+- Maailman luonti
+
+Modi palvelimessa voi lisäksi myös olla:
+- Temppuilevat / Huonosti ohjelmoidut modit,
+- Modien määrä
+
+Tehojen loppuminen ilmenee useana tapana, mutta näkyvin on tökkivä pelikokemus palvelimella.
+Konsoliin myös tälläisissä tilanteissa tulee ilmoitusta palvelimen resurssien loppumisesta: <code>Can’t keep up! Is the server overloaded?</code>
+
+
+# Korruptoitunut maailma
+
+Jos maailma on korruptoitunut palvelin ei kykene lataamaan maailman uudelleen.
+Helpoin tapa kokeilla johtuuko vika korruptoituneesta maailmasta on muuttaa <code>server.properties</code> tiedoston <code>level-name</code> -asetuksen arvoa ja kokeilla luoda uusi maailma.
+(Aikaisempi maailma ei katoa)
+
+# Väärin konfiguroitu server.properties tai muu tiedosto
+
+Useimmissa tapauksissa <code>server.properties</code> tiedoston muuttaminen ei vaikuta palvelimen käynnistymiseen. <br />
+Väärin konfiguroitujen kenttien kohdalla palvelin usein valitsee käyttää oletusarvoa. (Katso oletukset [server-properties](./configuration/server-properties)) <br /> <br />
+Esimerkki väärin konfiguroidusta <code>level-type</code> kentästä: <code>Failed to parse level-type minecraft:w, defaulting to minecraft:normal</code>
+
+
+# Väärä Java -versio
+
+Taulussa ovat Java -versiot ja niitä versioita käyttävät Minecraft versiot. Yleisesti tarvitset palvelimelle oikean Java -versio, jotta se käynnistyy. <br />
+Modipakettien kohdalla on hyvä varmistaa, että myös käyttäjällä on oikea Java -versio asennettuna. <br />
+Esimerkiksi "Prism Launcher" käyttäessä saatat joutu asentamaan itse oikean Java version Prism launcherin kautta:
+[Java Wizard (Prism Launcher)](https://prismlauncher.org/wiki/help-pages/java-wizard/) tai [Installing Java (Prism Launcher)](https://prismlauncher.org/wiki/getting-started/installing-java/).
+
+<table>
+  <thead>
+    <tr>
+      <th>Java versio</th>
+      <th>Minecraft versiot</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>8</td>
+    <td>1.7.10 - 1.11.2</td>
+  </tr>
+  <tr>
+    <td>8/11</td>
+    <td>1.12.2 - 1.16.5</td>
+  </tr>
+  <tr>
+    <td>16/17</td>
+    <td>1.17 - 1.18.2</td>
+  </tr>
+  <tr>
+    <td>17/21</td>
+    <td>1.19+</td>
+  </tr>
+  </tbody>
+</table>
+
+Alla esimerkki ajo Minecraft versiolla 1.21.11 ja Java -versiolla 17: <br />
+(Tärkeä huomata alusta esimerkiksi <code>OpenJDK Runtime Environment Temurin-17.0.18+8 (build 17.0.18+8)</code>)
+
+```error-log
+  [Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+  [Pterodactyl Daemon]: Updating process configuration files...
+  [Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+  container@pterodactyl~ Server marked as starting...
+  [Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+  [Pterodactyl Daemon]: Finished pulling Docker container image
+  container~ java -version
+  openjdk version "17.0.18" 2026-01-20
+  OpenJDK Runtime Environment Temurin-17.0.18+8 (build 17.0.18+8)
+  OpenJDK 64-Bit Server VM Temurin-17.0.18+8 (build 17.0.18+8, mixed mode, sharing)
+  container~ java --add-modules=jdk.incubator.vector -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar ${SERVER_JARFILE}
+  WARNING: Using incubator modules: jdk.incubator.vector
+  Starting org.bukkit.craftbukkit.Main
+  Exception in thread "ServerMain" java.lang.UnsupportedClassVersionError: org/bukkit/craftbukkit/Main has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+  at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+  at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+  at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+  at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:524)
+  at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:427)
+  at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:421)
+  at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+  at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:420)
+  at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:592)
+  at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+  at java.base/java.lang.Class.forName0(Native Method)
+  at java.base/java.lang.Class.forName(Class.java:469)
+  at io.papermc.paperclip.Paperclip.lambda$main$0(Paperclip.java:38)
+  at java.base/java.lang.Thread.run(Thread.java:840)
+  container@pterodactyl~ Server marked as offline...
+  [Pterodactyl Daemon]: ---------- Detected server process in a crashed state! ----------
+  [Pterodactyl Daemon]: Exit code: 0
+  [Pterodactyl Daemon]: Out of memory: false
+  [Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+  [Pterodactyl Daemon]: Updating process configuration files...
+  [Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+  container@pterodactyl~ Server marked as starting...
+  [Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+  [Pterodactyl Daemon]: Finished pulling Docker container image
+  container~ java -version
+  openjdk version "17.0.18" 2026-01-20
+  OpenJDK Runtime Environment Temurin-17.0.18+8 (build 17.0.18+8)
+  OpenJDK 64-Bit Server VM Temurin-17.0.18+8 (build 17.0.18+8, mixed mode, sharing)
+  container~ java --add-modules=jdk.incubator.vector -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar ${SERVER_JARFILE}
+  WARNING: Using incubator modules: jdk.incubator.vector
+  Starting org.bukkit.craftbukkit.Main
+  Exception in thread "ServerMain" java.lang.UnsupportedClassVersionError: org/bukkit/craftbukkit/Main has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+  at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+  at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+  at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+  at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:524)
+  at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:427)
+  at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:421)
+  at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+  at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:420)
+  at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:592)
+  at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+  at java.base/java.lang.Class.forName0(Native Method)
+  at java.base/java.lang.Class.forName(Class.java:469)
+  at io.papermc.paperclip.Paperclip.lambda$main$0(Paperclip.java:38)
+  at java.base/java.lang.Thread.run(Thread.java:840)
+  container@pterodactyl~ Server marked as offline...
+  [Pterodactyl Daemon]: ---------- Detected server process in a crashed state! ----------
+  [Pterodactyl Daemon]: Exit code: 0
+  [Pterodactyl Daemon]: Out of memory: false
+  [Pterodactyl Daemon]: Aborting automatic restart, last crash occurred less than 60 seconds ago.</code>
+```
+# Mojang/Microsoft autentikaatio palvelimet alhaalla
+
+Ajoittaiset katkokset käyttäjän autentikointi palvelimet ovat alhaalla. Näinä aikoina uusia kirjautumisia ei kyetä hyväksymään palvelimille.
+Tyypillisesti pienet viat korjataan noin 5-30 minuutin sisällä.
