@@ -22,18 +22,19 @@ Palvelin voi kaatua käynnistymisen yhteydessä tai käynnissäolon aikana, jos 
 Usein kaatumisen yhteydessä konsoliin tulee virheviesti, sekä kaatumisesta tehdään palvelimen tiedostoihin kaatumisen logi, jotka voivat auttaa paikantamaan virheellisen lisäosan.
 Bittivirran palvelimella löydät logi-tiedostot palvelimen kansioon <code>/logs</code> eli <code>/home/container/logs</code>.
 
-# Puutteellinen RAM eli muisti
+# Puutteellinen muisti (RAM)
 
 Palvelimella ollessa paljon pelaajia tai runsas määrä lisäosia tarvitsee palvelin usein enemmän muistia. Muistin loppuessa palvelin voi kaatua tai ruveta toimimaan viallisesti.
 Palvelimen tilaamisen yhteydessä onkin hyvä suunnitella etukäteen paljonko muistia tarvitset palvelimelle. Usein muistisuositukset modipakettien kohdalla ovat mainittuna modipakettien sivuilla.
 
+Multiverse pluginin käyttäjille on suositeltavaa harkita: <code>keepspawninmemory: true</code> => <code>false</code>.
+Asetus sammuttaa aloitus alueet, jolloin säästät muistia palvelimella, kun pelaajia ei ole paikalla.
 
 :::tip Huomaa
 Seuraava taulu muistinmäärälle (RAM) on vain suuntaa antava. Bittivirralla tilaukseesi saa lisättyä ja vähennettyä muistia helposti. Muisitn vähentämisestä tilauksesta saat osan rahoista takaisin.<br /> <br />
 Vanilla/Plugini palvelin: Suositeltavaa aloittaa pienemmällä määrällä muistia ja nostat tarvittaessa.<br />
 Modi(paketti) palvelin: Suositeltavaa seurata modipaketin sivuilla olevia suosituksia. Yksittäisten modien kohdalla kannattaa kokeilla pienemmällä määrällä muistia ja nostaa tarvittaessa.
 :::
-
 
 <table>
   <thead>
@@ -72,14 +73,14 @@ Modi(paketti) palvelin: Suositeltavaa seurata modipaketin sivuilla olevia suosit
   </tbody>
 </table>
 
-# Palvelimen prosessointi kyky
+# Palvelimen prosessointitaso
 
-Useat tekijät voivat vaikuttaa palvelimen prosessointi tasoon.  <br /> <br />
+Useat tekijät voivat vaikuttaa palvelimen prosessointi tasoon.  <br />
 
 Vanilla palvelimella kyseessä voi olla useita eri tekijöitä:
 - Iso määrä pelaajia,
 - Paljon eläimiä/vihollisia,
-- Punakivi laitteita etenkin kelloja,
+- Punakivilaitteita etenkin kelloja,
 - Maailman luonti
 
 Modi palvelimessa voi lisäksi myös olla:
@@ -87,8 +88,8 @@ Modi palvelimessa voi lisäksi myös olla:
 - Modien määrä
 
 Tehojen loppuminen ilmenee useana tapana, mutta näkyvin on tökkivä pelikokemus palvelimella.
-Konsoliin myös tälläisissä tilanteissa tulee ilmoitusta palvelimen resurssien loppumisesta: <code>Can’t keep up! Is the server overloaded?</code>
-
+Konsoliin myös tälläisissä tilanteissa tulee ilmoitusta palvelimen resurssien loppumisesta: <code>Can’t keep up! Is the server overloaded?</code>.
+(Viesti voi tulostua konsoliin myös satunnaisesti, mutta yksittäiset tulostukset konsoliin eivät vielä haittaa. Yleensä väistämätöntä isolla määrällä modeja tai plugineita.)
 
 # Korruptoitunut maailma
 
