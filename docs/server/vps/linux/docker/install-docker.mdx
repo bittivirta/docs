@@ -1,2 +1,67 @@
 
 # Asentaminen
+
+:::tip
+Huomaa, jos et ole **ROOT** käyttäjä, suorita komennot **sudo** -komennolla. <br />
+Esim: `sudo apt-get update && sudo apt-get install -y`
+Viimeisessä vaiheessa on myös valinnainen komento käyttäjän lisäämiseksi docker ryhmään, mikä mahdollistaa docker suorituksen ilman sudoa.
+:::
+# Docker/Docker-Compose asentaminen
+<Stepper title="Docker/Docker-Compose asentaminen">
+  <Step>
+  Päivitetään ensiksi paketit:
+  ```sh
+  // terminal
+  apt-get update && sudo apt-get install -y
+  ```
+  </Step>
+  <Step>
+  Sitten ladataan Docker ja Docker Compose:
+  ```sh
+  // terminal
+  apt install docker.io docker-compose -y
+  ```
+  </Step>
+  <Step>
+  Viimeiseksi kokeile onko docker ladattu onnistuneesti:
+  ```sh
+  // terminal
+  docker run hello-world
+  ```
+  </Step>
+
+  <Step>
+  Aikaisemman komennon tulostus pitäisi olla seuraava:
+  ```terminal
+  Hello from Docker!
+  This message shows that your installation appears to be working correctly.
+
+  To generate this message, Docker took the following steps:
+   1. The Docker client contacted the Docker daemon.
+   2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+      (amd64)
+   3. The Docker daemon created a new container from that image which runs the
+      executable that produces the output you are currently reading.
+   4. The Docker daemon streamed that output to the Docker client, which sent it
+      to your terminal.
+
+  To try something more ambitious, you can run an Ubuntu container with:
+   $ docker run -it ubuntu bash
+
+  Share images, automate workflows, and more with a free Docker ID:
+   https://hub.docker.com/
+
+  For more examples and ideas, visit:
+   https://docs.docker.com/get-started/
+  ```
+  </Step>
+  <Step>
+    Valinnainen: Aseta käyttäjä Docker ryhmään. (Dockerin suoritus ilman sudoa)
+    ```sh
+    // terminal
+    usermod -aG docker *käyttäjänimi*
+    ```
+    Saatat joutua kirjautumaan ulos ja uudelleen sisään.
+    <code>logout</code>
+  </Step>
+</Stepper>
