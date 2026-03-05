@@ -1,2 +1,236 @@
 
 # Docker-Compose peruskäyttö.
+
+:::warning
+Tietoturvan kannalta on parempi välttää kirjoittamasta salasanat suoraan docker-compose tiedostoon. <br />
+Suositeltava luoda erillinen .env tiedosto, mistä viet salasanat docker-compose tiedostoon. <br />
+Ohjeet täällä: LINKKI
+:::
+
+Docker compose käyttö aloitetaan luomalla docker-compose.yaml tiedosto ja määrittämällä palvelut ja niiden asetukset.
+Esimerkiksi docker-compose tiedoston luominen uudessa kansiossa kotihakemistossa:
+
+1. Luo uusi kansio ja siirry siihen:
+```sh
+// terminal
+mkdir ~/docker-compose && cd ~/docker-compose
+```
+
+2. Luo vaadittu `docker-compose.yaml` tiedosto:
+```sh
+// terminal
+touch docker-compose.yaml
+```
+3. Muokkaa `docker-compose.yaml` tiedostoa ja lisää palvelut ja niiden asetukset:
+```sh
+// terminal
+nano docker-compose.yaml
+```
+
+4. Käynnistä docker-compose palvelut komennolla:
+```sh
+// terminal
+docker-compose up
+```
+<code>Docker-compose up</code> käynnistää nykyisessä hakemistossasi olevan `docker-compose.yaml` tiedoston määrittelemät palvelut.
+
+<br />
+Esimerkki yksinkertaisessa `docker-compose.yaml` tiedostossa:
+
+## Yksinkertainen Docker Compose YAML-tiedosto
+```yaml docker-compose.yaml
+services:
+ website:
+  image: nginx
+  ports:
+   - 8080:80
+  restart: unless-stopped
+```
+Tällä docker-compose.yaml tiedostolla käynnistetään yksi palvelu nimeltä "website" käyttäen nginx kuvaketta.
+
+
+### Palveluiden määritys
+```yaml
+services:
+ website:
+```
+Määrittää, mitkä ja minkä nimiset palvelut docker-compose up käynnistää.
+Tässä esimerkissä käynnistettävä palvelu on "website".
+
+### Palvelun kuvake
+```yaml
+image: nginx
+```
+Tämä määrittää, minkä docker hub kuvakkeen palvelu nimeltä "website" ottaa käyttöönsä.
+Palvelu voi siis olla nimetty käytännössä miksi tahansa, oli se sitten "website" tai "web" tai "app".
+Palvelulle on annettava tarkasti oikea kuvakkeen nimi ja sen on löydyttävä Docker Hubista: https://hub.docker.com/_/nginx.
+
+### Palvelun portit
+```yaml
+ports:
+ - 8080:80
+```
+Määrittää, minkä portin palvelusi avaa.
+Tämä on tärkäeää olla oikein, sillä tämä mahdollistaa tässä tapauksessa verkkosivulle pääsyn selaimessa. <br /> <br />
+Tässä esimerkissä portti 8080 avataan palvelun portissa 80.
+Tarkoittaen siis, että kun selaimessa kirjoitat http://*PalvelimenOsoite*:8080 ohjaa Docker sinut palvelun "website" porttiin 80. (Portti 80 on NGINX oletusportti) <br /> <br />
+Eli jos haluat kaksi website palvelua kirjoitat: <br /> (Tällöin portit eivät ole samat, mutta silti ohjaavat NGINX oletusporttiin)
+```yaml
+services:
+ website1:
+  ports:
+   - 8080:80
+ website2:
+  ports:
+   - 8081:80
+```
+Huomaa, ettet voi käyttää porttia, mikä on jo käytössä toisella palvelulla.
+
+
+Yleiset portti ryhmät: ( https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers )
+
+<table>
+  <thead>
+  <tr>
+    <th>Portti alue</th>
+    <th>Kategoria</th>
+    <th>Yleinen käyttö kohde</th>
+    <th>Esimerkit</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>0 - 1023</td>
+    <td>Yleiset portit</td>
+    <td>Tärkeimpien toimintojen portit</td>
+    <td>22 (SSH), 80 (HTTP), 443 (HTTPS)</td>
+  </tr>
+  <tr>
+    <td>1024 - 49151</td>
+    <td>Rekisteröidyt portit</td>
+    <td>Yleisesti sovellusten käyttämä portti alue</td>
+    <td>3306 (MySQL), 5432 (PostgreSQL), 8080 (Alt HTTP)</td>
+  </tr>
+  <tr>
+    <td>49152 - 65535</td>
+    <td>Dynaamiset portit</td>
+    <td>Väliaikaiset yhteydet käyttäjille</td>
+    <td>Käyttöjärjestelmän asettamat väliaikaiset portit.</td>
+  </tr>
+  </tbody>
+</table>
+
+### Käynnistys
+```yaml
+restart: unless-stopped
+```
+Kun lisätään "unless-stopped", palvelu käynnistyy uudelleen aina sen kaatumisen jälkeen.
+(Huomaa, jos palvelin kaatuu/ei käynnisty virheellisen koodin tai ongelman vuoksi, seuraa siitä jatkuva uudelleenkäynnistys.
+Palvelin siis käynnistyy uudelleen useita kertoja, kunnes se pysäytetään manuaalisesti.)
+
+## Kehittyneempi Docker Compose YAML-tiedosto
+```yaml docker-compose.yaml
+services:
+ wordpress:
+   image: wordpress
+   ports:
+    - 8080:80
+   depends_on:
+    - mysql
+   environment:
+    WORDPRESS_DB_HOST: mysql
+    WORDPRESS_DB_USER: root
+    WORDPRESS_DB_PASSWORD: "salasana"
+    WORDPRESS_DB_NAME: wordpress
+   restart: unless-stopped
+   networks:
+    testiverkko:
+     ipv4_address: 10.10.1.1
+ mysql:
+   image: "mysql:5.7"
+   environment:
+    MYSQL_DATABASE: wordpress
+    MYSQL_ROOT_PASSWORD: "salasana"
+   volumes:
+     - ./mysql:/var/lib/mysql
+   networks:
+     testiverkko:
+       ipv4_address: 10.10.1.2
+networks:
+ testiverkko:
+  ipam:
+   driver: default
+   config:
+     - subnet: 10.10.1.0/24
+```
+
+### Riippuvuudet
+```yaml
+depends_on:
+ - mysql
+```
+Tässä esimerkissä palvelu "wordpress" riippuu MySQL palvelusta. <br /> <br />
+Tavallisesti Wordpress käynnistyy ennen MySQL palvelua, mutta wordpress tarvitsee MySQL tietokannan toimiakseen.
+"depends_on:" avulla varmistetaan, että palvelu nimeltä "mysql" käynnistyy ennen palvelua "wordpress". <br /> <br />
+(Huomaa, ettei käynnistysjärjestys kuitenkaan tarkoita, että MySQL olisi valmis ottamaan yhteyksiä vastaan (Healthy))
+
+### Ympäristömuuttujat
+```yaml
+ environment:
+  WORDPRESS_DB_HOST: mysql
+  WORDPRESS_DB_USER: root
+  WORDPRESS_DB_NAME: wordpressDB
+  WORDPRESS_DB_PASSWORD: "salasana"
+
+```
+Docker kuvilla (Image) on usein vaadittuja ympäristömuuttujia. Löydät ne kuvakkeen docker hub sivulta, esim wordpress: https://hub.docker.com/_/wordpress. <br /> <br />
+Koska Wordpress ei toimi ilman tietokanta yhteyttä, tarvitsee sille antaa seuraavat tiedot:
+- Tietokannan osoite, tässä tapauksessa "mysql" (palvelun nimi)
+- Käyttäjänimi, tässä tapauksessa "root" (Suositeltavaa vaihtaa itse toiseen itsekeksimään käyttäjään)
+- Salasana, tässä tapauksessa kirjoitettu suoraan docker-compose tiedostoon.
+(Tietoturvan takia salasanoja ei kannata kirjoittaa docker-compose tiedostoon. Lisää aiheesta tässä ohjeessa: LINKKI)
+- Tietokannan nimi eli wordpressDB, mikä määritetään myös mysql palvelussa.
+
+Vastaavanlaiset ympäristömuuttujat ovat määritetty samassa docker-compose.yaml tiedostossa tietokannalle:
+
+```yaml
+ environment:
+  MYSQL_DATABASE: wordpressDB
+  MYSQL_ROOT_PASSWORD: "salasana"
+```
+
+### Volume mountit
+```yaml
+volumes:
+  - ./mysql:/var/lib/mysql
+```
+
+Volume mountit määrittävät, mistä hakemistosta levytila linkitetään docker-konttiin. (Eli hakemisto, mikä on käytössä docker-kontin sisällä) <br />
+Esimerkissä annetaan hakemisto "./mysql" palvelun "mysql" käyttöön docker-kontin sisällä hakemistoon "/var/lib/mysql". Tämä tarkoittaa, että kun tietokanta palvelu mysql tallentaa tietokannan sen oletustiedostopolkuun "/var/lib/mysql", se on linkitetty hakemistoon "./mysql" paikallisessa levytilassa kontin ulkopuolella.
+
+### Verkot
+
+```yaml
+networks:
+ testiverkko:
+  ipam:
+   driver: default
+   config:
+     - subnet: 10.10.1.0/24
+```
+
+Esimerkki docker-compose.yaml tiedoston viimeisellä "networks" osassa on määritetty verkko "testiverkko", joka on käytössä docker-kontin sisällä. Tämä verkko on määritetty oletusajurilla "default" ja osoite alueella "10.10.1.0/24".
+
+Verkko ei kuitenkaan ole automaattisesti käytössä docker-kontilla, vaan se pitää erikseen määritellä palvelulle.
+Esimerkiksi palvelun "wordpress" verkko asetetaan kirjoittamalla:
+```yaml
+   networks:
+    testiverkko:
+     ipv4_address: 10.10.1.1
+```
+ja palvelun "mysql" verkko asetetaan kirjoittamalla:
+```yaml
+   networks:
+    testiverkko:
+     ipv4_address: 10.10.1.2
+```
