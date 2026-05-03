@@ -6,7 +6,7 @@
     "build": "bun run infogen && docusaurus build",
     "clear": "docusaurus clear",
     "deploy": "docusaurus deploy",
-    "dev": "bun run start",
+    "dev": "bun run start --no-open",
     "docusaurus": "docusaurus",
     "serve": "docusaurus serve",
     "start": "bun run infogen && docusaurus start",
