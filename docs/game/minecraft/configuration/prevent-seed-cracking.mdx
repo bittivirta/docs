@@ -1,0 +1,98 @@
+---
+authors:
+  - korhox
+tags:
+  - minecraft
+  - seed
+  - siemen
+  - siemenluku
+  - lähtöarvo
+---
+
+import { SpigotSeeds } from "./components/random-number";
+
+
+# Seedin murtamisen estäminen
+
+Pelimaailman seedin murtaminen palvelimen pelikartasta on mahdollista pelaajille, vaikka heillä ei olisikaan pääsyä `/seed`-komentoon. Tätä voidaan **yrittää** estää muutamaa asetusta muuttamalla, mutta on tärkeää huomauttaa, että nämä toimenpiteet eivät ole täysin vedenpitäviä, ja kokeneet pelaajat saattavat silti löytää keinoja seedin murtamiseen.
+
+Syy sille, miksi palvelimen omistajat haluavat yleensä estää seedin murtamisen, on se, että se voi antaa pelaajille mahdollisuuden löytää kaikki Minecraftin luomat rakennukset, luolat ja niiden resurssit maailmassa ilman vaivaa, mikä voi vähentää pelin haastetta ja hauskuutta.
+
+:::info Huomaa!
+Nämä toimenpiteet on tehtävä **ennen** maailman luomista, sillä ne eivät vaikuta jo generoituun maailmaan. Lisäksi toimenpiteet saattavat aiheuttaa maailman korruptoitumista.
+
+Vain Anti-Xrayn käyttöönotto on turvallista, eikä se aiheuta maailman korruptoitumista.
+:::
+
+## Maailman seedien hienosäätö
+
+Jos käytössäsi on palvelin, joka on tai perustuu Spigotiin (esim. Paper ja Purpur), voit muuttaa `spigot.yml`-tiedostossa olevia asetuksia tiettyjen rakenteiden, kuten luolien ja mineshaftien erillisiä seedejä. Tämä ei estä seedin murtamista kokonaan, mutta tekee siitä hieman vaikeampaa, koska pelaajien on löydettävä rakenteiden seedit erikseen toisistaan, eivätkä ne käytä samaa seediä kuin maailma.
+
+Aseta kaikkiin arvoihin satunnainen arvo, joka ei ole sama kuin maailman seedi. Voit kopioida tästä alta satunnaiset seedit. Liitä ne `spigot.yml`-tiedostoon, oikeaan kohtaan ja tallenna muutokset. Voit määrittää eri maailmoille eri seedit, jos sinulla on useita maailmoja palvelimellasi. Kopioi vain default-osio ja nimeä se uudelleen, esimerkiksi `world` tai `minun_maailma`, ja liitä satunnaiset seedit siihen.
+
+<SpigotSeeds/>
+
+Jos käytössäsi on myös Paper (esim. Purpur, pelkkä Spigot ei toimi), voit muuttaa seedien sijaan tiedoston `/config/paper-world-defaults.yml` asetuksen `generate-random-seeds-for-all` arvoon `true`. Tämä luo satunnaiset seedit kaikille rakenteille aina uusille maailmoille, mikä tekee seedin murtamisesta vaikeampaa, koska pelaajien on löydettävä kaikki rakenteiden seedit erikseen.
+
+```yaml title="/config/paper-world-defaults.yml"
+#...
+feature-seeds:
+// highlight
+  generate-random-seeds-for-all: false
+#...
+```
+
+## Paper anti-xray
+
+Jos käytössäsi on palvelin, joka on tai perustuu Paperiin (esim. Purpur, pelkkä Spigot ei toimi), voit käyttää anti-xray-ominaisuutta luomaan visuaalista häiriötä x-rayn käyttäjille. Tämä ei estä seedin murtamista, mutta tekee siitä vaikeampaa, koska pelaajien on löydettävä malmit ja luolat ilman suoraa näkyvyyttä niihin. Samalla ominaisuus auttaa estämään x-rayn käyttöä, mikä on yksi yleisimmistä pelaajien käyttämistä tavoista hankkia etulyöntiasemaa pelissä.
+
+Asetus löytyy tiedostosta `/config/paper-world-defaults.yml` kohdasta `anticheat.anti-xray`. Ota ominaisuus käyttöön asettamalla `enabled`-arvo `true`, ja määritä `engine-mode`-arvo `2`, joka on tehokkain anti-xray-tila. Tämä luo visuaalista häiriötä x-rayn käyttäjille, mutta ei vaikuta normaaliin pelaamiseen.
+
+Engine modet ovat seuraavat:
+- `0` - Ei käytössä (enabled: false).
+- `1` - Korvaa määritetyt blokit (hidden-blocks) muilla "väärennetyillä" blokeilla, kuten kivellä (deepslate y < 0), netherrackilla tai end_stonella ulottuvuuden mukaan.
+- `2` - Korvaa sekä hidden-blocks että replacement-blocks satunnaisesti luoduilla hidden-blocks -blokeilla.
+- `3` - Toimii samankuin kuin engine-mode: 2, mutta sen sijaan, että satunnaistaisi jokaisen blokin, se satunnaistaa blokin jokaiselle chunkin kerrokselle.
+
+Varsinkin pelaajan näkökulmasta engine-mode: 1 on paljon vähemmän laskennallisesti raskas, kun taas engine-mode: 2 saattaa paremmin estää x-rayn. Engine-mode: 1:llä vain kokonaan kiinteiden blokkien peittämät malmit piilotetaan. Ilman tai veden alla olevat malmit luolissa eivät piiloudu. Engine-mode: 2:ssa väärennetyt malmit estävät näkymän oikeisiin blokkeihin. Jos hidden-blocks -listaan lisätään ilma, engine-mode: 2 piilottaa tehokkaasti kaikki malmit, jopa ne, jotka ovat ilmassa. Engine-mode: 3 voi vähentää verkon kuormitusta liittyessä noin 2-kertaisesti ja auttaa chunkien pakettien pakkaamisessa.
+
+Huomaathan myös, että joskus pelaajat saattavat nähdä hetkellisesti väärennettyjä blokkeja, kun he lähestyvät malmeja, mutta tämä on normaalia ja johtuu siitä, että anti-xray korvaa blokit satunnaisiksi arvoiksi. Tämä ei kuitenkaan vaikuta pelaajien kykyyn löytää malmeja, koska ne ovat edelleen siellä, vaikka ne eivät näy suoraan. Ongelma saattaa tehostua jos palvelin on rasittunut tai pelaajan verkkoyhteys on hidas, mutta yleensä se ei ole merkittävä ongelma. Pelaajien on oltava tietoisia tästä, sillä timantin näkeminen nopeasti ennen kun se katoaa, saattaa aiheuttaa hämmennystä, mutta se on vain anti-xray-ominaisuuden normaalia toimintaa.
+
+```yaml title="/config/paper-world-defaults.yml"
+#...
+anticheat:
+  anti-xray:
+// highlight
+    enabled: true
+// highlight
+    engine-mode: 2
+    hidden-blocks:
+      #...
+```
+
+_Lähde: [Paper anti-xray configuration](https://docs.papermc.io/paper/anti-xray/)._
+
+## Lisäosien käyttö
+
+On olemassa useita kolmannen osapuolen lisäosia, jotka hankaloittavat seedin murtamista. Jotkin lisäosat voivat aiheuttaa suorituskykyongelmia tai muita haasteita palvelimellasi, joten on tärkeää tutkia ja testata lisäosa ennen kuin otat sen käyttöön. Tällaiset ongelmat ovat yleensä harvinaisia, mutta ne voivat silti tapahtua, joten on tärkeää olla tietoinen niistä ennen kuin asennat jonkin lisäosan.
+
+### AntiSeedCracker (plugin)
+
+AntiSeedCracker on plugin, joka muuttaa Minecraftin pelaajalle lähettämää seed-tiedon muotoa, mikä tekee seedin murtamisesta vaikeampaa. Se toimii korvaamalla seed-tiedot satunnaisilla arvoilla, jotka eivät vastaa todellista seedin arvoa.
+
+Lisäosa vaatii myös ProtocolLib -pluginin toimiakseen, joka on yleinen riippuvuus monille Minecraftin pluginille. Lataa molemmat lisäosat palvelimesi plugins -kansioon ja käynnistä palvelin uudelleen, jotta ne otetaan käyttöön.
+
+**AntiSeedCracker:** [spigotmc.org/resources/antiseedcracker-1-20-4-1-21.81495/](https://www.spigotmc.org/resources/antiseedcracker-1-20-4-1-21.81495/)<br/>
+**ProtocolLib:** [spigotmc.org/resources/protocollib.1997/](https://www.spigotmc.org/resources/protocollib.1997/)
+
+### UltimateAntiSeedCracker (datapack)
+
+UltimateAntiSeedCracker on datapack, joka muuttaa Minecraftin luomien rakennelmien tiheyttä ja taajuutta – mikä tekee seedin murtamisesta vaikeampaa tai lähes jopa mahdotonta, sillä rakennelmien sijainnit muuttuvat seedin osoittamalta paikalta jonkin verran. Lisäksi tämä tarkoittaa sitä, että vaikka pelaaja keksisikin seedin, hän ei välttämättä löydä rakennelmia odotetuilta paikoilta, mikä tekee seedin murtamisesta hyödytöntä.
+
+**UltimateAntiSeedCracker:** [modrinth.com/datapack/ultimateantiseedcracker](https://modrinth.com/datapack/ultimateantiseedcracker)<br/>
+
+### Seed Guard (modi: fabric/quilt)
+
+SeedGuard on modi, joka muuttaa Minecraftin rakennelmien seedit, kuten spigotin asetuksissa. Modin käyttö kuitenkin on joillekin palvelimen omistajalle parempi vaihtoehto, jos he eivät voi käyttää Spigotia silloin, kun heidän palvelin on modattu palvelin.
+
+**SeedGuard:** [curseforge.com/minecraft/mc-mods/seed-guard](https://www.curseforge.com/minecraft/mc-mods/seed-guard)
