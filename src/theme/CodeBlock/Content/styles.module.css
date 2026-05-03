@@ -80,3 +80,25 @@
 :global(.theme-code-block:hover) .buttonGroup button {
   opacity: 0.8;
 }
+
+::-webkit-scrollbar {
+  background: none;
+  width: 16px;
+  height: 16px;
+}
+::-webkit-scrollbar-corner {
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  border-width: 0px 4px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0);
+  border-image: initial;
+  border-radius: 9px / 4px;
+  box-shadow:
+    rgb(194, 205, 216) 0px 0px 0px 1px inset,
+    rgb(194, 205, 216) 0px 0px 0px 4px inset;
+}
+::-webkit-scrollbar-track-piece {
+  margin: 4px 0px;
+}

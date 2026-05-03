@@ -43,7 +43,8 @@ export default function CodeBlockString({
   // future. Note that MDX doesn't strip quotes when parsing metastring:
   // "title=\"xyz\"" => title: "\"xyz\""
   const title = parseCodeBlockTitle(metastring) || titleProp;
-  const { lineClassNames, code } = parseLines(children, {
+  const codeSource = children.replaceAll(" ", "\u00A0");
+  const {lineClassNames, code} = parseLines(codeSource, {
     metastring,
     language,
     magicComments,
